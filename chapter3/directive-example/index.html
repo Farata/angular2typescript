@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdn.rawgit.com/systemjs/systemjs/0.19.4/dist/system.js"></script>
+  <script src="//code.angularjs.org/2.0.0-alpha.40/angular2.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      map: {
+        typescript: '//cdn.rawgit.com/Microsoft/TypeScript/v1.6.2/lib/typescript.js'
+      }
+    });
+    System.import('index.ts');
+  </script>
+</head>
+<body>
+  <directive-example></directive-example>
+</body>
+</html>

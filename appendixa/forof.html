@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>forof.html</title>
+</head>
+<body>
+
+<script>
+
+    "use strict";
+
+    (function () {
+
+    var numbersArray = [1, 2, 3, 4];
+    numbersArray.description = "four numbers";
+
+
+    console.log("=== Running for each");
+    numbersArray.forEach((n)=> console.log(n);
+
+
+    console.log("=== Running for in");
+
+    for (let n in numbersArray) {
+        console.log(n);
+    }
+
+    for (let n in numbersArray) {
+        console.log(numbersArray[n]);
+    }
+
+    var contact = {name: "Jerry", phone: "212 555-1212"};
+    for (let p in contact) {
+        console.log(p);
+    }
+
+    console.log("=== Running for of for the entire array");
+    for (let n of numbersArray) {
+
+        console.log(n);
+    }
+
+    console.log("=== Running for of with a break");
+    for (let n of numbersArray) {
+        if (n > 2) break;
+
+        console.log(n);
+    }
+
+    console.log("=== Iterating over string characters");
+        for (let char of "John") {
+
+            console.log(char);
+        }
+
+   })();
+
+
+
+
+
+</script>
+
+</body>
+</html>

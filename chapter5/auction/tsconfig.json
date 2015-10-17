@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "system",
+    "noEmit": true,
+    "target": "ES5"
+  }
+}

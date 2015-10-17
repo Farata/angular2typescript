@@ -1,0 +1,8 @@
+.preview*
+.idea*
+.vscode*
+*.pdf*
+
+*.map
+
+jspm_packages

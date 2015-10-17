@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdn.rawgit.com/systemjs/systemjs/0.19.4/dist/system.js"></script>
+  <script src="//code.angularjs.org/2.0.0-alpha.40/angular2.js"></script>
+  <script>
+    System.config({
+      transpiler: 'traceur', // <1>
+      traceurOptions: { // <2>
+        annotations: true
+      },
+      map: {
+        traceur: '//cdn.rawgit.com/jmcriffey/bower-traceur/0.0.91/traceur.js' // <3>
+      }
+    });
+
+    System.import('main.js'); // <4>
+  </script>
+</head>
+<body>
+  <hello-world></hello-world>
+</body>
+</html>

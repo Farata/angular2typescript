@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//cdn.rawgit.com/jmcriffey/bower-traceur/0.0.91/traceur.js"></script>
+  <script src="//cdn.rawgit.com/systemjs/systemjs/0.19.4/dist/system.js"></script>
+  <script>
+    Promise.all([ // <1>
+      System.import('./es6module.js'), // <2>
+      System.import('./es5module.js') // <3>
+    ]).then(function (modules) { // <4>
+      var moduleNames = modules // <5>
+        .map(function (m) { return m.name; }) // <6>
+        .join(', '); // <7>
+
+      console.log('The following modules are loaded: ' + moduleNames);
+    });
+  </script>
+</head>
+<body></body>
+</html>

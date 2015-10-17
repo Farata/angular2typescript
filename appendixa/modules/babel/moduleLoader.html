@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>modules.html</title>
+    <script src="browser.js"></script>
+    <script src="es6-module-loader.js"></script>
+</head>
+<body>
+
+<button id="shippingBtn">Load the Shipping Module</button>
+
+<script type="text/ecmascript-6">
+    "use strict";
+    let btn = document.querySelector('#shippingBtn');
+    btn.addEventListener('click', function(){
+
+         System.transpiler='babel';
+         System.import('main')
+                 .then(function(module) {
+                     console.log("Module loaded ", module);
+                 })
+                 .catch(function(err){
+                     console.log("In error handler", err);
+                 });
+    });
+</script>
+
+</body>
+</html>

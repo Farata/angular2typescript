@@ -1,0 +1,13 @@
+{
+  "jspm": {
+    "dependencies": {
+      "@reactivex/rxjs": "npm:@reactivex/rxjs@^5.0.0-alpha.3",
+      "angular2": "npm:angular2@^2.0.0-alpha.42",
+      "core-js": "npm:core-js@^1.1.4",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.1"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@1.6.2"
+    }
+  }
+}

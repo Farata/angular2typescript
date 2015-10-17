@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>modules.html</title>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="es6-module-loader.js"></script>
+</head>
+<body>
+
+  <button id="shippingBtn">Load the Shipping Module</button>
+
+<script type="module">
+
+let btn = document.querySelector('#shippingBtn');
+btn.addEventListener('click', () => {
+
+     System.import('shipping')
+         .then(function(module) {
+             console.log("Shipping module Loaded. ", module);
+
+             module.ship();
+
+             module.calculateShippingCost();  // will throw an error
+         })
+         .catch(function(err){
+             console.log("In error handler", err);
+         });
+});
+
+</script>
+
+</body>
+</html>

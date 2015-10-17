@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fatArrow.html</title>
+</head>
+<body>
+
+<script>
+
+  "use strict";
+
+  function StockQuoteGenerator(symbol){
+
+      this.symbol = symbol;
+
+      setInterval(() => {
+                 console.log("The price quote for " + this.symbol
+                         + " is " + Math.random());
+              }, 1000);
+  }
+
+  var stockQuoteGenerator = new StockQuoteGenerator("IBM");
+
+</script>
+
+</body>
+</html>

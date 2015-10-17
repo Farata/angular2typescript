@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>let.html</title>
+</head>
+<body>
+
+
+<script>
+    "use strict";
+
+    let customer = "Joe";
+
+    (function (){
+        console.log("The name of the customer inside the function is "  + customer);
+
+        if (2 > 1) {
+         let customer = "Mary";
+         console.log("The name of the customer inside the block is "  + customer);
+        }
+
+    })();
+
+    for (let i=0; i<5; i++){
+        console.log("i=" + i);
+    }
+
+    console.log("i=" + i);   // prints Uncaught ReferenceError: i is not defined
+
+</script>
+
+</body>
+</html>

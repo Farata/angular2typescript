@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>generator.html</title>
+</head>
+<body>
+
+
+<script>
+
+  "use strict";
+
+  function* getStockPrice(symbol){
+
+      while(true){
+          yield Math.random()*100;
+
+          console.log(`resuming for ${symbol}`);
+      }
+  }
+
+
+  let generator = getStockPrice("IBM");
+
+  const limitPrice = 15;
+  let price = 100;
+
+
+  while ( price > limitPrice){
+
+      price = generator.next().value;
+      console.log (`The generator returned ${price}`);
+  }
+
+  console.log(`buying at ${price} !!!`);
+
+
+</script>
+
+</body>
+</html>

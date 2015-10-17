@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>optionalParameters.html</title>
+</head>
+<body>
+
+
+<script>
+
+    function calcTaxES5(income, state){
+
+        state = state || "Florida";
+
+        console.log("ES5. Calclating tax for the resident of " + state + " with the income " + income);
+
+    }
+
+    calcTaxES5(50000);
+
+
+
+    function calcTaxES6(income, state="Florida") {
+        console.log("ES6. Calclating tax for the resident of " + state + " with the income " + income);
+    }
+
+    calcTaxES6(50000);
+
+
+</script>
+
+</body>
+</html>

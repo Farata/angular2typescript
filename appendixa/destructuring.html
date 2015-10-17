@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>destructuring.html</title>
+</head>
+<body>
+
+<script>
+
+// Destructuring of the returned object
+    function getStock(){
+
+        return {
+            symbol: "IBM",
+            price: 100.00
+        };
+    }
+
+    let {symbol, price} = getStock();
+
+    console.log(`The price of ${symbol} is ${price}`);
+
+// Destructuring of the nested object
+
+    let msft = {symbol: "MSFT",
+        lastPrice: 50.00,
+        exchange: {
+            name: "NASDAQ",
+            tradingHours: "9:30am-4pm"
+        }
+    };
+
+    function printStockInfo(stock){
+        let {symbol, exchange:{name}} = stock;
+        console.log(`The ${symbol} stock is traded at ${name}`);
+    }
+
+    printStockInfo(msft);
+
+
+// Destructuting of an array
+
+    let [name1, name2] = ["Smith", "Clinton"];
+    console.log(`name1 = ${name1}, name2=${name2}`);
+
+
+// A function that returns multiple values
+
+    function getCustomers(){
+        return ["Smith", "Clinton", "Lou", "Gonzales"];
+    }
+
+    let [firstCustomer,,,lastCustomer] = getCustomers();
+    console.log(`The first customer is ${firstCustomer} and the last one is ${lastCustomer}`);
+
+
+// Array destructuring + ...rest
+
+    var customers = ["Smith", "Clinton", "Lou", "Gonzales"];
+
+    function processFirstTwoCustomers([firstCust, secondCust, ...otherCust]){
+
+    console.log(`The first customer is ${firstCust} and the second one is ${secondCust}`);
+    console.log(`Other customers are ${otherCust}`);
+
+    }
+
+    processFirstTwoCustomers(customers);
+
+
+
+</script>
+
+</body>
+</html>

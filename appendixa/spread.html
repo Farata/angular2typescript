@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rest.html</title>
+</head>
+<body>
+
+
+<script>
+
+  "use strict";
+
+  function calcTaxSpread( customer1, customer2, customer3, income) {
+      console.log("ES6. Calculating tax for customers with the income ", income);
+
+          console.log("Processing ", customer1, customer2, customer3);
+
+  }
+
+
+  var customers = ["Smith", "Johnson", "McDonald"];
+
+  // spread operator
+  calcTaxSpread(...customers, 50000);
+
+
+</script>
+
+</body>
+</html>

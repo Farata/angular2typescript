@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>thisAndThat.html</title>
+</head>
+<body>
+
+<script>
+
+    function StockQuoteGenerator(symbol){
+
+       // this.symbol = symbol;    // is undefined inside getQuote()
+
+        var that = this;
+        that.symbol = symbol;
+
+        setInterval(function getQuote(){
+            console.log("The price quote for " + that.symbol
+                    + " is " + Math.random());
+        }, 1000);
+    }
+
+    var stockQuoteGenerator = new StockQuoteGenerator("IBM");
+
+</script>
+
+</body>
+</html>
