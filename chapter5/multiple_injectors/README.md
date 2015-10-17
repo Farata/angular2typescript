@@ -10,3 +10,5 @@ And start a Web server of your choice in the root directory, in this book we use
 ```sh
 http-server
 ```
+
+Open your browser at localhost:8080
