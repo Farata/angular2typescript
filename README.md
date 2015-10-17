@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev "Angular 2 Development with TypeScript". This book will be piblished by Manning in May of 2016.
 
-To launch the app, open the command window, switch to the directory of the sample app you want to try, and run install `npm` and `jspm` dependencies:
+To launch the app, open the command window, switch to the directory of the sample app you want to try, and install `npm` and `jspm` dependencies:
 
 ```sh
 npm install
