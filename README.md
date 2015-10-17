@@ -7,7 +7,7 @@ npm install
 jspm install
 ```
 
-You'll need an HTTP serter.  For example, you can install a simple HTTP server by runing the following command:
+You'll need an HTTP server.  For example, you can install a simple HTTP server by runing the following command:
 
 ```
 npm install http-server -g
