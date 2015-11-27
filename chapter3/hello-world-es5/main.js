@@ -1,12 +1,10 @@
 function HelloWorldComponent() {
-  this.name = 'Angular';
+  this.name = 'Angular 2';
 }
 
 HelloWorldComponent.annotations = [
   new ng.Component({
-    selector: 'hello-world'
-  }),
-  new ng.View({
+    selector: 'hello-world',
     template: '<h1>Hello {{ name }}!</h1>'
   })
 ];

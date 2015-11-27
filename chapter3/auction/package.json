@@ -1,19 +1,22 @@
 {
-  "jspm": {
-    "dependencies": {
-      "@reactivex/rxjs": "npm:@reactivex/rxjs@^5.0.0-alpha.2",
-      "angular2": "npm:angular2@^2.0.0-alpha.40",
-      "bootstrap": "github:twbs/bootstrap@^3.3.5",
-      "core-js": "npm:core-js@^1.2.1",
-      "css": "github:systemjs/plugin-css@^0.1.18",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.2",
-      "zone.js": "npm:zone.js@^0.5.8"
-    },
-    "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
-    }
+  "name": "auction_ch3",
+  "description": "Sample Online Auction from Chapter 3 from the boo Angular 2 Development with TypeScript",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.46",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "systemjs": "0.19.5"
   },
   "devDependencies": {
-    "jspm": "^0.16.2"
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
   }
 }

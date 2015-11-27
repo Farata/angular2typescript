@@ -3,8 +3,8 @@
   Product1Component and Product2 component
   Hence both components will render iPhone7
  */
-import 'core-js/es6'
-import 'reflect-metadata';
+// import 'core-js/es6'
+// import 'reflect-metadata';
 
 import {Component, bootstrap, bind } from 'angular2/angular2';
 

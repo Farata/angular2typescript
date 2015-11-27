@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+</head>
+<body>
+  <hello-world>Loading...</hello-world>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      packages: {app: {defaultExtension: 'ts'}}
+    });
+    System.import('app/main');
+  </script>
+</body>
+</html>

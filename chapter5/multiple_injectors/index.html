@@ -1,11 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-  </head>
-  <body>
-    <app-root></app-root>
-    <script>System.import('app')</script>
-  </body>
+<head>
+  <title>DI with ProductComponent</title>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+<app-root></app-root>
+
+  <script>
+    System.import('app');
+  </script>
+</body>
 </html>

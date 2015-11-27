@@ -3,11 +3,18 @@
 <head>
   <title>Online Auction</title>
   <style>body{padding-top:70px}</style>
-  <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="config.js"></script> 
 </head>
 <body>
-  <auction-root></auction-root>
-  <script>System.import('app')</script>
+  <auction-application></auction-application> 
+  <script>System.import('app')</script>  
 </body>
 </html>

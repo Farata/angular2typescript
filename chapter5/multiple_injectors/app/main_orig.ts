@@ -2,8 +2,8 @@
  This version of main.ts uses the child injector for
  Product2Component and the parent's injector for Product1Component
  */
-import 'core-js/es6'
-import 'reflect-metadata';
+// import 'core-js/es6'
+// import 'reflect-metadata';
 
 import {Component, bootstrap, provide} from 'angular2/angular2';
 

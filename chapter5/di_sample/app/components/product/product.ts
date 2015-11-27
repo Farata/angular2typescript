@@ -3,7 +3,12 @@ import {ProductService, Product} from "../../services/product-service";
 
 @Component({
   selector: 'di-product-page',
-  templateUrl: 'app/components/product/product.html',
+  template: `<div>
+  <h1>Product Details</h1>
+  <h2>Title: {{product.title}}</h2>
+  <h2>Description: {{product.description}}</h2>
+  <h2>Price: \${{product.price}}</h2>
+</div>`,
   providers:[ProductService]
 })
 

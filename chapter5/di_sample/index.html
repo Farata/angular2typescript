@@ -2,12 +2,20 @@
 <html>
 <head>
   <title>DI with ProductComponent</title>
-  <style>body{padding-top:70px}</style>
-  <script src="jspm_packages/system.js"></script>
-  <script src="config.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 </head>
 <body>
   <disample-root></disample-root>
-  <script>System.import('app')</script>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      packages: {'app': {defaultExtension: 'ts'}},
+      typescriptOptions: {"emitDecoratorMetadata": true }
+    });
+    System.import('app/main');
+  </script>
 </body>
 </html>

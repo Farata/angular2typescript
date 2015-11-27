@@ -1,0 +1,20 @@
+{
+  "name": "auction_ch3",
+  "description": "Routing samples from Chapter 4 from the boo Angular 2 Development with TypeScript",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.46",
+    "systemjs": "0.19.5"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}

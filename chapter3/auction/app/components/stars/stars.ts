@@ -1,11 +1,11 @@
 // tag::annotations[]
-import {Component, NgFor, OnInit} from 'angular2/angular2';
+import {Component, NgFor, OnInit} from 'angular2/angular2'; // <1>
 
 @Component({
   templateUrl: 'app/components/stars/stars.html',
   directives: [NgFor],
   selector: 'auction-stars',
-  inputs: ['rating', 'count'] // <1>
+  inputs: ['rating', 'count'] // <2>
 })
 // end::annotations[]
 // tag::class[]

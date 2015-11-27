@@ -2,7 +2,8 @@
 
 <div class="container">
   <div class="row">
-    <!-- Left column contains only search form -->
+    <!-- Left column contains only search form the style col-md-3 comes from
+    Twitter Bootstrap grid system-->
     <div class="col-md-3">
       <auction-search></auction-search>
     </div>
@@ -20,7 +21,7 @@
       </div>
       <div class="row">
         <div *ng-for="#product of products" class="col-sm-4 col-lg-4 col-md-4">
-          <auction-product [product]="product"></auction-product>
+          <auction-product-item [product]="product"></auction-product-item>
         </div>
       </div>
     </div>

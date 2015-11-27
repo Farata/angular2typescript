@@ -1,13 +1,15 @@
-import {Component, bootstrap} from 'angular2/angular2'; // <1>
+import {Component, bootstrap} from 'angular2/angular2';
 
 @Component({
-  selector: 'hello-world', // <2>
-  template: `<h1>Hello {{ name }}!</h1>`}) // <3>
-class HelloWorldComponent { // <4>
-  name: string; // <5>
+  selector: 'hello-world',
+  template: '<h1>Hello {{ name }}!</h1>'
+})
+class HelloWorldComponent {
+  name: string;
+
   constructor() {
-    this.name = 'Angular 2'; // <6>
+    this.name = 'Angular 2';
   }
 }
 
-bootstrap(HelloWorldComponent); // <7>
+bootstrap(HelloWorldComponent);

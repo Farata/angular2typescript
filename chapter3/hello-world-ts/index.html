@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="//cdn.rawgit.com/systemjs/systemjs/0.19.4/dist/system.js"></script> <!--1-->
-  <script src="//code.angularjs.org/2.0.0-alpha.40/angular2.js"></script> <!--2-->
+  <script src="//npmcdn.com/systemjs@0.19.6/dist/system.js"></script>
+  <script src="//npmcdn.com/typescript@1.6.2/lib/typescript.js"></script>
+  <script src="//npmcdn.com/angular2@2.0.0-alpha.46/bundles/angular2.js"></script>
   <script>
-    System.config({ // <3>
-      transpiler: 'typescript',
-      map: {
-        typescript: '//cdn.rawgit.com/Microsoft/TypeScript/v1.6.2/lib/typescript.js'
-      }
-    });
-
-    System.import('main.ts'); // <4>
+    System.config({transpiler: 'typescript'});
+    System.import('main.ts');
   </script>
 </head>
 <body>
-  <hello-world></hello-world> <!--5-->
+  <hello-world></hello-world>
 </body>
 </html>

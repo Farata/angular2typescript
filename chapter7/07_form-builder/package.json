@@ -1,0 +1,20 @@
+{
+  "name": "form-builder",
+  "description": "Demo application showing how to create a form in Angular 2 using the FormBuilder class",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "start": "live-server --no-browser --open=src"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-alpha.45",
+    "systemjs": "0.19.5"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}

@@ -1,13 +1,17 @@
 {
-  "jspm": {
-    "dependencies": {
-      "@reactivex/rxjs": "npm:@reactivex/rxjs@^5.0.0-alpha.3",
-      "angular2": "npm:angular2@^2.0.0-alpha.42",
-      "core-js": "npm:core-js@^1.1.4",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.1"
-    },
-    "devDependencies": {
-      "typescript": "npm:typescript@1.6.2"
-    }
+  "name": "seed_npm_project",
+  "description": "An initial npm-managed project for Chapter 3",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+
+  "dependencies": {
+    "angular2": "2.0.0-alpha.46",
+    "systemjs": "0.19.5"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
   }
 }

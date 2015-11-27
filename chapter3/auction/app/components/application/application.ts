@@ -3,7 +3,7 @@ import {Component, NgFor} from 'angular2/angular2';
 import CarouselComponent from 'app/components/carousel/carousel';
 import FooterComponent from 'app/components/footer/footer';
 import NavbarComponent from 'app/components/navbar/navbar';
-import ProductComponent from 'app/components/product/product';
+import ProductItemComponent from '../product-item/product-item';
 import SearchComponent from 'app/components/search/search';
 import {Product, ProductService} from 'app/services/product-service';
 // end::imports[]
@@ -11,7 +11,7 @@ import {Product, ProductService} from 'app/services/product-service';
 // tag::annotation-component[]
 @Component({
   selector: 'auction-application', // <1>
-  viewBindings: [
+  providers: [
     ProductService // <2>
   ],
   templateUrl: 'app/components/application/application.html', // <3>
@@ -21,7 +21,7 @@ import {Product, ProductService} from 'app/services/product-service';
     CarouselComponent,
     FooterComponent,
     NavbarComponent,
-    ProductComponent,
+    ProductItemComponent,
     SearchComponent]
 })
 // end::annotation-component[]

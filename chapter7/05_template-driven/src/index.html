@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      packages: {'app': {defaultExtension: 'ts'}},
+      map: {'typescript': '../../node_modules/typescript/lib/typescript.js'}
+    });
+    System.import('app/app');
+  </script>
+</head>
+<body>
+  <app>Loading...</app>
+</body>
+</html>

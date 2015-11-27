@@ -2,23 +2,23 @@ import {Injectable} from 'angular2/angular2';
 
 export class Product {
   constructor(
-    public id: number,
-    public title: string,
-    public price: number,
-    public rating: number,
-    public description: string,
-    public categories: string[]) {
+      public id: number,
+      public title: string,
+      public price: number,
+      public rating: number,
+      public description: string,
+      public categories: string[]) {
   }
 }
 
 export class Review {
   constructor(
-    public id: number,
-    public productId: number,
-    public timestamp: Date,
-    public user: string,
-    public rating: number,
-    public comment: string) {
+      public id: number,
+      public productId: number,
+      public timestamp: Date,
+      public user: string,
+      public rating: number,
+      public comment: string) {
   }
 }
 
@@ -30,8 +30,8 @@ export class ProductService {
 
   getReviewsForProduct(productId: number): Review[] {
     return reviews
-      .filter(r => r.productId === productId)
-      .map(r => new Review(r.id, r.productId, new Date(r.timestamp), r.user, r.rating, r.comment));
+        .filter(r => r.productId === productId)
+        .map(r => new Review(r.id, r.productId, new Date(r.timestamp), r.user, r.rating, r.comment));
   }
 }
 
