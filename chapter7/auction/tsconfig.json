@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "module": "system",
-    "outDir": "dist",
-    "rootDir": "app",
-    "target": "es5"
-  }
-}

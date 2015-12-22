@@ -1,19 +1,23 @@
-import {Component} from 'angular2/angular2';
-import {RouteParams} from 'angular2/router';
+import {Component} from 'angular2/core';
+import {NgFor} from 'angular2/common';
+import {RouterLink, RouteParams} from 'angular2/router';
+import {Product, Review, ProductService} from '../../services/product-service';
+import StarsComponent from '../stars/stars';
 
 @Component({
   selector: 'auction-product-page',
-  template: `
-    <div>
-      <img src="http://placehold.it/820x320">
-      <h4>{{productTitle}}</a></h4>
-    </div>
-  `
+  templateUrl: 'app/components/product-detail/product-detail.html',
+  directives: [NgFor, RouterLink, StarsComponent]
 })
-export class ProductDetailComponent {
-  productTitle: string;
+export default class ProductDetailComponent {
+  product: Product;
+  reviews: Review[];
 
-  constructor(params: RouteParams){
-    this.productTitle = params.get('prodTitle');
+  constructor(params: RouteParams, productService: ProductService) {
+    this.product = productService
+        .getProducts()
+        .find(p => p.id === parseInt(params.get('productId')));
+
+    this.reviews = productService.getReviewsForProduct(this.product.id);
   }
 }

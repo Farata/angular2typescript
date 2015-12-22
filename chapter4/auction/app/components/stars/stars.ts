@@ -1,8 +1,9 @@
 // tag::annotations[]
-import {Component, NgFor, OnInit} from 'angular2/angular2';
-
+import {Component, OnInit} from 'angular2/core';
+import {NgFor} from 'angular2/common';
 @Component({
   templateUrl: 'app/components/stars/stars.html',
+  styles: [` .starrating { color: #d17581; }`],
   directives: [NgFor],
   selector: 'auction-stars',
   inputs: ['rating', 'count'] // <1>
@@ -14,7 +15,7 @@ export default class StarsComponent implements OnInit {
   rating: number = 0; // <2>
   stars: boolean[] = []; // <3>
 
-  onInit() { // <4>
+  ngOnInit() { // <4>
     for (let i = 1; i <= this.count; i++) {
       this.stars.push(i > this.rating);
     }

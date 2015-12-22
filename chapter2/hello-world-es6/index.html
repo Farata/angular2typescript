@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2-polyfills.js"></script>
+  <script src="//npmcdn.com/traceur@0.0.93/bin/traceur.js"></script> <!--1-->
+  <script src="//npmcdn.com/systemjs@0.19.8/dist/system.src.js"></script>
+  <script src="//npmcdn.com/rxjs@5.0.0-beta.0/bundles/Rx.js"></script>
+  <script src="//npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2.dev.js"></script>
+  <script>
+    System.config({
+      transpiler: 'traceur', // <2>
+      traceurOptions: {annotations: true} // <3>
+    });
+    System.import('main.js'); // <4>
+  </script>
+</head>
+<body>
+  <hello-world></hello-world>
+</body>
+</html>

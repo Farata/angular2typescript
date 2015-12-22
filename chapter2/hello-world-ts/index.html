@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2-polyfills.js"></script>
+  <script src="//npmcdn.com/typescript@1.7.5/lib/typescript.js"></script>
+  <script src="//npmcdn.com/systemjs@0.19.8/dist/system.src.js"></script>
+  <script src="//npmcdn.com/rxjs@5.0.0-beta.0/bundles/Rx.js"></script>
+  <script src="//npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2.dev.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true}
+    });
+    System.import('main.ts');
+  </script>
+</head>
+<body>
+  <hello-world></hello-world>
+</body>
+</html>

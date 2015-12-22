@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "system",
-    "moduleResolution": "classic",
-    "experimentalDecorators": true,
-    "noImplicitAny": true
-  }
-}

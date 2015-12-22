@@ -2,7 +2,7 @@
   <img src="http://placehold.it/320x150">
   <div class="caption">
     <h4 class="pull-right">{{ product.price | currency }}</h4>
-    <h4><a [router-link]="['/ProductDetail', {'prodTitle': product.title}]">{{ product.title }}</a></h4>
+    <h4><a [routerLink]="['/ProductDetail', {'productId': product.id}]">{{ product.title }}</a></h4>
     <p>{{ product.description }}</p>
   </div>
   <div class="ratings">
