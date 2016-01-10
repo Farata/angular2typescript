@@ -4,5 +4,5 @@ These examples are guaranteed to work with Angular 2, build beta.0, which is the
 
 Manning will publish the second MEAP of our book during the last week of December 2015. This MEAP will include three more chapters (Routing, Dependency Ingection, and Forms).  
 
-Non-breaking changes: we moved the content of Chapter 2 (Intro to TypeScript) to Appendix B, and other chapters were renamed accordingly, and it's reflected in TOC.  
+Non-breaking changes: we moved the content of Chapter 2 (Intro to TypeScript) to Appendix B and other chapters were renamed accordingly (see  the latest toc).  
 
