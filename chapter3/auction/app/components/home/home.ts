@@ -13,7 +13,7 @@ import {ProductService} from '../../services/product-service';
     CarouselComponent,
     ProductItemComponent
   ],
-  styleUrls: ['app/components/home/home.css'],
+  styleUrls: ['/home.css'],
   template: `
     <div class="row carousel-holder">
       <div class="col-md-12">
