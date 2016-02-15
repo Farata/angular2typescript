@@ -64,142 +64,159 @@ Chapter 4. Dependency Injection
 4.6.1. Creating the Product Details Component
 4.7. Summary
 
-Chapter 5. Binding, Events, and Observables
+Chapter 5. Bindings, Observables, and Pipes
 5.1. Data Binding
 5.1.1. Binding to Events
 5.1.2. Binding to Properties and Attributes
 5.1.3. Binding in Templates
 5.1.4. Two-Way Data Binding
 5.2. Events and Observables
-5.2.1. Introduction to Observables
+5.2.1. What are Observables
 5.2.2. Observable Event Streams
 5.2.1. How to Cancel Observables
-5.3. Inter-Component Communications
-5.3.1.1. Input Properties
-5.3.1.2  Output Properties and Custom Events
-5.3.2. The Mediator Pattern
-5.3.3. Changing Templates at Runtime with ngContent
-5.4. Component Lifecycle
-5.4.1 Using ngOnChanges
-5.5. Hands-on: Adding Rating Feature to Auction
-5.6. Summary
+5.3. Pipes
+5.3.1. Custom Pipes
+5.4. Hands-on: Filtering Products in Online Auction
+5.5. Summary
 
-Chapter 6. Working With Forms
-6.1. Overview of HTML Forms
-6.1.1. Introducing a User Registration Form
-6.2. Angular Forms API
-6.2.1. Form Controls
-6.2.1. Form Directives
-6.3. Form Validation
-6.3.1. Programmatic Approach
-6.3.2. Custom Validators
-6.3.3. Custom Validation Directives
-6.4. Template-Driven Forms
-6.4.1. Refactoring a Sample Form Template
-6.4.2. Creating a Sample Form Component
-6.5. Data-Driven Forms
-6.5.1. Creating a Sample Form Component
-6.5.2. Refactoring a Sample Form Template
-6.6. Hands-on: Adding Validation to the Search Form
-6.7. Summary
+Chapter 6. Implementing Components' Communication
+6.1. Inter-Component Communications
+6.1.1. Input and Output Properties
+6.1.1.1 Input Properties
+6.1.1.2  Output Properties and Custom Events
+6.1.2. The Mediator Pattern
+6.1.3. Changing Templates at Runtime with ngContent
+6.2. Component Lifecycle
+6.2.1 Using ngOnChanges
+6.3. Exposing Chile Component's API
+6.4. Hands-on: Adding Rating Feature to Auction
+6.5. Summary
 
-Chapter 7. Communicating with Servers
-7.1 Creating a Web Server with NodeJS and TypeScript
-7.2. Asynchronous HTTP requests
-7.2.1. Consuming HTTP Responses with Observables
-7.2.2. Using the class Request
-7.3. Working with RESTful services
-7.4. Using WebSockets
-7.5. Hands-on: Handling bids in Auction
-7.5.1. Subscribing for bid notifications
-7.5.2. Pushing bid notifications to the subscribers
-7.6. Summary
+Chapter 7. Working With Forms
+7.1. Overview of HTML Forms
+7.1.1. Introducing a User Registration Form
+7.2. Angular Forms API
+7.2.1. Form Controls
+7.2.1. Form Directives
+7.3. Form Validation
+7.3.1. Programmatic Approach
+7.3.2. Custom Validators
+7.3.3. Custom Validation Directives
+7.4. Template-Driven Forms
+7.4.1. Refactoring a Sample Form Template
+7.4.2. Creating a Sample Form Component
+7.5. Data-Driven Forms
+7.5.1. Creating a Sample Form Component
+7.5.2. Refactoring a Sample Form Template
+7.6. Hands-on: Adding Validation to the Search Form
+7.7. Summary
 
-Chapter 8. Testing Angular applications
-8.1. Developing without a compiler
-8.2. Test runners
-8.3. Testing frameworks
-8.4. Working with mock objects
-8.5. Troubleshooting Angular applications
-8.6. In-browser debugging
-8.7. Hands-on: Testing Online Auction
-8.7.1. Unit testing of the auction services
-8.7.2. Functional testing of components
-8.8. Summary
+Chapter 8. Interacting with Servers Using HTTP and WebSockets
 
-Chapter 9. Bundling and Deploying Applications with Webpack
+8.1. Brief Overview of the Http Object API
+8.2. Creating a Web Server with Node and TypeScript
+8.2.1. Creating a Simple Web Server
+8.2.2. Serving JSON
+8.2.3. Live TypeScript Recompilation and Code Reload
+8.2.4. Adding the RESTful API for Serving Products
+8.3. Bringing Angular and Node Together
+8.3.1. Static Resources on the Server
+8.3.2. Making GET Requests with Http Service
+8.3.3. Unwrapping Observables Inside Templates with AsyncPipe
+8.3.4. Injecting HTTP Into a Service
+8.4. Client-Server Communications via WebSockets
+8.4.1. Pushing Data From Node Server
+8.4.2. Turning WebSocket into Observable
+8.5. Hands-on: Implementing Product Search and Bid Notifications
+8.5.1. Implementing Product Search using HTTP
+8.5.2. Broadcasting Auction Bids using WebSocket
+8.6. Summary
 
-9.1 Intro to Webpack
-9.1.1 Bundling Hello World 
-9.2 Webpack Loaders
-9.2.1 Minimizing the Code
-9.2.2 Bundling CSS
-9.2.3. Transpiling Typscript
-9.2.4. Adding Angular to the Bundle
-9.3. Preparing Production Bundles
-9.4 Hands-on: Deploying Online Auction with Webpack
-9.5 Summary
+Chapter 9. Testing Angular applications
+9.1. Developing without a compiler
+9.2. Test runners
+9.3. Testing frameworks
+9.4. Working with mock objects
+9.5. Troubleshooting Angular applications
+9.6. In-browser debugging
+9.7. Hands-on: Testing Online Auction
+9.7.1. Unit testing of the auction services
+9.7.2. Functional testing of components
+9.8. Summary
+
+Chapter 10. Bundling and Deploying Applications with Webpack
+
+10.1 Getting to know Webpack
+10.1.1 Bundling Hello World 
+10.2 Webpack Loaders
+10.2.1 Minimizing the Code
+10.2.2 Bundling CSS
+10.2.3. Transpiling Typscript
+10.2.4. Adding Angular to the Bundle
+10.3. Preparing Production Bundles
+10.4 Hands-on: Deploying Online Auction with Webpack
+10.5 Summary
 
 Appendix A. Overview of ECMAScript 6
-10.1. How to Run Code Samples
-10.2. Template Literals
-10.2.1. Multi-line Strings
-10.2.2. Tagged Template Strings
-10.3. Optional Parameters and Default Values
-10.4. Scope of Variables
-10.4.1. Variable Hoisting
-10.4.2. Block Scoping With let and const
-10.4.3. Block Scope for Functions
-10.4.4. Arrow Function Expressions, This, and That
-10.5. Rest and Spread Operators
-10.6. Generators
-10.7. Destructuring
-10.7.1. Destructuring of Objects
-10.7.2. Destructuring of Arrays
-10.8. Iterating with forEach(), for-in, and for-of
-10.8.1. Using forEach()
-10.8.2. Using for-in
-10.8.3. Using for-of
-10.9. Classes and Inheritance
-10.9.1. Constructors
-10.9.2. Static Variables
-10.9.3. Getters, Setters, and Method Definitions
-10.9.4. The super Keyword and the super Function
-10.10. Asynchronous Processing with Promises
-10.10.1. A Callback Hell
-10.10.2. ES6 Promises
-10.10.3. Resolving Several Promises at Once
-10.11. Modules
-10.11.1. Imports and Exports
-10.11.2. Loading Modules Dynamically
-10.12. What to Read Next on ES6
-10.13. Summary
+11.1. How to Run Code Samples
+11.2. Template Literals
+11.2.1. Multi-line Strings
+11.2.2. Tagged Template Strings
+11.3. Optional Parameters and Default Values
+11.4. Scope of Variables
+11.4.1. Variable Hoisting
+11.4.2. Block Scoping With let and const
+11.4.3. Block Scope for Functions
+11.4.4. Arrow Function Expressions, This, and That
+11.5. Rest and Spread Operators
+11.6. Generators
+11.7. Destructuring
+11.7.1. Destructuring of Objects
+11.7.2. Destructuring of Arrays
+11.8. Iterating with forEach(), for-in, and for-of
+11.8.1. Using forEach()
+11.8.2. Using for-in
+11.8.3. Using for-of
+11.9. Classes and Inheritance
+11.9.1. Constructors
+11.9.2. Static Variables
+11.9.3. Getters, Setters, and Method Definitions
+11.9.4. The super Keyword and the super Function
+11.10. Asynchronous Processing with Promises
+11.10.1. A Callback Hell
+11.10.2. ES6 Promises
+11.10.3. Resolving Several Promises at Once
+11.11. Modules
+11.11.1. Imports and Exports
+11.11.2. Loading Modules Dynamically
+11.12. What to Read Next on ES6
+11.13. Summary
 
 Appendix B. TypeScript as a Language for Angular Applications
-11.1. Why Writing Angular Apps in TypeScript
-11.2. Getting Started With TypeScript
-11.2.1. Installing and Using TypeScript Compiler
-11.3. TypeScript as a Superset of JavaScript
-11.4. Optional Types
-11.5. Functions
-11.5.1. Default Parameters
-11.5.2. Optional Parameters
-11.5.3. Arrow Function Expressions
-11.6. Classes
-11.6.1. Access Modifiers
-11.6.2. Methods
-11.6.3. Inheritance
-11.7. Generics
-11.8. Interfaces
-11.8.1. Declaring Custom Types with Interfaces
-11.8.2. Using the Keyword implements
-11.8.3. Using Callable Interfaces
-11.9. TypeScript Modules
-11.10. Adding the Class Metadata With Annotations
-11.11. Using Type Definition Files
-11.12. Bringing Together TypeScript and Angular
-11.13. Overview of the TypeScript/Angular Development Process
-11.14. Summary
+12.1. Why Writing Angular Apps in TypeScript
+12.2. Getting Started With TypeScript
+12.2.1. Installing and Using TypeScript Compiler
+12.3. TypeScript as a Superset of JavaScript
+12.4. Optional Types
+12.5. Functions
+12.5.1. Default Parameters
+12.5.2. Optional Parameters
+12.5.3. Arrow Function Expressions
+12.6. Classes
+12.6.1. Access Modifiers
+12.6.2. Methods
+12.6.3. Inheritance
+12.7. Generics
+12.8. Interfaces
+12.8.1. Declaring Custom Types with Interfaces
+12.8.2. Using the Keyword implements
+12.8.3. Using Callable Interfaces
+12.9. TypeScript Modules
+12.10. Adding the Class Metadata With Annotations
+12.11. Using Type Definition Files
+12.12. Bringing Together TypeScript and Angular
+12.13. Overview of the TypeScript/Angular Development Process
+12.14. Summary
 
 Appendix C. Brief Overview of Web Components
 13.1. Shadow DOM

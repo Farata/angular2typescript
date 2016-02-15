@@ -16,8 +16,10 @@ import {RouteConfig,  ROUTER_DIRECTIVES, ROUTER_PROVIDERS,
 })
 @RouteConfig([
     {path: '/',        component: HomeComponent, as: 'Home'},
-    {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail', data:{isProd: true}  }
-   // {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail'  }
+    {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail'  }
+
+    // An Illustration of using RouteData
+    // {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail', data:{isProd: true}  }
 ])
 class RootComponent{}
 

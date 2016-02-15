@@ -1,0 +1,53 @@
+= Data Binding
+
+:ref_dom: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+Main characteristic - one-way, unidirectional. It means whenever you update a component's property (model) the view is automatically updated. View never updates the model. To update the view you need to define a corresponding event handler and manually updated the model.
+
+How does it differs from AngularJS?
+
+There are four types of data binding in Angular:
+
+== Attribute binding
+
+HTML element's attribute is updated with a text value.
+
+== Property binding
+
+Every HTML element is backed by an instance of a JavaScript object - {ref_dom}[DOM Node]. DOM Node is an HTML Element's counterpart accessible from the JavaScript.
+
+Unlike the attribute binding the property binding syncs DOM node's property rather than HTML element's attribute with an Angular component's property. Often HTML attributes have corresponding DOM properties, but it's not always the case. For example `hidden` attribute that allows hiding elements on the page is not supported in IE 10 and earlier versions. In the example below the `hidden` attribute will hide the error message in modern versions of IE, Chrome and Firefox, but the message will be visible in IE10 since there is no `hidden` property that implements this functionality on the DOM node.
+
+[source, html]
+----
+<div hidden>Error message</div>
+----
+
+Unlike HTML attributes DOM node properties can be of any type supported by JavaScript.
+
+== Event binding
+
+[source, html]
+----
+<input (input)="onInputEvent($event)">
+----
+
+== Template binding
+
+Unlike other Angular binding template binding transforms the view template. To make them distinguishable for compiler we need a star syntax. The example below conditionally shows/hides the error message.
+
+[source, html]
+----
+<p *ngIf="showError">Error message</p>
+----
+
+It transformed by the compiler to the following HTML markup:
+
+[source, html]
+----
+<template [ngIf]="showError">
+  <p>Error message</p>
+</template>
+----
+
+HTML Template element is part of emerging Web Components. Unlike most of the elements it's not rendered by the browsers. It's content stamped out to render the enclosed markup.

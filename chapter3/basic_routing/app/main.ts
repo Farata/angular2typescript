@@ -25,4 +25,3 @@ class RootComponent{
 // bootstrap(RootComponent, [ROUTER_PROVIDERS, provide(APP_BASE_HREF,{useValue:'/'}) ]);
 
 bootstrap(RootComponent, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
-
