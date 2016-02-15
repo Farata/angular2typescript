@@ -217,13 +217,3 @@ Appendix B. TypeScript as a Language for Angular Applications
 12.12. Bringing Together TypeScript and Angular
 12.13. Overview of the TypeScript/Angular Development Process
 12.14. Summary
-
-Appendix C. Brief Overview of Web Components
-13.1. Shadow DOM
-13.2. Templates
-13.3. Custom Elements
-13.4. HTML Imports
-13.5. Using Web Components in Angular
-13.6. Using Polymer elements
-13.7. Angular Material Components
-13.8. Summary
