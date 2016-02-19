@@ -15,9 +15,15 @@
     System.config({
       transpiler: 'typescript',
       typescriptOptions: {emitDecoratorMetadata: true},
-      packages: {app: {defaultExtension: 'ts'}}
+      packages: {app: {defaultExtension: 'ts'}},
+      meta: {
+        'app/mediator/stock.ts': {
+          format: 'es6'
+        }
+      }
+
     });
-    System.import('app/binding/input_property_binding');
+    System.import('app/mediator/mediator');
   </script>
 </body>
 </html>

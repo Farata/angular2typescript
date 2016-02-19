@@ -1,4 +1,4 @@
-export class Stock {
+export interface Stock {
     stockSymbol: string;
     bidPrice: number;
 }
