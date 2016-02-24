@@ -1,6 +1,5 @@
 // tag::imports[]
 import {Component} from 'angular2/core';
-import {NgFor} from 'angular2/common';
 import CarouselComponent from 'app/components/carousel/carousel';
 import FooterComponent from 'app/components/footer/footer';
 import NavbarComponent from 'app/components/navbar/navbar';
@@ -18,7 +17,6 @@ import {Product, ProductService} from 'app/services/product-service';
   templateUrl: 'app/components/application/application.html', // <3>
   styleUrls: ['app/components/application/application.css'], // <4>
   directives: [ // <5>
-    NgFor,
     CarouselComponent,
     FooterComponent,
     NavbarComponent,

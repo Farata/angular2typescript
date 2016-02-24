@@ -5,7 +5,7 @@ import {Component} from 'angular2/core';
   selector: 'app',
   template: `<h1>Hello {{ name }}!</h1>`
 })
-class App {
+class AppComponent {
   name: string;
 
   constructor() {
@@ -13,4 +13,4 @@ class App {
   }
 }
 
-bootstrap(App);
+bootstrap(AppComponent);
