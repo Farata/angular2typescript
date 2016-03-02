@@ -1,6 +1,5 @@
-import {bootstrap} from '../../node_modules/angular2/platform/browser.d';
-import {Component, Output, Directive, EventEmitter} from '../../node_modules/angular2/core.d';
-
+import {bootstrap} from 'angular2/platform/browser';
+import {Component, Output, EventEmitter} from 'angular2/core';
 
 interface IPriceQuote {
     stockSymbol: string;
@@ -28,7 +27,7 @@ class PriceQuoterComponent {
 
             this.price = priceQuote.lastPrice;
 
-            this.lastPrice.emit(priceQuote)
+            this.lastPrice.emit(priceQuote);
         }, 1000);
     }
 }
