@@ -32,9 +32,14 @@ class AppComponent {
             .subscribe(
                 res => {
                     if (res['cod'] === '404') return;
-                    this.temperature =
-                        `Current temperature is  ${res.list[0].main.temp}F, ` +
-                        `humidity: ${res.list[0].main.humidity}%`;
+                    if (!res.list[0]) {
+                        this.temperature ='City is not found';
+                    } else {
+
+                        this.temperature =
+                            `Current temperature is  ${res.list[0].main.temp}F, ` +
+                            `humidity: ${res.list[0].main.humidity}%`;
+                    }
                 },
                 err => console.log(`Can't get weather. Error code: %s, URL: %s`, err.message, err.url),
                 () => console.log(`Weather is retrieved`)

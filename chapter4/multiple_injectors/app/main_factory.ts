@@ -1,8 +1,7 @@
 /*
  This version of main.ts illustrates the use of useFactory and useValue
  */
-//import 'core-js/es6'
-// import 'reflect-metadata';
+
 import {bootstrap} from 'angular2/platform/browser';
 import {Component, provide} from 'angular2/core';
 

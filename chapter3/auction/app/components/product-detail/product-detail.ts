@@ -10,7 +10,7 @@ import {RouteParams} from 'angular2/router';
     </div>
   `
 })
-export class ProductDetailComponent {
+export default class ProductDetailComponent {
   productTitle: string;
 
   constructor(params: RouteParams){

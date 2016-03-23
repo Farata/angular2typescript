@@ -1,9 +1,7 @@
 import {Component, EventEmitter, Input, Output} from 'angular2/core';
-import {NgFor} from 'angular2/common';
 
 @Component({
   selector: 'auction-stars',
-  directives: [NgFor],
   styles: [`.starrating { color: #d17581; }`],
   templateUrl: 'app/components/stars/stars.html'
 })

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="../node_modules/typescript/lib/typescript.js"></script>
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="../node_modules/angular2/bundles/http.dev.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+</head>
+<body>
+  <http-client>Loading...</http-client>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      packages: {app: {defaultExtension: 'ts'}
+      }
+    });
+    System.import('app/main_with_service_websocket');
+  </script>
+</body>
+</html>

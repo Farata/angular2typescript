@@ -21,7 +21,6 @@ class ChildComponent implements OnChanges {
   message: string = 'Initial message';
 
   ngOnChanges(changes: IChanges) {
-
     console.log(JSON.stringify(changes, null, 2));
   }
 }

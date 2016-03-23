@@ -1,0 +1,38 @@
+{
+  "name": "auction_ch8",
+  "description": "Sample Online Auction from Chapter 8 from the book Angular 2 Development with TypeScript",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "postinstall": "typings install",
+    "start": "node build/auction.js",
+    "dev": "nodemon build/auction.js",
+    "test": "karma start karma.conf.js"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "angular2": "2.0.0-beta.11",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "^0.6.4",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.3",
+    "jquery": "^2.2.2",
+    "systemjs": "0.19.24",
+    "ws": "^1.0.1"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "nodemon": "^1.8.1",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
+  }
+}

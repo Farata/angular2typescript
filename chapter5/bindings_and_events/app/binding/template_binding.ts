@@ -1,6 +1,5 @@
-import {NgIf} from 'angular2/common';
 import {bootstrap} from 'angular2/platform/browser';
-import {Component, Input} from 'angular2/core';
+import {Component} from 'angular2/core';
 
 @Component({
     selector: 'app',

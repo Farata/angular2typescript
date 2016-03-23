@@ -4,7 +4,7 @@ import HomeComponent from '../home/home';
 import NavbarComponent from '../navbar/navbar';
 import FooterComponent from '../footer/footer';
 import SearchComponent from '../search/search';
-import {ProductDetailComponent} from "../product-detail/product-detail";
+import ProductDetailComponent from "../product-detail/product-detail";
 
 @Component({
   selector: 'auction-application',

@@ -20,9 +20,9 @@ export default class ProductDetailComponent {
   isReviewHidden: boolean = true;
 
   constructor(params: RouteParams, productService: ProductService) {
-    this.product = productService
-        .getProducts()
-        .find(p => p.id === parseInt(params.get('productId')));
+
+    let prodId: number = parseInt(params.get('productId'));
+    this.product = productService.getProductById(prodId);
 
     this.reviews = productService.getReviewsForProduct(this.product.id);
   }

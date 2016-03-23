@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ This file is used only for testing custom_observable_service_sibscriber.ts
+ The Node server is not used in this example
+
+ Just start http-server and open http://localhost:8080
+
+-->
+<head>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+</head>
+<body>
+  <subscriber>Loading...</subscriber>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      map:{'app': 'client/app'},
+      packages: {app: {defaultExtension: 'ts'}
+      }
+    });
+    System.import('app/custom_observable_service_subscriber');
+  </script>
+</body>
+</html>

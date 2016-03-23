@@ -1,5 +1,4 @@
 import {Component} from 'angular2/core';
-import {NgFor} from 'angular2/common';
 import {RouteParams} from 'angular2/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
@@ -8,7 +7,7 @@ import StarsComponent from '../stars/stars';
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
   templateUrl: 'app/components/product-detail/product-detail.html',
-  directives: [NgFor, StarsComponent]
+  directives: [StarsComponent]
 })
 export default class ProductDetailComponent {
   product: Product;
@@ -20,9 +19,9 @@ export default class ProductDetailComponent {
   isReviewHidden: boolean = true;
 
   constructor(params: RouteParams, productService: ProductService) {
-    this.product = productService
-      .getProducts()
-      .find(p => p.id === parseInt(params.get('productId')));
+
+    let prodId: number = parseInt(params.get('productId'));
+    this.product = productService.getProductById(prodId);
 
     this.reviews = productService.getReviewsForProduct(this.product.id);
   }

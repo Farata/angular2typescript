@@ -6,7 +6,7 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-  <script src="/node_modules/angular2/bundles/http.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
 </head>
 <body>
   <app>Loading...</app>
@@ -19,11 +19,13 @@
       meta: {
         'app/mediator/stock.ts': {
           format: 'es6'
+        },
+        'app/mediator_on_push/stock.ts': {
+          format: 'es6'
         }
       }
-
     });
-    System.import('app/binding/input_property_binding');
+    System.import('./app/mediator_on_push/mediator.ts');
   </script>
 </body>
 </html>

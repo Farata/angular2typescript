@@ -28,6 +28,10 @@ export class ProductService {
     return products.map(p => new Product(p.id, p.title, p.price, p.rating, p.description, p.categories));
   }
 
+  getProductById(productId: number): Product {
+    return products.find(p => p.id === productId);
+  }
+
   getReviewsForProduct(productId: number): Review[] {
     return reviews
         .filter(r => r.productId === productId)

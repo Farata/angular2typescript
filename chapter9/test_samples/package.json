@@ -1,0 +1,27 @@
+{
+  "name": "test_samples",
+  "description": "A sample Weather app showing how to test Angular 2 applications",
+  "private": true,
+  "scripts": {
+    "start": "live-server",
+    "test": "karma start karma.conf.js"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-beta.11",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "^0.19.24",
+    "zone.js": "^0.6.4"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "live-server": "^0.9.2",
+    "typescript": "^1.8.9"
+  }
+}

@@ -1,5 +1,4 @@
 import {Component} from 'angular2/core';
-import {NgFor} from 'angular2/common';
 import {Product, ProductService} from 'app/services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
@@ -9,7 +8,6 @@ import {ProductService} from '../../services/product-service';
   selector: 'auction-home-page',
   providers: [ProductService],
   directives: [
-    NgFor,
     CarouselComponent,
     ProductItemComponent
   ],

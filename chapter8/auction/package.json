@@ -1,0 +1,32 @@
+{
+  "name": "auction_ch8",
+  "description": "Sample Online Auction from Chapter 8 from the book Angular 2 Development with TypeScript",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "postinstall": "typings install",
+    "start": "node build/auction.js",
+    "dev": "nodemon build/auction.js"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "bootstrap": "^3.3.6",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.9",
+    "ws": "^1.0.1",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1",
+    "typescript": "^1.7.5",
+    "typings": "^0.6.3"
+  }
+}

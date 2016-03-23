@@ -3,7 +3,7 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'stock-search',
-    template: `<input type='text' placeholder= "Enter stock symbol" [(ngModel)] = "lastStockSymbol">
+    template: `<input type='text' placeholder= "Enter stock symbol" [(ngModel)] = "lastStockSymbol" />
                <br>The value of lastStockSymbol is {{lastStockSymbol}}`
 })
 class StockComponent {

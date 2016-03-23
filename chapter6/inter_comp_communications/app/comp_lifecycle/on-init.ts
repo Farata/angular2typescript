@@ -1,11 +1,11 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {Component, Input, OnInit} from 'angular2/core';
+import {Component, Input, OnInit, OnChanges} from 'angular2/core';
 
 @Component({
   selector: 'child',
   template: '{{greeting}}'
 })
-class ChildComponent implements OnInit { // OnInit is optional
+class ChildComponent implements OnInit, OnChanges {
   @Input() greeting: string;
 
   /** greeting isn't initialized yet */
@@ -19,9 +19,8 @@ class ChildComponent implements OnInit { // OnInit is optional
   }
 
   /**
-   * Invoked after very first ngOnChanges(). Might be useful when you want to
-   * initialize the component's state right after the component is get passed
-   * with initial @Input() properties values.
+   * Invoked after very first ngOnChanges(). It's used if you want to
+     use the values from component's properties, which are not available in the constructor.
    */
   ngOnInit() {
     console.log(`ngOnInit: ${this.greeting}`);

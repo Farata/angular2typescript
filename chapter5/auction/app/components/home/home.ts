@@ -1,5 +1,5 @@
 import {Component, Pipe, PipeTransform} from 'angular2/core';
-import {NgFor, Control, NgFormControl} from 'angular2/common';
+import {Control, NgFormControl} from 'angular2/common';
 import {Product, ProductService} from 'app/services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
@@ -10,7 +10,6 @@ import 'rxjs/add/operator/debounceTime';
 @Component({
   selector: 'auction-home-page',
   directives: [
-    NgFor,
     NgFormControl,
     CarouselComponent,
     ProductItemComponent

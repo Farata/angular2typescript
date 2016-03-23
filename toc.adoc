@@ -132,28 +132,29 @@ Chapter 8. Interacting with Servers Using HTTP and WebSockets
 8.5.2. Broadcasting Auction Bids using WebSocket
 8.6. Summary
 
-Chapter 9. Testing Angular applications
-9.1. Developing without a compiler
-9.2. Test runners
-9.3. Testing frameworks
-9.4. Working with mock objects
-9.5. Troubleshooting Angular applications
-9.6. In-browser debugging
-9.7. Hands-on: Testing Online Auction
-9.7.1. Unit testing of the auction services
-9.7.2. Functional testing of components
-9.8. Summary
+Chapter 9. Unit Testing Angular Applications
+
+9.1 Getting to know Jasmine
+9.2 What Comes with Angular Testing Library
+9.2.1 Testing Services
+9.2.2 Testing Component Router
+9.2.3 Testing Components
+9.3 Testing A Sample Weather Application
+9.3.1 Testing the Weather Router
+9.3.1 Testing the Weather Service
+9.3.1 Testing the Weather Component
+9.4 Running Tests with Karma
+9.5 Hands-on: Unit Testing of Online Auction 
+9.6 Summary
 
 Chapter 10. Bundling and Deploying Applications with Webpack
 
-10.1 Getting to know Webpack
-10.1.1 Bundling Hello World 
-10.2 Webpack Loaders
-10.2.1 Minimizing the Code
-10.2.2 Bundling CSS
-10.2.3. Transpiling Typscript
-10.2.4. Adding Angular to the Bundle
-10.3. Preparing Production Bundles
+10.1 Getting to Know Webpack
+10.1.1 Hello World with Webpack 
+10.1.2 Loaders
+10.1.3 Plugins
+10.2 Creating a Basic Webpack Configuration for Angular
+10.3 Creating Dev and Prod Webpack Configurations for Angular
 10.4 Hands-on: Deploying Online Auction with Webpack
 10.5 Summary
 
