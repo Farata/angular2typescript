@@ -1,5 +1,6 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-All examples except Chapter 7 work with Angular 2 beta.6.  Keeping beta.0 in ch7 samples because of the bug in Angular.
+All examples work with Angular 2 beta.11.  If you see an earlier verion of Angular in package.json, upgrade it to a newer one. If any of the code samples doesn't work with the latest version of Angular2, please open an issue.
+
 
 
