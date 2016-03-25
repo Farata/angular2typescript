@@ -1,10 +1,11 @@
 {
-  "dependencies": {},
-  "devDependencies": {},
   "ambientDependencies": {
-    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
-    "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#3b6d42912788a3b5b47edf271f551b80966fd9e6",
-    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#2b2353068b57c5f0e10439f5a7cbca5ae41aa3d5",
-    "ws": "github:DefinitelyTyped/DefinitelyTyped/ws/ws.d.ts#34ae8420ec14158c1015882f876bbe99ad7110af"
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
+    "express": "registry:dt/express#4.0.0+20160317120654",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#0.0.0+20160317120654",
+    "mime": "registry:dt/mime#0.0.0+20160316155526",
+    "node": "registry:dt/node#4.0.0+20160319033040",
+    "serve-static": "registry:dt/serve-static#0.0.0+20160317120654",
+    "ws": "registry:dt/ws#0.0.0+20160317120654"
   }
 }
