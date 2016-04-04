@@ -1,7 +1,10 @@
 {
+  "ambientDevDependencies": {
+    "jasmine": "registry:dt/jasmine#2.2.0+20160317120654"
+  },
   "ambientDependencies": {
-    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
-    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#fab0b336b0414fac23963bde83f7d7077f6cf14c",
-    "zone.js": "github:DefinitelyTyped/DefinitelyTyped/zone.js/zone.js.d.ts#b923a5aaf013ac84c566f27ba6b5843211981c7a"
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654",
+    "jquery": "registry:dt/jquery#1.10.0+20160316155526",
+    "zone.js": "registry:dt/zone.js#0.0.0+20160316155526"
   }
 }

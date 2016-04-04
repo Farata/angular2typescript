@@ -44,10 +44,10 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress: {screw_ie8 : true},
-      mangle: {
-        screw_ie8 : true,
-        except: ['RouterLink'] // TODO: Remove after #6678 fixed
-      }
+      mangle: false, // TODO: Remove after #6678 fixed
+      // mangle: {
+      //   screw_ie8 : true,
+      // }
     })
   ],
   resolve: {

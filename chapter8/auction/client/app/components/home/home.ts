@@ -36,7 +36,7 @@ export default class HomeComponent {
     this.productService.searchEvent
       .subscribe(
         params => this.products = this.productService.search(params),
-        console.error.bind(console),
+          err =>  console.log("Can't get products. Error code: %s, URL: %s "),
         () => console.log('DONE')
       );
   }

@@ -16,8 +16,7 @@ module.exports = function (config) {
       {pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: false},
       {pattern: 'karma-test-runner.js', included: true, watched: false},
       {pattern: 'system.config.js', included: true, watched: false},
-
-      {pattern: 'app/**/*.ts', included: false, watched: false}
+      {pattern: 'app/**/*.ts', included: false, watched: true}
     ],
     proxies: {
       '/app/': '/base/app/'

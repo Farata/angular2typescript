@@ -4,7 +4,6 @@ import {
   ControlGroup,
   FormBuilder,
   Validators,
-  CORE_DIRECTIVES,
   FORM_DIRECTIVES
 } from 'angular2/common';
 
@@ -13,7 +12,7 @@ import {ProductService} from 'app/services/product-service';
 @Component({
   selector: 'auction-search',
   providers: [ProductService],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
+  directives: [FORM_DIRECTIVES],
   templateUrl: 'app/components/search/search.html'
 })
 export default class SearchComponent {

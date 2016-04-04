@@ -18,8 +18,8 @@ module.exports = function (config) {
       {pattern: '../karma-test-runner.js', included: true, watched: false},
       {pattern: 'config.js', included: true, watched: false},
       // Paths loaded via module imports.
-      {pattern: 'app/**/*.ts', included: false, watched: false},
-      {pattern: 'app/**/*.html', included: false, watched: false}
+      {pattern: 'app/**/*.ts', included: false, watched: true},
+      {pattern: 'app/**/*.html', included: false, watched: true}
     ],
     proxies: {
       // Required for component assets fetched by Angular's compiler

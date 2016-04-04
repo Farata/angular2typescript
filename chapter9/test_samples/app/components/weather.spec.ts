@@ -23,8 +23,8 @@ describe('WeatherComponent', () => {
   ]);
 
   beforeEach(inject([TestComponentBuilder, WeatherComponent], (tcb, cmp) => {
-    component = cmp;
     testComponentBuilder = tcb;
+    component = cmp;
   }));
 
   it('should display the weather ', done => {

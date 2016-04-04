@@ -24,7 +24,7 @@ export default class ProductDetailComponent implements OnDeactivate {
   isReviewHidden: boolean = true;
   isWatching: boolean = false;
 
-  private subscription: Subscription<any>;
+  private subscription: Subscription;
 
   constructor(
       params: RouteParams,

@@ -12,7 +12,7 @@ export class Review {
   constructor(
     public id: number,
     public productId: number,
-    public timestamp: Date,
+    public timestamp: string,
     public user: string,
     public rating: number,
     public comment: string) {}
@@ -41,12 +41,19 @@ export function getProductById(productId: number): Product {
   return products.find(p => p.id === productId);
 }
 
-export function getReviewsByProductId(productId: number): Review {
+export function getReviewsByProductId(productId: number): Review[] {
   return reviews.filter(r => r.productId === productId);
 }
 
 var products = [
-  new Product(0, 'First Product', 24.99, 4.3, 'This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', ['electronics', 'hardware']),
+  {
+    "id": 0,
+    "title": 'First Product',
+    "price": 24.99,
+    "rating": 4.3,
+    "description": 'This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    "categories": ['electronics', 'hardware']
+  },
   {
     "id": 1,
     "title": "Second Product",

@@ -30,7 +30,7 @@ module.exports = {
       {test: /\.css$/,   loader: 'to-string!css', exclude: /node_modules/},
       {test: /\.css$/,   loader: 'style!css', exclude: /src/},
       {test: /\.html$/,  loader: 'raw-loader'},
-      {test: /\.ts$/,    loader: 'ts-loader'},
+      {test: /\.ts$/,    loader: 'ts', query: {compilerOptions: {noEmit: false}}},
       {test: /\.woff$/,  loader: "url?limit=10000&minetype=application/font-woff"},
       {test: /\.woff2$/, loader: "url?limit=10000&minetype=application/font-woff"},
       {test: /\.ttf$/,   loader: "url?limit=10000&minetype=application/octet-stream"},
@@ -52,10 +52,8 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress : {screw_ie8 : true},
-      mangle: {
-        screw_ie8 : true,
-        except: ['RouterLink'] // TODO: Remove after #6678 fixed
-      }
+      mangle: false, // TODO: Remove after #6678 fixed
+      // mangle: {screw_ie8 : true}
     }),
     new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'})
   ],

@@ -12,7 +12,7 @@ export class Review {
   constructor(
     public id: number,
     public productId: number,
-    public timestamp: Date,
+    public timestamp: string,
     public user: string,
     public rating: number,
     public comment: string) {}
@@ -41,7 +41,7 @@ export function getProductById(productId: number): Product {
   return products.find(p => p.id === productId);
 }
 
-export function getReviewsByProductId(productId: number): Review {
+export function getReviewsByProductId(productId: number): Review[] {
   return reviews.filter(r => r.productId === productId);
 }
 

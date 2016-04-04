@@ -6,13 +6,12 @@
     "start": "live-server"
   },
   "dependencies": {
-    "es6-promise": "^3.1.2",
-    "es6-shim": "^0.33.13",
+    "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.24",
-    "zone.js": "0.5.15",
-    "angular2": "2.0.0-beta.9"
+    "zone.js": "0.6.6",
+    "angular2": "2.0.0-beta.12"
   },
   "devDependencies": {
     "live-server": "^0.9.0",

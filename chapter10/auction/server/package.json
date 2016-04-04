@@ -15,7 +15,7 @@
   "devDependencies": {
     "compression": "^1.6.1",
     "nodemon": "^1.8.1",
-    "typescript": "~1.7.5",
-    "typings": "^0.6.2"
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
   }
 }

@@ -1,6 +1,7 @@
 <form [ngFormModel]="formModel"
       (ngSubmit)="onSearch()"
       novalidate>
+
   <div *ngIf="true"> <!-- Workaround for https://github.com/angular/angular/issues/6374 -->
   <div class="form-group"
        [class.has-error]="formModel.hasError('minlength', 'title')">
