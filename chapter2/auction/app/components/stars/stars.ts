@@ -1,17 +1,13 @@
-// tag::annotations[]
-import {Component,  OnInit} from 'angular2/core'; // <1>
+import {Component,  Input, OnInit} from 'angular2/core'; // <1>
 
 @Component({
   templateUrl: 'app/components/stars/stars.html',
   styles: [` .starrating { color: #d17581; }`],
-  selector: 'auction-stars',
-  inputs: ['rating', 'count'] // <2>
+  selector: 'auction-stars'
 })
-// end::annotations[]
-// tag::class[]
 export default class StarsComponent implements OnInit {
-  count: number = 5; // <1>
-  rating: number = 0; // <2>
+  @Input() count: number = 5; // <1>
+  @Input() rating: number = 0; // <2>
   stars: boolean[] = []; // <3>
 
   ngOnInit() { // <4>
@@ -20,4 +16,3 @@ export default class StarsComponent implements OnInit {
     }
   }
 }
-// end::class[]
