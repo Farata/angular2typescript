@@ -52,8 +52,8 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress : {screw_ie8 : true},
-      mangle: false, // TODO: Remove after #6678 fixed
-      // mangle: {screw_ie8 : true}
+       //mangle: false, // TODO: Remove after #6678 fixed
+      mangle: {screw_ie8 : true } // TODO: Uncomment after #6678 fixed
     }),
     new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'})
   ],

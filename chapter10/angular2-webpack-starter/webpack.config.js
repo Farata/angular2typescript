@@ -1,6 +1,5 @@
 const path               = require('path');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-const CopyWebpackPlugin  = require('copy-webpack-plugin');
 const DefinePlugin       = require('webpack/lib/DefinePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
@@ -41,7 +40,6 @@ module.exports = {
   },
   plugins: [
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
-    new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})
   ],
   resolve: {

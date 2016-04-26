@@ -3,9 +3,8 @@ import {Component, provide} from 'angular2/core';
 import {HomeComponent} from './components/home';
 import {ProductDetailComponentParam} from "./components/product_param";
 
-import {RouteConfig,  ROUTER_DIRECTIVES, ROUTER_PROVIDERS,
-        LocationStrategy, HashLocationStrategy} from 'angular2/router';
-
+import {RouteConfig,  ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
 
 @Component({
     selector: 'basic-routing',
@@ -19,7 +18,7 @@ import {RouteConfig,  ROUTER_DIRECTIVES, ROUTER_PROVIDERS,
     {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail'  }
 
     // An Illustration of using RouteData
-    {path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail', data:{isProd: true}  }
+    //{path: '/product/:id', component: ProductDetailComponentParam, as: 'ProductDetail', data:{isProd: true}  }
 ])
 class RootComponent{}
 

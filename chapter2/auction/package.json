@@ -1,6 +1,6 @@
 {
   "name": "auction_ch2",
-  "description": "Sample Online Auction from Chapter 2 from the boo Angular 2 Development with TypeScript",
+  "description": "Sample Online Auction from Chapter 2 from the book Angular 2 Development with TypeScript",
   "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "npm": ">=2.14.x"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.13",
+    "angular2": "2.0.0-beta.14",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",

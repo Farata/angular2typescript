@@ -10,9 +10,9 @@ app.use('/node_modules', express.static(path.join(__dirname, '..', 'node_modules
 
 // HTTP Server
 app.get('/', (req, res) => {
-    //res.sendFile(path.join(__dirname, '..', 'client/simple_websocket_client.html'));
+    res.sendFile(path.join(__dirname, '..', 'client/simple_websocket_client.html'));
 
-    res.sendFile(path.join(__dirname, '..', 'client/angular_websocket_client.html'));
+    //res.sendFile(path.join(__dirname, '..', 'client/angular_websocket_client.html'));
 });
 
 const httpServer = app.listen(8000, "localhost", () => {

@@ -18,7 +18,7 @@ function ssnValidator(control: Control): {[key: string]: any} {
   template: `
     <form [ngFormModel]="form">
       SSN: <input type="text" ngControl="my-ssn">
-           <span [hidden]="!form.hasError('ssn', 'my-ssn')">SSN in invalid</span>
+           <span [hidden]="!form.hasError('ssn', 'my-ssn')">SSN is invalid</span>
     </form>
   `
 })
