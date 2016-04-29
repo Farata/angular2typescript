@@ -16,8 +16,8 @@ import {APP_BASE_HREF, LocationStrategy, HashLocationStrategy} from 'angular2/pl
 })
 
 @RouteConfig([
-    {path: '/',        component: HomeComponent, as: 'Home'},
-    {path: '/product', component: ProductDetailComponent, as: 'ProductDetail'}
+    {path: '/', component: HomeComponent, as: 'Home'},
+    { path: '/product', component: ProductDetailComponent, as: 'ProductDetail'}
 ])
 class RootComponent{
 }

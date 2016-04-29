@@ -10,17 +10,17 @@
     "npm": ">=2.14.x"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.14",
+    "angular2": "2.0.0-beta.17",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.24",
-    "zone.js": "^0.6.6",
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "0.19.26",
+    "zone.js": "^0.6.12",
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.2"
   },
   "devDependencies": {
-    "live-server": "^0.8.2",
+    "live-server": "0.8.2",
     "typescript": "^1.8.9"
   }
 }
