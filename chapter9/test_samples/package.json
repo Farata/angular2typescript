@@ -7,13 +7,13 @@
     "test": "karma start karma.conf.js"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.12",
+    "angular2": "2.0.0-beta.16",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
-    "systemjs": "^0.19.24",
-    "zone.js": "^0.6.6"
+    "systemjs": "^0.19.26",
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "jasmine-core": "^2.4.1",
@@ -22,6 +22,6 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
     "live-server": "^0.9.2",
-    "typescript": "^1.8.9"
+    "typescript": "^1.8.10"
   }
 }
