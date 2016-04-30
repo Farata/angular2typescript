@@ -6,8 +6,8 @@ System.config({
   },
   packages: {
     "app": {
-      "defaultExtension": "ts",
-      "main": "main.ts"
+      defaultExtension: "ts",
+      main: "main.ts"
     }
   }
 });
