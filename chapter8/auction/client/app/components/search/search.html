@@ -38,7 +38,7 @@
             class="form-control"
             ngControl="category">
       <option value="">All categories</option>
-      <option *ngFor="#c of categories"
+      <option *ngFor="let c of categories"
               [value]="c">{{c}}</option>
     </select>
   </div>

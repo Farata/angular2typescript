@@ -21,7 +21,7 @@ import ProductItemComponent from '../product-item/product-item';
       </div>
     </div>
     <div class="row">
-      <div *ngFor="#product of products | async" class="col-sm-4 col-lg-4 col-md-4">
+      <div *ngFor="let product of products | async" class="col-sm-4 col-lg-4 col-md-4">
         <auction-product-item [product]="product"></auction-product-item>
       </div>
     </div>

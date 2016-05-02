@@ -1,10 +1,11 @@
 import {Observable, } from 'rxjs/Rx';
+import {Bid} from 'bid';
 
 export class BidService{
 
     ws: WebSocket;
 
-    createObservableSocket(url:string):Observable{
+    createObservableSocket(url:string):Observable<Bid>{
 
         this.ws = new WebSocket(url);
 
