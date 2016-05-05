@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2-polyfills.js"></script>
-  <script src="//npmcdn.com/traceur@0.0.105/bin/traceur.js"></script> <!--1-->
-  <script src="//npmcdn.com/systemjs@0.19.24/dist/system.src.js"></script>
-  <script src="//npmcdn.com/rxjs@5.0.0-beta.2/bundles/Rx.js"></script>
-  <script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2.dev.js"></script>
+  <script src="//npmcdn.com/zone.js@0.6.12"></script>
+  <script src="//npmcdn.com/reflect-metadata@0.1.3"></script>
+  <script src="//npmcdn.com/traceur@0.0.108/bin/traceur.js"></script>
+  <script src="//npmcdn.com/systemjs@0.19.27/dist/system.src.js"></script>
   <script>
     System.config({
-      transpiler: 'traceur', // <2>
-      traceurOptions: {annotations: true} // <3>
+      transpiler: 'traceur',
+      traceurOptions: {annotations: true},
+      map: {
+        'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
+
+        '@angular/core'                    : 'https://npmcdn.com/@angular/core@2.0.0-rc.1',
+        '@angular/common'                  : 'https://npmcdn.com/@angular/common@2.0.0-rc.1',
+        '@angular/compiler'                : 'https://npmcdn.com/@angular/compiler@2.0.0-rc.1',
+        '@angular/platform-browser'        : 'https://npmcdn.com/@angular/platform-browser@2.0.0-rc.1',
+        '@angular/platform-browser-dynamic': 'https://npmcdn.com/@angular/platform-browser-dynamic@2.0.0-rc.1'
+      },
+      packages: {
+        '@angular/core'                    : {main: 'index.js'},
+        '@angular/common'                  : {main: 'index.js'},
+        '@angular/compiler'                : {main: 'index.js'},
+        '@angular/platform-browser'        : {main: 'index.js'},
+        '@angular/platform-browser-dynamic': {main: 'index.js'}
+      }
     });
-    System.import('main.js'); // <4>
+    System.import('main.js');
   </script>
 </head>
 <body>

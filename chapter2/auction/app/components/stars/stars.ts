@@ -1,4 +1,4 @@
-import {Component,  Input, OnInit} from 'angular2/core'; // <1>
+import {Component,  Input, OnInit} from '@angular/core'; // <1>
 
 @Component({
   templateUrl: 'app/components/stars/stars.html',

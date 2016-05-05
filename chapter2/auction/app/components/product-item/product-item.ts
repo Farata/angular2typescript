@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 import StarsComponent from 'app/components/stars/stars';
 import {Product} from 'app/services/product-service';
 

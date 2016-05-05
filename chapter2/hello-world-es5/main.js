@@ -5,10 +5,10 @@ function HelloWorldComponent() {
 HelloWorldComponent.annotations = [
   new ng.core.Component({
     selector: 'hello-world',
-    template: '<h1>Hello {{ name }}!</h1>'
+    template: '<h1>Hello {{name}}!</h1>'
   })
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
-  ng.platform.browser.bootstrap(HelloWorldComponent);
+  ng.platformBrowserDynamic.bootstrap(HelloWorldComponent);
 });

@@ -1,5 +1,5 @@
 // tag::imports[]
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import CarouselComponent from 'app/components/carousel/carousel';
 import FooterComponent from 'app/components/footer/footer';
 import NavbarComponent from 'app/components/navbar/navbar';

@@ -1,9 +1,9 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'hello-world',
-  template: `<h1>Hello {{name}}!</h1>`
+  template: '<h1>Hello {{name}}!</h1>'
 })
 class HelloWorldComponent {
   constructor() {
