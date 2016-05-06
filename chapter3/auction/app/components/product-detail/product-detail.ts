@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteSegment} from '@angular/router';
 
 @Component({
   selector: 'auction-product-page',
@@ -13,7 +13,7 @@ import {RouteParams} from 'angular2/router';
 export default class ProductDetailComponent {
   productTitle: string;
 
-  constructor(params: RouteParams){
-    this.productTitle = params.get('prodTitle');
+  constructor(params: RouteSegment){
+    this.productTitle = params.getParam('prodTitle');
   }
 }

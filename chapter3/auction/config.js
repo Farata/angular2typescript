@@ -5,7 +5,7 @@ System.config({
     "emitDecoratorMetadata": true
   },
   packages: {
-    "app": {
+    app: {
       defaultExtension: "ts",
       main: "main.ts"
     }

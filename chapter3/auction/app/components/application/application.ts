@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Route, RouteConfig, RouterOutlet} from 'angular2/router';
+import {Component} from '@angular/core';
+import { Routes, ROUTER_DIRECTIVES} from '@angular/router';
 import HomeComponent from '../home/home';
 import NavbarComponent from '../navbar/navbar';
 import FooterComponent from '../footer/footer';
@@ -10,15 +10,15 @@ import ProductDetailComponent from "../product-detail/product-detail";
   selector: 'auction-application',
   templateUrl: 'app/components/application/application.html',
   directives: [
-    RouterOutlet,
+    ROUTER_DIRECTIVES,
     NavbarComponent,
     FooterComponent,
     SearchComponent,
     HomeComponent
   ]
 })
-@RouteConfig([
-  {path: '/', component: HomeComponent, as: 'Home'},
-  {path: '/products/:prodTitle', component: ProductDetailComponent, as: 'ProductDetail'}
+@Routes([
+  {path: '/', component: HomeComponent},
+  {path: '/products/:prodTitle', component: ProductDetailComponent}
 ])
 export default class ApplicationComponent {}

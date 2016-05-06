@@ -1,16 +1,14 @@
 // tag::annotations[]
-import {Component, onInit} from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   templateUrl: 'app/components/stars/stars.html',
-  directives: [NgFor],
   selector: 'auction-stars',
   inputs: ['rating', 'count'] // <1>
 })
 // end::annotations[]
 // tag::class[]
-export default class StarsComponent implements onInit {
+export default class StarsComponent implements OnInit {
   count: number = 5; // <1>
   rating: number = 0; // <2>
   stars: boolean[] = []; // <3>
