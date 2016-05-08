@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {Product, ProductService} from 'app/services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
@@ -17,7 +17,7 @@ import ProductItemComponent from '../product-item/product-item';
       </div>
     </div>
     <div class="row">
-      <div *ngFor="#product of products" class="col-sm-4 col-lg-4 col-md-4">
+      <div *ngFor="let product of products" class="col-sm-4 col-lg-4 col-md-4">
         <auction-product-item [product]="product"></auction-product-item>
       </div>
     </div>

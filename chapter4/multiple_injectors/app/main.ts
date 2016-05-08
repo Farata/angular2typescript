@@ -3,8 +3,8 @@
   Product1Component and Product2 component
   Hence both components will render iPhone7
  */
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, bind} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, bind} from '@angular/core';
 
 class Product {
   constructor(public title: string) {}

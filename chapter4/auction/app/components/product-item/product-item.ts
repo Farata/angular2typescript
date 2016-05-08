@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouterLink} from 'angular2/router';
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 import {Product} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -8,7 +8,7 @@ import StarsComponent from '../stars/stars';
   properties: ['product'],
   templateUrl: './app/components/product-item/product-item.html',
   styleUrls: ['./app/components/product-item/product-item.css'],
-  directives: [RouterLink, StarsComponent],
+  directives: [ROUTER_DIRECTIVES, StarsComponent],
 })
 export default class ProductItemComponent {
   product: Product;

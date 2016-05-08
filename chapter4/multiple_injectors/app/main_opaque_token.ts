@@ -1,15 +1,11 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, OpaqueToken, provide, Inject} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, OpaqueToken, provide, Inject} from '@angular/core';
 
 export const BackendUrl  = new OpaqueToken('BackendUrl');
 
 @Component({
   selector: 'app-root',
-  template: 'URL: {{url}}',
-  providers: [
-    // This is how we can override the dependency:
-    // provide(BackendUrl, {useValue: 'nb-demo.surancebay.com'})
-  ]
+  template: 'URL: {{url}}'
 })
 class RootComponent {
   constructor(@Inject(BackendUrl) public url: string) {}

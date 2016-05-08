@@ -1,8 +1,8 @@
 /*
  This version uses an interface and its two implementations
  */
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, provide, Inject, OpaqueToken} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, provide, Inject, OpaqueToken} from '@angular/core';
 
 class Product {
     constructor(public title: string) {}

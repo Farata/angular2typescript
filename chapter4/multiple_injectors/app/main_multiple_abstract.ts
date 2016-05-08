@@ -1,8 +1,8 @@
 /*
  This version uses an abstract class and its two implementations
  */
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, provide} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, provide} from '@angular/core';
 
 class Product {
     constructor(public title: string) {}
