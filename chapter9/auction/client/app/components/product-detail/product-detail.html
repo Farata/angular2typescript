@@ -7,7 +7,7 @@
   </div>
   <div class="ratings">
     <p class="pull-right">{{ reviews?.length }} reviews</p>
-    <p><auction-stars [rating]="produt?.rating"></auction-stars></p>
+    <p><auction-stars [rating]="product?.rating"></auction-stars></p>
   </div>
 </div>
 <div class="thumbnail">
@@ -35,7 +35,7 @@
     <div><button (click)="addReview()" class="btn">Add review</button></div>
   </div>
 
-  <div class="row" *ngFor="#review of reviews">
+  <div class="row" *ngFor="let review of reviews">
     <hr>
     <div class="col-md-12">
       <auction-stars [rating]="review.rating"></auction-stars>

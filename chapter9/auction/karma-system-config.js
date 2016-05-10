@@ -1,8 +1,9 @@
 System.config({
+  baseURL: 'base',
   transpiler: 'typescript',
   typescriptOptions: {emitDecoratorMetadata: true},
   map: {
-    'app'     : 'app',
+    'app'     : 'client/app',
     'rxjs'    : 'node_modules/rxjs',
     '@angular': 'node_modules/@angular'
   },

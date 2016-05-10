@@ -3,21 +3,25 @@
 <head>
   <title>[TEST] Online Auction</title>
 
+  <!-- TypeScript in-browser compiler -->
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+
+  <!-- Polyfills -->
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+  <!-- Zone.js dependencies -->
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/zone.js/dist/async-test.js"></script>
+  <script src="node_modules/zone.js/dist/fake-async-test.js"></script>
+
   <!-- Jasmine -->
   <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
   <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
   <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
   <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
 
-  <!-- Angular -->
-  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <!-- SystemJS -->
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="node_modules/rxjs/bundles/Rx.js"></script>
-  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-  <script src="node_modules/angular2/bundles/router.dev.js"></script>
-  <script src="node_modules/angular2/bundles/http.dev.js"></script>
-  <script src="node_modules/angular2/bundles/testing.dev.js"></script>
   <script src="config.js"></script>
 </head>
 <body>
@@ -29,16 +33,16 @@
   ];
 
   Promise.all([
-    System.import('angular2/testing'),
-    System.import('angular2/platform/testing/browser')
+    System.import('@angular/core/testing'),
+    System.import('@angular/platform-browser-dynamic/testing')
   ])
   .then(function (modules) {
     var testing = modules[0];
     var browser = modules[1];
 
     testing.setBaseTestProviders(
-      browser.TEST_BROWSER_PLATFORM_PROVIDERS,
-      browser.TEST_BROWSER_APPLICATION_PROVIDERS);
+        browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
+        browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
 
     // Load all the spec files.
     return Promise.all(SPEC_MODULES.map(function (module) {

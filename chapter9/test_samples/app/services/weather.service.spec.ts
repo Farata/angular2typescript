@@ -1,7 +1,9 @@
-import {provide} from 'angular2/core';
-import {Http, BaseRequestOptions, Response, ResponseOptions} from 'angular2/http';
-import {MockBackend, MockConnection} from 'angular2/http/testing';
-import {it, inject, beforeEach, beforeEachProviders} from 'angular2/testing';
+import {provide} from '@angular/core';
+import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
+import {MockBackend, MockConnection} from '@angular/http/testing';
+import {it, inject, beforeEach, beforeEachProviders} from '@angular/core/testing';
+
+
 
 import {WeatherService, WEATHER_URL_BASE, WEATHER_URL_SUFFIX} from './weather.service';
 

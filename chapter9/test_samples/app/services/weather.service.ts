@@ -1,5 +1,5 @@
-import {Inject, Injectable, OpaqueToken} from 'angular2/core';
-import {Http, Response} from 'angular2/http';
+import {Inject, Injectable, OpaqueToken} from '@angular/core';
+import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';

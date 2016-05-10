@@ -1,49 +1,42 @@
-import {provide} from 'angular2/core';
-import { Router, RouteRegistry, ROUTER_PRIMARY_COMPONENT} from 'angular2/router';
-import {Location} from 'angular2/platform/common';
-import {RootRouter} from 'angular2/src/router/router';
-import {SpyLocation} from 'angular2/router/testing';
-import {beforeEach, beforeEachProviders, inject, it} from 'angular2/testing';
+import {
+    beforeEachProviders,
+    describe,
+    expect,
+    inject,
+    it,
+    fakeAsync,
+    tick
+} from '@angular/core/testing';
 
-import {AppComponent} from './app';
+import {ROUTER_FAKE_PROVIDERS} from '@angular/router/testing';
+import {Location} from '@angular/common';
+import {Router} from '@angular/router';
 
 describe('Router', () => {
-  let location: Location;
-  let router: Router;
 
-  beforeEachProviders(() => [
-    RouteRegistry,
-    provide(Location, {useClass: SpyLocation}),
-    provide(Router, {useClass: RootRouter}),
-    provide(ROUTER_PRIMARY_COMPONENT, {useValue: AppComponent})
-  ]);
+  beforeEachProviders(() => [ROUTER_FAKE_PROVIDERS]);
 
-  beforeEach(inject([Router, Location], (_router, _location) => {
-    location = _location;
-    router = _router;
-  }));
-
-  it('should be able to navigate to Home', done => {
-    router.navigate(['/Home']).then(() => {
+  it('should be able to navigate to home using commands API',
+    fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
+      router.navigate(['/']);
+      tick();
       expect(location.path()).toBe('');
-      done();
-    }).catch(e => done.fail(e));
-  });
+    })
+  ));
 
-  it('should be able to navigate to Weather by route name', done => {
-    router.navigate(['/Weather']).then(() => {
+  it('should be able to navigate to weather using commands API',
+    fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
+      router.navigate(['/weather']);
+      tick();
       expect(location.path()).toBe('/weather');
-      done();
-    }).catch(e => done.fail(e));
-  });
+    })
+  ));
 
-  it('should be able to navigate to Weather by URL', done => {
-    router.navigateByUrl('/weather').then(() => {
-      expect(location.path()).toBe('/weather');
-      done();
-    }).catch(e => done.fail(e));
-  });
+  it('should be able to navigate to weather by URL',
+    fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
+      router.navigateByUrl('/weather');
+      tick();
+      expect(location.path()).toEqual('/weather');
+    })
+  ));
 });
-
-
-

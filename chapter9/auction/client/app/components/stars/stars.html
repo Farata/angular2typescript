@@ -1,5 +1,5 @@
 <p>
-  <span *ngFor="#star of stars; #i = index"
+  <span *ngFor="let star of stars; let i = index"
         class="starrating glyphicon glyphicon-star"
         [class.glyphicon-star-empty]="!star"
         (click)="fillStarsWithColor(i)">

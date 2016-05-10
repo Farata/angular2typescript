@@ -1,5 +1,6 @@
-import {provide} from 'angular2/core';
-import {beforeEach, beforeEachProviders, inject, it, TestComponentBuilder} from 'angular2/testing';
+import {provide} from '@angular/core';
+import {beforeEach, beforeEachProviders, inject, it} from '@angular/core/testing';
+import {TestComponentBuilder} from '@angular/compiler/testing';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/empty';
 

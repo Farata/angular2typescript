@@ -1,6 +1,6 @@
-import {Component} from 'angular2/core';
-import {NgClass} from 'angular2/common';
-import {RouteParams, OnDeactivate} from 'angular2/router';
+import {Component} from '@angular/core';
+import {NgClass} from '@angular/common';
+import {CanDeactivate, OnActivate, RouteSegment} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
@@ -13,7 +13,7 @@ import StarsComponent from '../stars/stars';
   templateUrl: 'app/components/product-detail/product-detail.html',
   directives: [NgClass, StarsComponent]
 })
-export default class ProductDetailComponent implements OnDeactivate {
+export default class ProductDetailComponent implements OnActivate, CanDeactivate {
   product: Product;
   reviews: Review[];
 
@@ -26,27 +26,26 @@ export default class ProductDetailComponent implements OnDeactivate {
 
   private subscription: Subscription;
 
-  constructor(
-      params: RouteParams,
-      productService: ProductService,
-      private bidService: BidService) {
+  constructor(private productService: ProductService,
+              private bidService: BidService) {}
 
-    const productId = parseInt(params.get('productId'));
+  routerOnActivate(currentSegment: RouteSegment) {
+    const productId = parseInt(currentSegment.getParam('productId'));
 
-    productService
-      .getProductById(productId)
-      .subscribe(
-        product => {
-          this.product = product;
-          this.currentBid = product.price;
-        },
-        error => console.error(error));
+    this.productService
+        .getProductById(productId)
+        .subscribe(
+            product => {
+              this.product = product;
+              this.currentBid = product.price;
+            },
+            error => console.error(error));
 
-    productService
-      .getReviewsForProduct(productId)
-      .subscribe(
-        reviews => this.reviews = reviews,
-        error => console.error(error));
+    this.productService
+        .getReviewsForProduct(productId)
+        .subscribe(
+            reviews => this.reviews = reviews,
+            error => console.error(error));
   }
 
   toggleWatchProduct() {
@@ -63,10 +62,12 @@ export default class ProductDetailComponent implements OnDeactivate {
     }
   }
 
-  routerOnDeactivate(): any {
+  routerCanDeactivate(): any {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+
+    return Promise.resolve(true);
   }
 
   addReview() {

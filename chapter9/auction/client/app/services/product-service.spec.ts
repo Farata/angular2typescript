@@ -1,13 +1,14 @@
 import {
   it,
   inject,
+  expect,
+  describe,
   beforeEach,
   beforeEachProviders
-} from 'angular2/testing';
+} from '@angular/core/testing';
 
-import {provide} from 'angular2/core';
-import {Http, BaseRequestOptions, Response, ResponseOptions} from 'angular2/http'
-import {MockBackend, MockConnection} from 'angular2/http/testing'
+import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http'
+import {MockBackend, MockConnection} from '@angular/http/testing'
 
 import {ProductService} from './product-service';
 
@@ -19,10 +20,11 @@ describe('ProductService', () => {
     ProductService,
     MockBackend,
     BaseRequestOptions,
-    provide(Http, {
+    {
+      provide: Http,
       useFactory: (backend, options) => new Http(backend, options),
       deps: [MockBackend, BaseRequestOptions]
-    })
+    }
   ]);
 
   beforeEach(inject([MockBackend, ProductService], (_mockBackend, _service) => {
