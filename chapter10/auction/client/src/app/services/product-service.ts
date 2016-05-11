@@ -1,5 +1,5 @@
-import {EventEmitter, Injectable} from 'angular2/core';
-import {Http, URLSearchParams} from 'angular2/http';
+import {EventEmitter, Injectable} from '@angular/core';
+import {Http, URLSearchParams} from '@angular/http';
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 

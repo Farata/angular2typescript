@@ -1,15 +1,15 @@
 const path               = require('path');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-const DefinePlugin       = require('webpack/lib/DefinePlugin');
+const DefinePlugin        = require('webpack/lib/DefinePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 
 const metadata = {
-  env    : ENV,
-  host   : HOST,
-  port   : PORT
+  env : ENV,
+  host: HOST,
+  port: PORT
 };
 
 module.exports = {
@@ -31,8 +31,7 @@ module.exports = {
       {test: /\.css$/,  loader: 'style!css?-minimize', exclude: /src/},
       {test: /\.html$/, loader: 'raw'},
       {test: /\.ts$/,   loader: 'ts', query: {compilerOptions: {noEmit: false}}}
-    ],
-    noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
+    ]
   },
   output: {
     path    : './dist',

@@ -20,8 +20,7 @@ module.exports = {
       {test: /\.css$/,  loader: 'style!css?-minimize', exclude: /src/},
       {test: /\.html$/, loader: 'raw'},
       {test: /\.ts$/,   loader: 'ts', query: {compilerOptions: {noEmit: false}}}
-    ],
-    noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
+    ]
   },
   plugins: [
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})

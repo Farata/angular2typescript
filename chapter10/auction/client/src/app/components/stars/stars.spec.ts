@@ -1,10 +1,13 @@
 import {
-  it,
-  inject,
   beforeEach,
   beforeEachProviders,
-  TestComponentBuilder,
-} from 'angular2/testing';
+  describe,
+  expect,
+  inject,
+  it
+} from '@angular/core/testing';
+
+import {TestComponentBuilder} from '@angular/compiler/testing';
 
 // Component to test
 import StarsComponent from './stars';

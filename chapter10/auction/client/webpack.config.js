@@ -46,8 +46,7 @@ module.exports = {
       {test: /\.ttf$/,   loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg$/,   loader: 'url?limit=10000&mimetype=image/svg+xml'},
       {test: /\.eot$/,   loader: 'file'}
-    ],
-    noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
+    ]
   },
   output: {
     path    : './dist',

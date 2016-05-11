@@ -36,8 +36,7 @@ module.exports = {
       {test: /\.ttf$/,   loader: "url?limit=10000&minetype=application/octet-stream"},
       {test: /\.svg$/,   loader: "url?limit=10000&minetype=image/svg+xml"},
       {test: /\.eot$/,   loader: "file"}
-    ],
-    noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
+    ]
   },
   output: {
     path    : './dist',
@@ -52,8 +51,7 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress : {screw_ie8 : true},
-       //mangle: false, // TODO: Remove after #6678 fixed
-      mangle: {screw_ie8 : true } // TODO: Uncomment after #6678 fixed
+      mangle: {screw_ie8 : true } 
     }),
     new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'})
   ],

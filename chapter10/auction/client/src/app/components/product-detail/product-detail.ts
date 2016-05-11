@@ -1,6 +1,5 @@
-import {Component} from 'angular2/core';
-import {NgClass, NgFor} from 'angular2/common';
-import {RouteParams, OnDeactivate} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteSegment, OnActivate, CanDeactivate} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
@@ -11,9 +10,9 @@ import StarsComponent from '../stars/stars';
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
   template: require('./product-detail.html'),
-  directives: [NgClass, NgFor, StarsComponent]
+  directives: [StarsComponent]
 })
-export default class ProductDetailComponent implements OnDeactivate {
+export default class ProductDetailComponent implements OnActivate, CanDeactivate {
   product: Product;
   reviews: Review[];
 
@@ -26,14 +25,13 @@ export default class ProductDetailComponent implements OnDeactivate {
 
   private subscription: Subscription;
 
-  constructor(
-      params: RouteParams,
-      productService: ProductService,
-      private bidService: BidService) {
+  constructor(private productService: ProductService,
+              private bidService: BidService) {}
 
-    const productId = parseInt(params.get('productId'));
+  routerOnActivate(currentSegment: RouteSegment) {
+    const productId = parseInt(currentSegment.getParam('productId'));
 
-    productService
+    this.productService
       .getProductById(productId)
       .subscribe(
         product => {
@@ -42,7 +40,7 @@ export default class ProductDetailComponent implements OnDeactivate {
         },
         error => console.error(error));
 
-    productService
+    this.productService
       .getReviewsForProduct(productId)
       .subscribe(
         reviews => this.reviews = reviews,
@@ -63,10 +61,12 @@ export default class ProductDetailComponent implements OnDeactivate {
     }
   }
 
-  routerOnDeactivate(): any {
+  routerCanDeactivate(): any {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+
+    return Promise.resolve(true);
   }
 
   addReview() {

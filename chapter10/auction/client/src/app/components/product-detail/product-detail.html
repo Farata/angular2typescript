@@ -35,7 +35,7 @@
     <div><button (click)="addReview()" class="btn">Add review</button></div>
   </div>
 
-  <div class="row" *ngFor="#review of reviews">
+  <div class="row" *ngFor="let review of reviews">
     <hr>
     <div class="col-md-12">
       <auction-stars [rating]="review.rating"></auction-stars>

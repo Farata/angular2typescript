@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Route, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import { Routes, ROUTER_DIRECTIVES} from '@angular/router';
 
 import {Home} from './home/home';
 import {About} from './about/about';
@@ -10,8 +10,8 @@ import {About} from './about/about';
   template: require('./app.html'),
   directives: [ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-  new Route({ path: '/',      component: Home,  name: 'Home'}),
-  new Route({ path: '/about', component: About, name: 'About'})
+@Routes([
+  { path: '/',      component: Home},
+  { path: '/about', component: About}
 ])
 export class MyApp {}

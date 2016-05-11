@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Route, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import { Routes, ROUTER_DIRECTIVES} from '@angular/router';
 
 import {Home} from './home';
 import {About} from './about';
@@ -10,16 +10,16 @@ import {About} from './about';
   template: `
     <h1>Basic Webpack Starter</h1>
     <div>
-      <a [routerLink]="['/Home']">Home</a>
-      <a [routerLink]="['/About']">About</a>
+      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['/about']">About</a>
     </div>
     <div>
       <router-outlet></router-outlet>
     </div>
   `
 })
-@RouteConfig([
-  new Route({ path: '/',      component: Home,  name: 'Home'}),
-  new Route({ path: '/about', component: About, name: 'About'})
+@Routes([
+  { path: '/',      component: Home},
+  { path: '/about', component: About}
 ])
 export class MyApp {}

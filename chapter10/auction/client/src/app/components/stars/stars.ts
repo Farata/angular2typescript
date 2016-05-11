@@ -1,9 +1,7 @@
-import {Component, EventEmitter, Input, Output} from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'auction-stars',
-  directives: [NgFor],
   styles: [`.starrating { color: #d17581; }`],
   template: require('./stars.html')
 })
@@ -27,7 +25,7 @@ export default class StarsComponent {
   }
 
   @Output()
-  ratingChange: EventEmitter<number> = new EventEmitter();
+  ratingChange: EventEmitter<number> = new EventEmitter<number>();
 
   fillStarsWithColor(index) {
 

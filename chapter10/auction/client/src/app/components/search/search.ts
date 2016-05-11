@@ -1,13 +1,13 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {
   Control,
   ControlGroup,
-  FormBuilder,
-  Validators,
   CORE_DIRECTIVES,
   FORM_DIRECTIVES,
-  FORM_PROVIDERS
-} from 'angular2/common';
+  FORM_PROVIDERS,
+  FormBuilder,
+  Validators
+} from '@angular/common';
 
 import {ProductService} from '../../services/product-service';
 
