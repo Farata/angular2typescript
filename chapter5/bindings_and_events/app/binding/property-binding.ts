@@ -1,5 +1,5 @@
-import {bootstrap} from '../../node_modules/angular2/platform/browser.d';
-import {Component, ChangeDetectorRef} from '../../node_modules/angular2/core.d';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, ChangeDetectorRef} from '@angular/core';
 
 @Component({
   selector: 'app',

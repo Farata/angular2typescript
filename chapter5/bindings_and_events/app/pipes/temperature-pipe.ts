@@ -1,11 +1,9 @@
-import {Pipe, PipeTransform} from 'angular2/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({name: 'temperature'})
 export class TemperaturePipe implements PipeTransform {
 
-    transform(value: any[], parameters: string[]): any {
-
-        let fromTo: string = parameters[0];
+    transform(value: any[], fromTo: string): any {
 
         if ( !fromTo) {
             throw "Temperature pipe requires parameter FtoC or CtoF ";

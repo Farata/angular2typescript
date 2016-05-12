@@ -1,5 +1,5 @@
-import {bootstrap} from '../../node_modules/angular2/platform/browser.d';
-import {Component, Output, Directive, EventEmitter} from '../../node_modules/angular2/core.d';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, Output, Directive, EventEmitter} from '@angular/core';
 
 
 interface IPriceQuote {

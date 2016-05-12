@@ -1,9 +1,8 @@
-import {Component, Pipe, PipeTransform} from 'angular2/core';
-import {Control, NgFormControl} from 'angular2/common';
-import {Product, ProductService} from 'app/services/product-service';
+import {Component} from '@angular/core';
+import {Control, NgFormControl} from '@angular/common';
+import {Product, ProductService} from '../../services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
-import {ProductService} from '../../services/product-service';
 import {FilterPipe} from '../pipes/filter-pipe'
 import 'rxjs/add/operator/debounceTime';
 
@@ -32,7 +31,7 @@ import 'rxjs/add/operator/debounceTime';
       </div>
     </div>
     <div class="row">
-      <div *ngFor="#product of products | filter:'title':filterCriteria" class="col-sm-4 col-lg-4 col-md-4">
+      <div *ngFor="let product of products | filter:'title':filterCriteria" class="col-sm-4 col-lg-4 col-md-4">
         <auction-product-item [product]="product"></auction-product-item>
       </div>
     </div>

@@ -1,7 +1,7 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
-import {Control, NgFormControl} from 'angular2/common';
-import {HTTP_PROVIDERS, Http} from 'angular2/http';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
+import {Control, NgFormControl} from '@angular/common';
+import {HTTP_PROVIDERS, Http} from '@angular/http';
 
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/switchMap';

@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import { RouteParams, RouteData} from 'angular2/router';
+import {Component} from '@angular/core';
+import { RouteSegment} from '@angular/router';
 
 
 @Component({
@@ -9,12 +9,7 @@ import { RouteParams, RouteData} from 'angular2/router';
 })
 export class ProductDetailComponentParam {
     productID: string;
-    constructor(params: RouteParams
-                //, data: RouteData
-
-    ){
-        this.productID = params.get('id');
-
-        //console.log("Is this prod environment?" + data.get('isProd'));
+    constructor(params: RouteSegment){
+        this.productID = params.getParam('id');
     }
 }

@@ -1,10 +1,8 @@
-import {bootstrap} from '../../node_modules/angular2/platform/browser.d';
-import {Component} from '../../node_modules/angular2/core.d';
-import {NgIf} from '../../node_modules/angular2/common.d';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app',
-  directives: [NgIf], // Needed for the template-binding example.
+  selector: 'app'
   template: `
     <h3>Attribute binding:</h3>
     <input [attr.my-attribute]="greeting">

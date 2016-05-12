@@ -1,6 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
-import {Control, ControlGroup, FORM_DIRECTIVES} from 'angular2/common';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
+import {Control} from '@angular/common';
 //import 'rxjs/Rx'; // import all operators
 import 'rxjs/add/operator/debounceTime';
 

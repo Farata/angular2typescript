@@ -1,5 +1,5 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, ElementRef, Directive} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, ElementRef} from '@angular/core';
 
 interface IPriceQuote {
   stockSymbol: string,

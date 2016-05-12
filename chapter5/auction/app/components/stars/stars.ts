@@ -1,10 +1,8 @@
 // tag::annotations[]
-import {Component, OnInit} from 'angular2/core';
-import {NgFor} from 'angular2/common';
+import {Component, OnInit} from '@angular/core';
 @Component({
   templateUrl: 'app/components/stars/stars.html',
   styles: [` .starrating { color: #d17581; }`],
-  directives: [NgFor],
   selector: 'auction-stars',
   inputs: ['rating', 'count'] // <1>
 })

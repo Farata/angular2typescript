@@ -2,18 +2,16 @@
 <html>
 <head>
   <title>Basic Routing Samples</title>
-  <style>body{padding-top:70px}</style>
-
-  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
-  <script src="../node_modules/typescript/lib/typescript.js"></script>
-  <script src="../node_modules/systemjs/dist/system.src.js"></script>
-  <script src="../node_modules/rxjs/bundles/Rx.js"></script>
-  <script src="../node_modules/angular2/bundles/router.dev.js"></script>
-  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
-  <script src="config.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {console.error(err);});
+  </script>
 </head>
 <body>
   <basic-routing></basic-routing>
-  <script>System.import('app')</script>
 </body>
 </html>

@@ -1,7 +1,10 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, provide} from 'angular2/core';
-import {RouteConfig,  ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-import {LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, provide} from '@angular/core';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import {LuxuryComponent} from "./components/luxury";
+
+// This is a non-working app - needs migration to new router
 
 @Component({
     selector: 'product',
@@ -17,21 +20,29 @@ export class HomeComponent {}
 
 @Component({
     selector: 'basic-routing',
-    template: `<a [routerLink]="['/Home']">Home</a>
-              <a [routerLink]="['/ProductDetail']">Product Details</a>
-              <a [routerLink]="['/Luxury']">Luxury Items</a>
-              <router-outlet></router-outlet>`,
+    template: `<a [routerLink]="['/']">Home</a>
+               <a [routerLink]="['/product']">Product Details</a>
+               <a [routerLink]="['/luxury']">Luxury Items</a>
+               <router-outlet></router-outlet>`,
     directives: [ ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-    {path: '/',        component: HomeComponent, as: 'Home'},
-    {path: '/product', component: ProductDetailComponent, as: 'ProductDetail'  },
-    {path:'/luxury',
-                    loader: ()=> System.import('app/components/luxury')
-                                        .then(libModule => libModule.LuxuryComponent),
-                    as: 'Luxury'
+@Routes([
+    {path: '/',        component: HomeComponent},
+    {path: '/product', component: ProductDetailComponent},
+    {path:'/luxury', component: LuxuryComponent
     }
 ])
 class RootComponent{}
 
 bootstrap(RootComponent, [ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
+
+/*
+ @Routes([
+ {path: '/',        component: HomeComponent},
+ {path: '/product', component: ProductDetailComponent},
+ {path:'/luxury',
+ loader: ()=> System.import('app/components/luxury')
+ .then(libModule => libModule.LuxuryComponent),
+ as: 'Luxury'
+ }
+ */
