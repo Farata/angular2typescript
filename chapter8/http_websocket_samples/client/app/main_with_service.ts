@@ -1,7 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {FORM_DIRECTIVES} from 'angular2/common';
-import {Component} from 'angular2/core';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
+import {HTTP_PROVIDERS} from '@angular/http';
 import {ProductService} from "./product-service";
 
 @Component({

@@ -1,5 +1,5 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {OrderComponent} from './order';
 import {PriceQuoterComponent} from './price_quoter';
 import {Stock} from './stock';

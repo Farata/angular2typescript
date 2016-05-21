@@ -2,7 +2,6 @@
       (ngSubmit)="onSearch()"
       novalidate>
 
-  <div *ngIf="true"> <!-- Workaround for https://github.com/angular/angular/issues/6374 -->
   <div class="form-group"
        [class.has-error]="formModel.hasError('minlength', 'title')">
     <label for="title">Product title:</label>
@@ -38,10 +37,9 @@
             class="form-control"
             ngControl="category">
       <option value="-1">All categories</option>
-      <option *ngFor="#c of categories"
+      <option *ngFor="let c of categories"
               [value]="c">{{c}}</option>
     </select>
-  </div>
   </div>
 
   <div class="form-group">

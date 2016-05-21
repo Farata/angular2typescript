@@ -1,6 +1,6 @@
-import {Component} from 'angular2/core';
-import {NgClass} from 'angular2/common';
-import {RouteParams, OnDeactivate} from 'angular2/router';
+import {Component} from '@angular/core';
+import {NgClass} from '@angular/common';
+import {RouteSegment, OnDeactivate} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
@@ -27,11 +27,11 @@ export default class ProductDetailComponent implements OnDeactivate {
   private subscription: Subscription;
 
   constructor(
-      params: RouteParams,
+      params: RouteSegment,
       productService: ProductService,
       private bidService: BidService) {
 
-    const productId = parseInt(params.get('productId'));
+    const productId = parseInt(params.getParam('productId'));
 
     productService
       .getProductById(productId)

@@ -5,7 +5,7 @@ export class BidService{
 
     ws: WebSocket;
 
-    createObservableSocket(url:string):Observable<Bid>{
+    createObservableSocket(url:string):Observable{
 
         this.ws = new WebSocket(url);
 

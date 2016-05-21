@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
+</head>
+<body>
+  <app>Loading...</app>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      packages: {app: {defaultExtension: 'ts'}},
+      meta: {
+        'app/mediator/stock.ts': {
+          format: 'es6'
+        },
+        'app/mediator_on_push/stock.ts': {
+          format: 'es6'
+        }
+      }
+    });
+    System.import('./app/child_api/exposing-child-api.ts');
+  </script>
+</body>
+</html>

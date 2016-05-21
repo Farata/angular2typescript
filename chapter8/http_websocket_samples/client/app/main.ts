@@ -1,6 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
-import {HTTP_PROVIDERS, Http} from 'angular2/http';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
+import {HTTP_PROVIDERS, Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable} from "rxjs/Observable";
 
@@ -8,7 +8,7 @@ import { Observable} from "rxjs/Observable";
     selector: 'http-client',
     template: `<h1>All Products</h1>
   <ul>
-    <li *ngFor="#product of products">
+    <li *ngFor="let product of products">
        {{product.title}}
     </li>
 

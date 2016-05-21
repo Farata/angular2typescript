@@ -1,4 +1,5 @@
 import {
+  async,
   it,
   inject,
   expect,
@@ -9,22 +10,15 @@ import {
 
 import {TestComponentBuilder} from '@angular/compiler/testing';
 
-// Component to test
 import StarsComponent from './stars';
 
 describe('StarsComponent', () => {
   let component;
   let testComponentBuilder;
 
-  beforeEachProviders(() => [
-    StarsComponent,
-    TestComponentBuilder
-  ]);
+  beforeEachProviders(() => [StarsComponent, TestComponentBuilder]);
 
-  beforeEach(inject([
-    StarsComponent,
-    TestComponentBuilder
-  ], (_cmp, _tcb) => {
+  beforeEach(inject([StarsComponent, TestComponentBuilder], (_cmp, _tcb) => {
     component = _cmp;
     testComponentBuilder = _tcb;
   }));
@@ -37,7 +31,7 @@ describe('StarsComponent', () => {
     expect(component.readonly).toEqual(true);
   });
 
-  it('all stars are empty', done => {
+  it('all stars are empty', async(() => {
     testComponentBuilder.createAsync(StarsComponent).then(fixture => {
       let element = fixture.nativeElement;
       let cmp = fixture.componentInstance;
@@ -47,11 +41,10 @@ describe('StarsComponent', () => {
 
       let selector = '.glyphicon-star-empty';
       expect(element.querySelectorAll(selector).length).toBe(5);
-      done();
     });
-  });
+  }));
 
-  it('all stars are filled', done => {
+  it('all stars are filled', async(() => {
     testComponentBuilder.createAsync(StarsComponent).then(fixture => {
       let element = fixture.nativeElement;
       let cmp = fixture.componentInstance;
@@ -61,16 +54,14 @@ describe('StarsComponent', () => {
 
       let selector = '.glyphicon-star:not(.glyphicon-star-empty)';
       expect(element.querySelectorAll(selector).length).toBe(5);
-      done();
     });
-  });
+  }));
 
-  it('emits rating change event when readonly is false', done => {
+  it('emits rating change event when readonly is false', async(() => {
     component.ratingChange.subscribe(r => {
       expect(r).toBe(3);
-      done();
     });
     component.readonly = false;
     component.fillStarsWithColor(2);
-  });
+  }));
 });

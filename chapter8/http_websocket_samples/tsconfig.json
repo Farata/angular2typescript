@@ -9,8 +9,6 @@
   },
   "exclude": [
     "node_modules",
-    "client",
-    "typings/browser",
-    "typings/browser.d.ts"
+    "client"
   ]
 }

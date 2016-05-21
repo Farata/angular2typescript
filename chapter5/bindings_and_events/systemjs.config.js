@@ -8,7 +8,7 @@ System.config({
 
       },
       packages: {
-        'app'                              : {main: './pipes/pipe-tester.ts', defaultExtension: 'ts'},
+        'app'                              : {main: './observables/observable_events_http.ts', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

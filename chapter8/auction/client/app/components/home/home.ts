@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 
 import {Product, ProductService} from 'app/services/product-service';

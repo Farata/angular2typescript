@@ -3,21 +3,23 @@
 <head>
   <title>Online Auction</title>
   <style>body{padding-top:70px}</style>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <!-- Polyfills -->
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/typescript/lib/typescript.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="node_modules/rxjs/bundles/Rx.js"></script>
-  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+  <!-- SystemJS -->
   <script src="config.js"></script>
+  <script>System.import('app')</script>
 </head>
 <body>
   <auction-application></auction-application>
-  <script>System.import('app')</script>
 </body>
 </html>

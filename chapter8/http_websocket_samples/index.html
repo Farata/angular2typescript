@@ -9,24 +9,17 @@
 
 -->
 <head>
-  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <title>CH8 code samples</title>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
   <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="node_modules/rxjs/bundles/Rx.js"></script>
-  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {console.error(err);});
+  </script>
 </head>
 <body>
-  <subscriber>Loading...</subscriber>
-
-  <script>
-    System.config({
-      transpiler: 'typescript',
-      typescriptOptions: {emitDecoratorMetadata: true},
-      map:{'app': 'client/app'},
-      packages: {app: {defaultExtension: 'ts'}
-      }
-    });
-    System.import('app/custom_observable_service_subscriber');
-  </script>
+<app>Loading...</app>
 </body>
 </html>

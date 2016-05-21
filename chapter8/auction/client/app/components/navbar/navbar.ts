@@ -1,9 +1,9 @@
-import {Component} from 'angular2/core';
-import {RouterLink} from 'angular2/router';
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
   selector: 'auction-navbar',
   templateUrl: 'app/components/navbar/navbar.html',
-  directives: [RouterLink]
+  directives: [ROUTER_DIRECTIVES]
 })
 export default class NavbarComponent {}

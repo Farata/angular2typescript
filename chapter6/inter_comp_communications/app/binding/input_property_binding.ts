@@ -1,5 +1,5 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, Input} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'order-processor',

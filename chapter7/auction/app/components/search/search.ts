@@ -1,13 +1,13 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {
   Control,
   ControlGroup,
   FormBuilder,
   Validators,
   FORM_DIRECTIVES
-} from 'angular2/common';
+} from '@angular/common';
 
-import {ProductService} from 'app/services/product-service';
+import {ProductService} from '../../services/product-service';
 
 @Component({
   selector: 'auction-search',

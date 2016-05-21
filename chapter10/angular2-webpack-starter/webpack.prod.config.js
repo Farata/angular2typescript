@@ -26,7 +26,7 @@ module.exports = {
     loaders: [
       {test: /\.css$/,  loader: 'to-string!css', exclude: /node_modules/}, // Inline CSS into components
       {test: /\.css$/,  loader: 'style!css', exclude: /src/}, // Add CSS as style tag to index.html
-      {test: /\.html$/, loader: 'raw'},
+      {test: /\.html$/, loader: 'html?caseSensitive=true'},
       {test: /\.ts$/,   loader: 'ts', query: {compilerOptions: {noEmit: false}}}
     ]
   },
@@ -43,10 +43,7 @@ module.exports = {
     new OccurenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress: {screw_ie8 : true},
-      mangle: false, // TODO: Remove after #6678 fixed
-      // mangle: {
-      //   screw_ie8 : true,
-      // }
+      mangle: {screw_ie8 : true}
     })
   ],
   resolve: {

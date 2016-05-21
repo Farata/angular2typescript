@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "postinstall": "typings install",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run test",
     "build": "webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-cached",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080",
     "preserve:dist": "npm run build",
@@ -32,6 +32,7 @@
     "copy-webpack-plugin": "^2.0.1",
     "css-loader": "^0.23.1",
     "dedupe-plugin": "^1.0.0",
+    "html-loader": "^0.4.3",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",

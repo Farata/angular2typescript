@@ -1,5 +1,5 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
 import 'rxjs/add/operator/map';
 import {CustomObservableService} from "./custom_observable_service";
 

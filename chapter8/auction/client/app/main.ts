@@ -1,9 +1,9 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {provide} from 'angular2/core';
-import {FORM_PROVIDERS} from 'angular2/common';
-import {ROUTER_PROVIDERS} from 'angular2/router';
-import { LocationStrategy, HashLocationStrategy} from 'angular2/platform/common';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {provide} from '@angular/core';
+import {FORM_PROVIDERS} from '@angular/common';
+import {ROUTER_PROVIDERS} from '@angular/router';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {HTTP_PROVIDERS} from '@angular/http';
 import ApplicationComponent from "./components/application/application";
 import {ONLINE_AUCTION_SERVICES} from './services/services';
 

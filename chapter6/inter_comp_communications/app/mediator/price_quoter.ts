@@ -1,5 +1,4 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, Output, Directive, EventEmitter} from 'angular2/core';
+import {Component, Output, Directive, EventEmitter} from '@angular/core';
 import {Stock} from './stock';
 
 @Component({

@@ -1,6 +1,5 @@
-import {Component} from 'angular2/core';
-import { NgFor} from 'angular2/common';
-import {Product} from 'app/services/product-service';
+import {Component} from '@angular/core';
+import {Product} from '../../services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
 import {ProductService} from '../../services/product-service';
@@ -8,7 +7,6 @@ import {ProductService} from '../../services/product-service';
 @Component({
   selector: 'auction-home-page',
   directives: [
-    NgFor,
     CarouselComponent,
     ProductItemComponent
   ],
@@ -20,7 +18,7 @@ import {ProductService} from '../../services/product-service';
       </div>
     </div>
     <div class="row">
-      <div *ngFor="#product of products" class="col-sm-4 col-lg-4 col-md-4">
+      <div *ngFor="let product of products" class="col-sm-4 col-lg-4 col-md-4">
         <auction-product-item [product]="product"></auction-product-item>
       </div>
     </div>

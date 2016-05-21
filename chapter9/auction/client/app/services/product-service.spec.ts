@@ -1,4 +1,5 @@
 import {
+  async,
   it,
   inject,
   expect,
@@ -20,8 +21,7 @@ describe('ProductService', () => {
     ProductService,
     MockBackend,
     BaseRequestOptions,
-    {
-      provide: Http,
+    { provide: Http,
       useFactory: (backend, options) => new Http(backend, options),
       deps: [MockBackend, BaseRequestOptions]
     }
@@ -32,7 +32,7 @@ describe('ProductService', () => {
     service = _service;
   }));
 
-  it('getProductById() should return Product with ID=1', done => {
+  it('getProductById() should return Product with ID=1', async(() => {
     let mockProduct = {id: 1};
     mockBackend.connections.subscribe((connection: MockConnection) => {
       let responseOpts = new ResponseOptions({body: JSON.stringify(mockProduct)});
@@ -41,7 +41,6 @@ describe('ProductService', () => {
 
     service.getProductById(1).subscribe(p => {
       expect(p.id).toBe(1);
-      done();
     });
-  });
+  }));
 });

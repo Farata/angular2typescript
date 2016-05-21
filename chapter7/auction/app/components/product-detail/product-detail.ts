@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteSegment, OnActivate} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -9,7 +9,7 @@ import StarsComponent from '../stars/stars';
   templateUrl: 'app/components/product-detail/product-detail.html',
   directives: [StarsComponent]
 })
-export default class ProductDetailComponent {
+export default class ProductDetailComponent implements OnActivate {
   product: Product;
   reviews: Review[];
 
@@ -18,17 +18,17 @@ export default class ProductDetailComponent {
 
   isReviewHidden: boolean = true;
 
-  constructor(params: RouteParams, productService: ProductService) {
+  constructor(private productService: ProductService) {}
 
-    let prodId: number = parseInt(params.get('productId'));
-    this.product = productService.getProductById(prodId);
-
-    this.reviews = productService.getReviewsForProduct(this.product.id);
+  routerOnActivate(currentSegment: RouteSegment) {
+    let productId = parseInt(currentSegment.getParam('productId'));
+    this.product = this.productService.getProductById(productId);
+    this.reviews = this.productService.getReviewsForProduct(this.product.id);
   }
 
   addReview() {
     let review = new Review(0, this.product.id, new Date(), 'Anonymous',
-      this.newRating, this.newComment);
+        this.newRating, this.newComment);
     this.reviews = [...this.reviews, review];
     this.product.rating = this.averageRating(this.reviews);
 

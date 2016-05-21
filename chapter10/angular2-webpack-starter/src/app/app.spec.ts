@@ -2,13 +2,11 @@ import {ComponentResolver} from '@angular/core';
 import {Location} from '@angular/common';
 import {
   DefaultRouterUrlSerializer,
-  RouteSegment,
   Router,
   RouterOutletMap,
   RouterUrlSerializer
 } from '@angular/router';
 import {
-  beforeEach,
   beforeEachProviders,
   describe,
   expect,

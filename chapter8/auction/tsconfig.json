@@ -8,8 +8,6 @@
     "target": "ES5"
   },
   "exclude": [
-    "typings/browser.d.ts",
-    "typings/browser",
     "node_modules",
     "client"
   ]

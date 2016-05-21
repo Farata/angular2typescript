@@ -1,8 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
+import {bootstrap} from '@angular/platform-browser-dynamic';
 import {
-    Component, Input, OnChanges, AfterViewChecked, SimpleChange, enableProdMode,
-    ChangeDetectionStrategy
-} from 'angular2/core';
+    Component, Input, OnChanges, AfterViewChecked, SimpleChange, enableProdMode, ChangeDetectionStrategy} from '@angular/core';
 
 interface IChanges {[key: string]: SimpleChange};
 

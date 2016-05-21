@@ -1,6 +1,5 @@
-import {Component} from 'angular2/core';
-import {NgFor} from 'angular2/common';
-import {RouterLink, RouteParams} from 'angular2/router';
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -8,7 +7,7 @@ import StarsComponent from '../stars/stars';
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
   templateUrl: 'app/components/product-detail/product-detail.html',
-  directives: [NgFor, RouterLink, StarsComponent]
+  directives: [ ROUTER_DIRECTIVES, StarsComponent]
 })
 export default class ProductDetailComponent {
   product: Product;
@@ -19,9 +18,9 @@ export default class ProductDetailComponent {
 
   isReviewHidden: boolean = true;
 
-  constructor(params: RouteParams, productService: ProductService) {
+  constructor(params: RouteSegment, productService: ProductService) {
 
-    let prodId: number = parseInt(params.get('productId'));
+    let prodId: number = parseInt(params.getParam('productId'));
     this.product = productService.getProductById(prodId);
 
     this.reviews = productService.getReviewsForProduct(this.product.id);

@@ -1,5 +1,5 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {Component, ViewChild, AfterViewInit} from 'angular2/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component, ViewChild, AfterViewInit} from '@angular/core';
 
 @Component({
     selector: 'child',
