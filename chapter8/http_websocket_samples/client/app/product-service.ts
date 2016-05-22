@@ -12,18 +12,4 @@ export class ProductService{
        return this.http.get(`/products/${productID}`)
            .map(res => res.json());
     }
-
-    // A a method that can be invoked with or w/o parameter
- /*   getProducts(productID?: string): Observable {
-        let url ='/products';
-
-        if (productID){
-            url+=`/${productID}`;
-        }
-
-        return this.http.get(url)
-            .map(res => res.json());
-    };
-*/
-
 }

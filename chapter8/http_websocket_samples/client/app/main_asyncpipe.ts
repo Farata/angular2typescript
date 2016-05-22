@@ -11,7 +11,6 @@ import 'rxjs/add/operator/map';
     <li *ngFor="let product of products | async">
        {{product.title}}
     </li>
-
   </ul>
   `})
 class AppComponent {

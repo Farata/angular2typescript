@@ -3,7 +3,9 @@
   "scripts": {
     "postinstall": "typings install",
     "start": "node build/simple_websocket_server.js",
-    "dev": "nodemon build/bids/bid_server.js"
+    "dev": "nodemon build/auction-rest-server-angular.js",
+    "wsServer": "nodemon build/simple_websocket_server.js",
+    "bidServer": "nodemon build/bids/bid_server.js"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.1",

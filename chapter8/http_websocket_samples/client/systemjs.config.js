@@ -1,14 +1,15 @@
-// This file is used by the html files sent by the Node server
+// This file is used by samples that are loaded by with the Node server
 System.config({
     transpiler: 'typescript',
     typescriptOptions: {emitDecoratorMetadata: true},
     map: {
-        'app' : 'client/app',
+        'app' : 'app',
         'rxjs': 'node_modules/rxjs',
-        '@angular'                         : 'node_modules/@angular'
+        '@angular'                    : 'node_modules/@angular'
+
       },
       packages: {
-        'app'                              : {main: 'custom_observable_service_subscriber.ts', defaultExtension: 'ts'},
+        'app'                              : {main: 'bids/bid_component.ts', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},
@@ -17,5 +18,6 @@ System.config({
         '@angular/platform-browser'        : {main: 'index.js'},
         '@angular/platform-browser-dynamic': {main: 'index.js'},
         '@angular/http'                    : {main: 'index.js'}
+
       }
 });

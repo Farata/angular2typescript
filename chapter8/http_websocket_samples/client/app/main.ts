@@ -11,7 +11,6 @@ import { Observable} from "rxjs/Observable";
     <li *ngFor="let product of products">
        {{product.title}}
     </li>
-
   </ul>
   `})
 class AppComponent {
