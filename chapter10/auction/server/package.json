@@ -16,6 +16,6 @@
     "compression": "^1.6.1",
     "nodemon": "^1.8.1",
     "typescript": "^1.8.10",
-    "typings": "^0.7.9"
+    "typings": "^1.0.4"
   }
 }
