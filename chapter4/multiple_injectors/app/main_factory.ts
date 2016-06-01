@@ -33,7 +33,7 @@ class MockProductService implements ProductService { // <2>
 class Product1Component { // <3>
   product: Product;
 
-  constructor(productService: ProductService) { // <4>
+  constructor(productService: ProductService) {
     this.product = productService.getProduct();
   }
 }
@@ -56,7 +56,7 @@ class Product1Component { // <3>
 class Product2Component {
   product: Product;
 
-  constructor(productService: ProductService) { // <6>
+  constructor(productService: ProductService) {
     this.product = productService.getProduct();
   }
 }

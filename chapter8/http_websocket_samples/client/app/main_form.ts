@@ -1,6 +1,5 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
-//import {FORM_DIRECTIVES} from '@angular/common';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 

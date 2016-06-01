@@ -5,8 +5,6 @@
     "target": "ES5"
   },
   "exclude": [
-    "typings/main",
-    "typings/main.d.ts",
     "node_modules"
   ]
 }

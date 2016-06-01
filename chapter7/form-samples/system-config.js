@@ -2,12 +2,11 @@ System.config({
   transpiler: 'typescript',
   typescriptOptions: {emitDecoratorMetadata: true},
   map: {
-    'app'     : 'src',
     'rxjs'    : 'node_modules/rxjs',
     '@angular': 'node_modules/@angular'
   },
   packages: {
-    'app'                              : {main: '01_basic-form-api', defaultExtension: 'ts'},
+    'app'                              : {defaultExtension: 'ts'},
     'rxjs'                             : {main: 'index'},
     '@angular/core'                    : {main: 'index'},
     '@angular/common'                  : {main: 'index'},

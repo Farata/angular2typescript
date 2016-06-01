@@ -9,7 +9,7 @@ System.config({
 
       },
       packages: {
-        'app'                              : {main: 'bids/bid_component.ts', defaultExtension: 'ts'},
+        'app'                              : {main: 'websocket_observable_service_subscriber', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

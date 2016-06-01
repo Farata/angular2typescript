@@ -1,4 +1,4 @@
-import {bootstrap} from '@angular-platform-browser';
+import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component, ElementRef, Directive} from '@angular/core';
 
 interface IPriceQuote {

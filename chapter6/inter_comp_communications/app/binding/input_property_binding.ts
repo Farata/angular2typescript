@@ -11,11 +11,10 @@ import {Component, Input} from '@angular/core';
 class OrderComponent {
 
     @Input() quantity: number;
-  //  @Input('stock-symbol') stockSymbol: string;
 
     private _stockSymbol: string;
 
-    @Input('stock-symbol')
+    @Input()
     set stockSymbol(value: string) {
         this._stockSymbol = value;
         if (this._stockSymbol != undefined) {
@@ -33,7 +32,7 @@ class OrderComponent {
     template: `
     <input type="text" placeholder="Enter stock (e.g. AAPL)"  (change)="onInputEvent($event)">
     <br/>
-    <order-processor [stock-symbol]="stock" quantity="100"></order-processor>
+    <order-processor [stockSymbol]="stock" quantity="100"></order-processor>
   `,
     directives: [OrderComponent]
 })

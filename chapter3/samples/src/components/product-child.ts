@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Routes, ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
-import {SellerInfoComponent} from './seller';
 import {ProductDescriptionComponent} from './product-description';
+import {SellerInfoComponent} from './seller';
 
 @Component({
     selector: 'product',
@@ -22,7 +22,7 @@ import {ProductDescriptionComponent} from './product-description';
 export class ProductDetailComponent {
   productID: string;
 
-  constructor(params: RouteSegment) {
-    this.productID = params.getParam('id');
+  constructor(segment: RouteSegment) {
+    this.productID = segment.getParam('id');
   }
 }

@@ -43,14 +43,11 @@ The code samples are https://github.com/Farata/angular2typescript[here].
 === 3.1. Routing Basics
 ==== 3.1.1. Location Strategies
 ==== 3.2.2. Client-Side Navigation Building Blocks
-=== 3.3. Passing Data to Routes
-==== 3.3.1. Using RouteParam
-==== 3.3.2. Using RouteData
-=== 3.4. Child Routes
-=== 3.5. Auxiliary Routes
-=== 3.6. Lazy Loading with AsyncRoute
-=== 3.7. Hands-on: Adding navigation to Online Auction
-=== 3.8. Summary
+=== 3.2. Passing Data to Routes
+==== 3.2.1. Using RouteSegment
+=== 3.3. Child Routes
+=== 3.4. Hands-on: Adding navigation to Online Auction
+=== 3.5. Summary
 
 == Chapter 4. Dependency Injection
 === 4.1. The Dependency Injection and Inversion Of Control Patterns

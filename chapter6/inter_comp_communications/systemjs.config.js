@@ -8,7 +8,7 @@ System.config({
 
       },
       packages: {
-        'app'                              : {main: './transclusion/basic-ng-content.ts', defaultExtension: 'ts'},
+        'app'                              : {main: './binding/input_property_binding.ts', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

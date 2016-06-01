@@ -29,7 +29,7 @@ module.exports = {
     loaders: [
       {test: /\.css$/,   loader: 'to-string!css', exclude: /node_modules/},
       {test: /\.css$/,   loader: 'style!css', exclude: /src/},
-      {test: /\.html$/,  loader: 'raw-loader'},
+      {test: /\.html$/,  loader: 'html?caseSensitive=true'},
       {test: /\.ts$/,    loader: 'ts', query: {compilerOptions: {noEmit: false}}},
       {test: /\.woff$/,  loader: "url?limit=10000&minetype=application/font-woff"},
       {test: /\.woff2$/, loader: "url?limit=10000&minetype=application/font-woff"},

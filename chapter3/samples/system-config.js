@@ -7,7 +7,7 @@ System.config({
     '@angular': 'node_modules/@angular'
   },
   packages: {
-    'app'                              : {main: 'main-matrix-params', defaultExtension: 'ts'},
+    'app'                              : {main: 'main-child', defaultExtension: 'ts'},
     'rxjs'                             : {main: 'index'},
     '@angular/core'                    : {main: 'index'},
     '@angular/common'                  : {main: 'index'},

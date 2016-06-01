@@ -10,8 +10,8 @@ import {ProductDetailComponent} from './components/product';
     selector: 'basic-routing',
     directives: [ROUTER_DIRECTIVES],
     template: `
-        <a [routerLink]="['./']">Home</a>
-        <a [routerLink]="['./product']">Product Details</a>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/product']">Product Details</a>
         <router-outlet></router-outlet>
     `
 })

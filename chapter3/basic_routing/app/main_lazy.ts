@@ -4,7 +4,8 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
 import {LuxuryComponent} from "./components/luxury";
 
-// This is a non-working app - needs migration to new router
+// This is a non-working app. It used to work in Angular Beta,
+// but support of lazy loading of the routes was removed from Angular RC.1
 
 @Component({
     selector: 'product',
