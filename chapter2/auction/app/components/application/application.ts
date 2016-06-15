@@ -1,11 +1,11 @@
 // tag::imports[]
-import {Component} from '@angular/core';
-import CarouselComponent from 'app/components/carousel/carousel';
-import FooterComponent from 'app/components/footer/footer';
-import NavbarComponent from 'app/components/navbar/navbar';
+import {Component, ViewEncapsulation} from '@angular/core';
+import CarouselComponent from '../carousel/carousel';
+import FooterComponent from '../footer/footer';
+import NavbarComponent from '../navbar/navbar';
 import ProductItemComponent from '../product-item/product-item';
-import SearchComponent from 'app/components/search/search';
-import {Product, ProductService} from 'app/services/product-service';
+import SearchComponent from '../search/search';
+import {Product, ProductService} from '../../services/product-service';
 // end::imports[]
 
 // tag::annotation-component[]
@@ -21,7 +21,8 @@ import {Product, ProductService} from 'app/services/product-service';
     FooterComponent,
     NavbarComponent,
     ProductItemComponent,
-    SearchComponent]
+    SearchComponent],
+   encapsulation:ViewEncapsulation.None
 })
 // end::annotation-component[]
 // tag::class[]
