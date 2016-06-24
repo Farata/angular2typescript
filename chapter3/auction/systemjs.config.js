@@ -2,7 +2,6 @@ System.config({
     transpiler: 'typescript',
     typescriptOptions: {emitDecoratorMetadata: true},
     map: {
-        'app' : 'app',
         'rxjs': 'node_modules/rxjs',
 
         '@angular/core'                    : 'node_modules/@angular/core',

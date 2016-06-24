@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {RouteSegment} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'auction-product-page',
@@ -13,7 +13,7 @@ import {RouteSegment} from '@angular/router';
 export default class ProductDetailComponent {
   productTitle: string;
 
-  constructor(params: RouteSegment){
-    this.productTitle = params.getParam('prodTitle');
+  constructor(route: ActivatedRoute){
+    this.productTitle = route.snapshot.params['prodTitle'];
   }
 }
