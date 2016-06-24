@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {RouteSegment, OnActivate} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -9,7 +9,8 @@ import StarsComponent from '../stars/stars';
   templateUrl: 'app/components/product-detail/product-detail.html',
   directives: [StarsComponent]
 })
-export default class ProductDetailComponent implements OnActivate {
+export default class ProductDetailComponent implements OnInit {
+  productId: number;
   product: Product;
   reviews: Review[];
 
@@ -18,11 +19,12 @@ export default class ProductDetailComponent implements OnActivate {
 
   isReviewHidden: boolean = true;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, route: ActivatedRoute) {
+    this.productId = parseInt(route.snapshot.params['productId']);
+  }
 
-  routerOnActivate(currentSegment: RouteSegment) {
-    let productId = parseInt(currentSegment.getParam('productId'));
-    this.product = this.productService.getProductById(productId);
+  ngOnInit() {
+    this.product = this.productService.getProductById(this.productId);
     this.reviews = this.productService.getReviewsForProduct(this.product.id);
   }
 

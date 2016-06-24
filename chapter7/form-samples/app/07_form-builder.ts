@@ -1,22 +1,30 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Directive, Component} from '@angular/core';
-import {Control, ControlGroup, Validators, FormBuilder, FORM_DIRECTIVES} from '@angular/common';
+import {
+  disableDeprecatedForms,
+  provideForms,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+  REACTIVE_FORM_DIRECTIVES
+} from '@angular/forms';
 
 /**
- * Returns `true` if Control's value represents a valid SSN,
+ * Returns `true` if FormControl's value represents a valid SSN,
  * otherwise returns `false`.
  */
-function ssnValidator(control: Control): {[key: string]: any} {
+function ssnValidator(control: FormControl): {[key: string]: any} {
   const value: string = control.value || '';
   const valid = value.match(/^\d{9}$/);
   return valid ? null : {ssn: true};
 }
 
 /**
- * Returns `true` if all Controls in the specified ControlGroup have exactly
+ * Returns `true` if all FormControls in the specified FormGroup have exactly
  * the same value. Otherwise returns `false`.
  */
-function equalValidator({value}: ControlGroup): {[key: string]: any} {
+function equalValidator({value}: FormGroup): {[key: string]: any} {
   const [first, ...rest] = Object.keys(value || {});
   const valid = rest.every(v => value[v] === value[first]);
   return valid ? null : {equal: true};
@@ -24,31 +32,31 @@ function equalValidator({value}: ControlGroup): {[key: string]: any} {
 
 @Component({
   selector: 'app',
-  directives: [FORM_DIRECTIVES],
+  directives: [REACTIVE_FORM_DIRECTIVES],
   template: `
-    <form [ngFormModel]="formModel" (ngSubmit)="onSubmit()" novalidate>
+    <form [formGroup]="formModel" (ngSubmit)="onSubmit()" novalidate>
       <div>
         Username:
-        <input type="text" ngControl="username">
+        <input type="text" formControlName="username">
         <span [hidden]="!formModel.hasError('required', 'username')">Username is required</span>
       </div>
 
       <div>
         SSN:
-        <input type="text" ngControl="ssn">
+        <input type="text" formControlName="ssn">
         <span [hidden]="!formModel.hasError('ssn', 'ssn')">SSN is invalid</span>
       </div>
 
-      <div ngControlGroup="passwordsGroup">
+      <div formGroupName="passwordsGroup">
         <div>
           Password:
-          <input type="password" ngControl="password">
+          <input type="password" formControlName="password">
           <span [hidden]="!formModel.hasError('minlength', ['passwordsGroup', 'password'])">Password is too short</span>
         </div>
 
         <div>
           Confirm password:
-          <input type="password" ngControl="pconfirm">
+          <input type="password" formControlName="pconfirm">
           <span [hidden]="!formModel.hasError('equal', 'passwordsGroup')">Passwords must be the same</span>
         </div>
       </div>
@@ -58,7 +66,7 @@ function equalValidator({value}: ControlGroup): {[key: string]: any} {
   `
 })
 class AppComponent {
-  formModel: ControlGroup;
+  formModel: FormGroup;
 
   constructor() {
     const fb = new FormBuilder();
@@ -79,4 +87,7 @@ class AppComponent {
   }
 }
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms()
+]);

@@ -4,6 +4,8 @@ All examples were upgraded to Angular 2 RC.1. Started updating code samples to R
 
 In the latest version of the code we use the new new new router 3.0 Alpha 7. If you want the router's sample that use older version of the router see the dir chapter3_router_v2.
 
+Also, the Forms API is being changed. Code samples that described in MEAP v6 are located in the dir chapter7_old_form_api. The code samples with the latest Forms API are in chapter7.
+
 
 
 

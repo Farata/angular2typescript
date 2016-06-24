@@ -1,6 +1,12 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component, Input} from '@angular/core';
-import {FORM_DIRECTIVES, Control, DefaultValueAccessor} from '@angular/common';
+import {
+  disableDeprecatedForms,
+  provideForms,
+  DefaultValueAccessor
+  FormControl,
+  REACTIVE_FORM_DIRECTIVES
+} from '@angular/forms';
 
 @Component({
   selector: 'custom-input',
@@ -12,18 +18,21 @@ class CustomInputComponent {
 
 @Component({
   selector: 'app',
-  directives: [FORM_DIRECTIVES, CustomInputComponent, DefaultValueAccessor],
+  directives: [REACTIVE_FORM_DIRECTIVES, CustomInputComponent, DefaultValueAccessor],
   template: `
-    Custom: <custom-input type="text" [ngFormControl]="customInput" ngDefaultControl></custom-input>
+    Custom: <custom-input type="text" [formControl]="customInput" ngDefaultControl></custom-input>
     <button (click)="onSubmit()">Submit</button>
   `
 })
 class AppComponent {
-  customInput: Control = new Control();
+  customInput: FormControl = new FormControl();
 
   onSubmit() {
     console.log(this.customInput.value);
   }
 }
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms()
+]);

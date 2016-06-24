@@ -1,12 +1,17 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component, Directive} from '@angular/core';
-import {Control, NG_VALIDATORS, FORM_DIRECTIVES} from '@angular/common';
+import {
+  disableDeprecatedForms,
+  provideForms,
+  FormControl,
+  NG_VALIDATORS
+} from '@angular/forms';
 
 /**
- * Returns `true` if Control's value represents a valid SSN,
+ * Returns `true` if FormControl's value represents a valid SSN,
  * otherwise returns `false`.
  */
-function ssnValidator(control: Control): {[key: string]: any} {
+function ssnValidator(control: FormControl): {[key: string]: any} {
   const value: string = control.value || '';
   const valid = value.match(/^\d{9}$/);
   return valid ? null : {ssn: true};
@@ -24,18 +29,17 @@ class SsnValidatorDirective {}
 
 @Component({
   selector: 'app',
-  directives: [FORM_DIRECTIVES, SsnValidatorDirective],
+  directives: [SsnValidatorDirective],
   template: `
     <form #f="ngForm">
-      SSN: <input type="text"
-                  ngControl="my-ssn"
-                  ssn>
-           <span [hidden]="!f.form.hasError('ssn', 'my-ssn')">
-             SSN is invalid
-           </span>
+      SSN: <input type="text" name="my-ssn" ngModel ssn>
+           <span [hidden]="!f.form.hasError('ssn', 'my-ssn')">SSN is invalid</span>
     </form>
   `
 })
 class AppComponent {}
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms()
+]);
