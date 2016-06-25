@@ -13,7 +13,7 @@ System.config({
         '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic'
       },
       packages: {
-        'app'                              : {main: 'main.ts', defaultExtension: 'ts'},
+        'app'                              : {main: 'main_factory', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

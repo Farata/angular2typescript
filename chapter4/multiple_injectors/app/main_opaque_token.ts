@@ -1,5 +1,5 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component, OpaqueToken, provide, Inject} from '@angular/core';
+import {Component, OpaqueToken, Inject} from '@angular/core';
 
 export const BackendUrl  = new OpaqueToken('BackendUrl');
 
@@ -12,5 +12,5 @@ class RootComponent {
 }
 
 bootstrap(RootComponent, [
-  provide(BackendUrl, {useValue: 'nb.surancebay.com'})
+  {provide:BackendUrl, useValue: 'myQAserver.com'}
 ]);

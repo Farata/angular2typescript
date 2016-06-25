@@ -40,12 +40,12 @@ class Product1Component { // <3>
   }
 }
 
-
 // The second components gets a specific MockProductService injected
 @Component({
   selector: 'product2',
-  template: '{{product.title}}'}
-)
+  template: '{{product.title}}',
+  providers: [{provide:ProductService, useClass:MockProductService}]
+})
 class Product2Component {
   product: Product;
 

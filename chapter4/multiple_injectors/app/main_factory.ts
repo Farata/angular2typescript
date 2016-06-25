@@ -14,7 +14,7 @@ class ProductService { //<1>
   getProduct(): Product {
     // Code making an HTTP request to get actual product details
     // would go here
-    return new Product('iPhone 777');
+    return new Product('iPhone 7');
   }
 }
 
@@ -43,16 +43,18 @@ class Product1Component { // <3>
 @Component({
   selector: 'product2',
 
-  providers: [provide(ProductService,{useFactory:
-            (isDev) =>{
-                      if (isDev){
-                        return new MockProductService();
-                      } else{
-                        return new ProductService();
-                      }
-            }, deps:["IS_DEV_ENVIRONMENT"]})],
+  providers:[{
+    provide: ProductService,
+    useFactory: (isDev) => {
+      if (isDev){
+        return new MockProductService();
+      } else{
+        return new ProductService();
+      }
+    }, deps: ["IS_DEV_ENVIRONMENT"]}],
+
   template: '{{product.title}}'
- })
+})
 class Product2Component {
   product: Product;
 
@@ -82,4 +84,4 @@ const DEFAULT_SERVICE_PROVIDERS = [ // <8>
   ProductService
 ];
 
-bootstrap(RootComponent, [DEFAULT_SERVICE_PROVIDERS, provide("IS_DEV_ENVIRONMENT",{useValue:true})]); // <9>
+bootstrap(RootComponent, [DEFAULT_SERVICE_PROVIDERS, {provide: "IS_DEV_ENVIRONMENT", useValue:true}]); // <9>
