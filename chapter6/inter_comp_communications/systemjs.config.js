@@ -8,7 +8,7 @@ System.config({
 
       },
       packages: {
-        'app'                              : {main: './binding/input_property_binding.ts', defaultExtension: 'ts'},
+        'app'                              : {main: './mediator/mediator', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

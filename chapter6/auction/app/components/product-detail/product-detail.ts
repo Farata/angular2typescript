@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
+import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -18,9 +18,9 @@ export default class ProductDetailComponent {
 
   isReviewHidden: boolean = true;
 
-  constructor(params: RouteSegment, productService: ProductService) {
+  constructor(route: ActivatedRoute, productService: ProductService) {
 
-    let prodId: number = parseInt(params.getParam('productId'));
+    let prodId: number = parseInt(route.snapshot.params['productId']);
     this.product = productService.getProductById(prodId);
 
     this.reviews = productService.getReviewsForProduct(this.product.id);

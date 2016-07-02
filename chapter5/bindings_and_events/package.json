@@ -5,17 +5,17 @@
     "start": "live-server"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.1",
-    "@angular/compiler": "2.0.0-rc.1",
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/http": "2.0.0-rc.1",
-    "@angular/platform-browser": "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
-    "@angular/router": "2.0.0-rc.1",
-    "intl": "^1.1.0",
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.2",
+    "@angular/forms": "^0.2.0",
     "reflect-metadata": "^0.1.3",
+    "@angular/http": "2.0.0-rc.4",
     "rxjs": "5.0.0-beta.6",
-    "systemjs": "^0.19.27",
+    "systemjs": "^0.19.31",
     "zone.js": "^0.6.12"
   },
   "devDependencies": {

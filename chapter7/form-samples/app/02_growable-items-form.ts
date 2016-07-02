@@ -9,14 +9,6 @@ import {
     FormGroup,
 } from '@angular/forms';
 
-
-/**************************************************************************
- * NOTE: This example doesn't work as of @angular/forms v0.1.0 due to     *
- *       unreleased formArray directive. After the next forms release the *
- *       example should work.                                             *
- **************************************************************************/
-
-
 @Component({
   selector: 'app',
   directives: [REACTIVE_FORM_DIRECTIVES],

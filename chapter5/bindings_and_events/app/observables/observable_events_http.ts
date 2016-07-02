@@ -46,35 +46,11 @@ class AppComponent {
             );
     }
 
-    getWeather(city): Observable<Array> {
+    getWeather(city: string): Observable<Array<string>> {
       return this.http.get(this.baseWeatherURL + city + this.urlSuffix)
         .map(res => res.json());
     }
 }
 bootstrap(AppComponent, [...HTTP_PROVIDERS]);
 
-
-
-
-/*
- getWeather(city) {
-
- this.http.get(this.baseWeatherURL + city + this.urlSuffix)
-
- .map(res => res.json())
- .subscribe(
- res => {
-
-
- this.temperature=`Current temperature in ${city} is
- ${res.list[0].main.temp}F,
- humidity: ${res.list[0].main.humidity}%`;
- } ,
-
- err =>
- console.log("Can't get weather. Error code: %s, URL: %s ",  err.message, err.url),
- () => console.log(`Weather for ${city} is retrieved`)
- );
- }
- */
 

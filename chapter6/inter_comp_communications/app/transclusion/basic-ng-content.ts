@@ -7,7 +7,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
   template: `
     <div class="wrapper">
      <h2>Child</h2>
-      <div>This &lt;div&gt; is defined in the child's template</div>
+      <div>This div is defined in the child's template</div>
       <ng-content></ng-content>
     </div>
   `,
@@ -22,9 +22,9 @@ class ChildComponent {}
   template: `
     <div class="wrapper">
      <h2>Parent</h2>
-      <div>This &lt;div&gt; is defined in the Parent's template</div>
+      <div>This div is defined in the Parent's template</div>
       <child>
-        <div>Parent projects this &lt;div&gt; onto the child </div>
+        <div>Parent projects this div onto the child </div>
       </child>
     </div>
   `,

@@ -23,7 +23,7 @@ class AppComponent {
             .subscribe(stock => this.getStockQuoteFromServer(stock));
     }
 
-    getStockQuoteFromServer(stock) {
+    getStockQuoteFromServer(stock: string) {
 
         console.log(`The price of ${stock} is ${100*Math.random().toFixed(4)}`);
     }
