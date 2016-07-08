@@ -1,24 +1,21 @@
 import {Component} from '@angular/core';
 import {
-  Control,
-  ControlGroup,
-  FormBuilder,
-  Validators,
-  CORE_DIRECTIVES,
-  FORM_DIRECTIVES,
-  FORM_PROVIDERS
-} from '@angular/common';
+    FormControl,
+    FormGroup,
+    FormBuilder,
+    Validators,
+    REACTIVE_FORM_DIRECTIVES
+} from '@angular/forms';
 
 import {ProductService} from 'app/services/product-service';
 
 @Component({
   selector: 'auction-search',
-  providers: [FORM_PROVIDERS],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
+  directives: [REACTIVE_FORM_DIRECTIVES],
   templateUrl: 'app/components/search/search.html'
 })
 export default class SearchComponent {
-  formModel: ControlGroup;
+  formModel: FormGroup;
   categories: string[];
 
   constructor(private productService: ProductService) {
@@ -39,10 +36,11 @@ export default class SearchComponent {
   }
 }
 
-function positiveNumberValidator(control: Control): any {
+
+function positiveNumberValidator(control: FormControl): any {
   if (!control.value) return null;
   const price = parseInt(control.value);
   return price === null ||
-    typeof price === 'number' &&
-         price > 0 ? null : {positivenumber: true};
+  typeof price === 'number' &&
+  price > 0 ? null : {positivenumber: true};
 }

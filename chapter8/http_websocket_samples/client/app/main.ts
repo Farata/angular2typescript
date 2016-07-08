@@ -40,7 +40,6 @@ class AppComponent {
                 console.log("Can't get products. Error code: %s, URL: %s ",  err.status, err.url),
             () => console.log('Product(s) are retrieved')
         );
-
     }
 }
 

@@ -9,7 +9,7 @@ System.config({
 
       },
       packages: {
-        'app'                              : {main: 'websocket_observable_service_subscriber', defaultExtension: 'ts'},
+        'app'                              : {main: 'bids/bid_component', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},
@@ -17,7 +17,8 @@ System.config({
         '@angular/router'                  : {main: 'index.js'},
         '@angular/platform-browser'        : {main: 'index.js'},
         '@angular/platform-browser-dynamic': {main: 'index.js'},
-        '@angular/http'                    : {main: 'index.js'}
+        '@angular/http'                    : {main: 'index.js'},
+        '@angular/forms'                    : {main: 'index.js'}
 
       }
 });

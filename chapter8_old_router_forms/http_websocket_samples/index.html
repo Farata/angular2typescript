@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ This file is used only for testing custom_observable_service_sibscriber.ts
+ The Node server is not used in this example
+
+ Just start http-server and open http://localhost:8080
+
+-->
+<head>
+  <title>CH8 code samples</title>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {console.error(err);});
+  </script>
+</head>
+<body>
+<app>Loading...</app>
+</body>
+</html>

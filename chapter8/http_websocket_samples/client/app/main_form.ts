@@ -1,4 +1,5 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
+import {disableDeprecatedForms, provideForms} from '@angular/forms';
 import {Component} from '@angular/core';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -8,12 +9,11 @@ import 'rxjs/add/operator/map';
   template: `<h1>Find Product By ID</h1>
      <form #f="ngForm" (ngSubmit) = "getProductByID(f.value)" >
        <label for="productID">Enter Product ID</label>
-       <input id="productID" type="number" ngControl="productID">
+       <input id="productID" type="number" name = "productID" ngModel>
        <button type="submit">Find Product</button>
      </form>
 
-     <h4>{{ productTitle}} {{productPrice}}</h4>
-
+     <h4>{{productTitle}} {{productPrice}}</h4>
   `})
 class AppComponent {
 
@@ -34,4 +34,4 @@ class AppComponent {
   }
 }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS]);
+bootstrap(AppComponent, [HTTP_PROVIDERS, disableDeprecatedForms(), provideForms()]);

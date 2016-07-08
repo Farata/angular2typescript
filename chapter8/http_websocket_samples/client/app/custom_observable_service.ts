@@ -2,7 +2,7 @@ import {Observable} from 'rxjs/Rx';
 
 export class CustomObservableService{
 
-    createObservableService(): Observable{
+    createObservableService(): Observable<Date>{
 
         return new Observable(
             observer => {

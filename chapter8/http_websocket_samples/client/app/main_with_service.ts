@@ -2,6 +2,7 @@ import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import {ProductService} from "./product-service";
+import {disableDeprecatedForms, provideForms} from '@angular/forms';
 
 @Component({
   selector: 'http-client',
@@ -9,7 +10,7 @@ import {ProductService} from "./product-service";
   template: `<h1>Find Product By ID Using ProductService</h1>
      <form #f="ngForm" (ngSubmit) = "getProductByID(f.value)" >
        <label for="productID">Enter Product ID</label>
-       <input id="productID" type="number" ngControl="productID">
+       <input id="productID" type="number" name="productID" ngModel>
        <button type="submit">Find Product</button>
      </form>
 
@@ -36,4 +37,4 @@ class AppComponent {
   }
 }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS]);
+bootstrap(AppComponent, [HTTP_PROVIDERS, disableDeprecatedForms(), provideForms()]);

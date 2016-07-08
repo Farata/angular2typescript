@@ -15,12 +15,12 @@ import 'rxjs/add/operator/map';
   `})
 class AppComponent {
 
-  products: Observable<Array<String>>;
+  products: Observable<Array<string>>;
 
   constructor(private http: Http) {
 
    this.products = this.http.get('/products')
-        .map(res => res.json());
+        .map(res => res.json()); 
   }
 }
 
