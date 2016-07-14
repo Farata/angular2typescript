@@ -1,12 +1,4 @@
-import {
-  async,
-  it,
-  inject,
-  expect,
-  describe,
-  beforeEach,
-  beforeEachProviders,
-} from '@angular/core/testing';
+import { addProviders, async, inject } from '@angular/core/testing';
 
 import {TestComponentBuilder} from '@angular/compiler/testing';
 
@@ -16,7 +8,7 @@ describe('StarsComponent', () => {
   let component;
   let testComponentBuilder;
 
-  beforeEachProviders(() => [StarsComponent, TestComponentBuilder]);
+  beforeEach(() => addProviders([StarsComponent, TestComponentBuilder]));
 
   beforeEach(inject([StarsComponent, TestComponentBuilder], (_cmp, _tcb) => {
     component = _cmp;

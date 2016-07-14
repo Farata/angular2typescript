@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {NgClass} from '@angular/common';
-import {CanDeactivate, OnActivate, RouteSegment} from '@angular/router';
+import {CanDeactivate, ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
@@ -13,7 +13,7 @@ import StarsComponent from '../stars/stars';
   templateUrl: 'app/components/product-detail/product-detail.html',
   directives: [NgClass, StarsComponent]
 })
-export default class ProductDetailComponent implements OnActivate, CanDeactivate {
+export default class ProductDetailComponent implements OnDestroy {
   product: Product;
   reviews: Review[];
 
@@ -27,10 +27,10 @@ export default class ProductDetailComponent implements OnActivate, CanDeactivate
   private subscription: Subscription;
 
   constructor(private productService: ProductService,
-              private bidService: BidService) {}
+              private bidService: BidService,
+              route: ActivatedRoute) {
 
-  routerOnActivate(currentSegment: RouteSegment) {
-    const productId = parseInt(currentSegment.getParam('productId'));
+    const productId = parseInt(route.snapshot.params['productId']);
 
     this.productService
         .getProductById(productId)
@@ -62,7 +62,7 @@ export default class ProductDetailComponent implements OnActivate, CanDeactivate
     }
   }
 
-  routerCanDeactivate(): any {
+  ngOnDestroy(): any {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

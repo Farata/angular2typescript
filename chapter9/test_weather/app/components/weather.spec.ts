@@ -1,5 +1,7 @@
-import {fakeAsync, beforeEach, beforeEachProviders, describe, inject, it} from '@angular/core/testing';
+import {addProviders, fakeAsync, inject} from '@angular/core/testing';
 import {TestComponentBuilder} from '@angular/compiler/testing';
+import {disableDeprecatedForms, provideForms} from '@angular/forms';
+
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/empty';
 
@@ -16,11 +18,14 @@ describe('WeatherComponent', () => {
   let component: WeatherComponent;
   let testComponentBuilder: TestComponentBuilder;
 
-  beforeEachProviders(() => [
+  beforeEach(() => addProviders([
+    disableDeprecatedForms(),
+    provideForms(),
+
     TestComponentBuilder,
     WeatherComponent,
     {provide: WeatherService, useClass: MockWeatherService}
-  ]);
+  ]));
 
   beforeEach(inject([TestComponentBuilder, WeatherComponent], (tcb, cmp) => {
     testComponentBuilder = tcb;

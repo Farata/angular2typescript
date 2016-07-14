@@ -1,5 +1,5 @@
 import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
-import {async, describe, it, inject, beforeEach, beforeEachProviders} from '@angular/core/testing';
+import {addProviders, async, inject} from '@angular/core/testing';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {WeatherService, WEATHER_URL_BASE, WEATHER_URL_SUFFIX} from './weather.service';
 
@@ -7,7 +7,7 @@ describe('WeatherService', () => {
   let mockBackend: MockBackend;
   let service: WeatherService;
 
-  beforeEachProviders(() => [
+  beforeEach(() => addProviders([
     MockBackend,
     BaseRequestOptions,
     WeatherService,
@@ -17,7 +17,7 @@ describe('WeatherService', () => {
       useFactory: (backend, options) => new Http(backend, options),
       deps: [MockBackend, BaseRequestOptions]
     }
-  ]);
+  ]));
 
   beforeEach(inject([MockBackend, WeatherService], (_mockBackend, _service) => {
     mockBackend = _mockBackend;

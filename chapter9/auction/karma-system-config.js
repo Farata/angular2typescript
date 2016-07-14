@@ -16,6 +16,7 @@ System.config({
     '@angular/platform-browser'        : {main: 'index'},
     '@angular/platform-browser-dynamic': {main: 'index'},
     '@angular/http'                    : {main: 'index'},
-    '@angular/router'                  : {main: 'index'}
+    '@angular/router'                  : {main: 'index'},
+    '@angular/forms'                   : {main: 'index'}
   }
 });

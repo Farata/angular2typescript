@@ -3,6 +3,7 @@ This is a repository for code samples for the upcoming book by Yakov Fain and An
 All examples were upgraded to Angular 2 RC.4. 
 
 In the latest version of the code we use the new new new router 3.0 Beta 2. If you want the router's sample that use older version of the router see the dir chapter3_router_v2.
+Any folder that has _old_ in the name has code samples described in the MEAP V6.
 
 Also, the Forms API is being changed. Code samples that described in MEAP v6 are located in the dir chapter7_old_form_api. The code samples with the latest Forms API are in chapter7.
 

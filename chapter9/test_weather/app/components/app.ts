@@ -1,8 +1,5 @@
 import {Component} from '@angular/core';
-import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
-
-import {HomeComponent} from './home';
-import {WeatherComponent} from './weather';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -10,16 +7,12 @@ import {WeatherComponent} from './weather';
   template: `
     <h1>Get Weather</h1>
     <div>
-      <a [routerLink]="['/']">Home</a>
-      <a [routerLink]="['/weather']">Weather</a>
+      <a [routerLink]="['']">Home</a>
+      <a [routerLink]="['weather']">Weather</a>
     </div>
     <div>
       <router-outlet></router-outlet>
     </div>
   `
 })
-@Routes([
-  {path: '/', component: HomeComponent},
-  {path: '/weather', component: WeatherComponent}
-])
 export class AppComponent {}

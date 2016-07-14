@@ -1,5 +1,4 @@
 {
-  "version": "1.7.5",
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -8,8 +7,6 @@
     "target": "ES5"
   },
   "exclude": [
-    "typings/browser.d.ts",
-    "typings/browser",
     "node_modules",
     "client"
   ]
