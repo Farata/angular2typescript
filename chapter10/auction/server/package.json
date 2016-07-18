@@ -4,8 +4,8 @@
   "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
   "private": true,
   "scripts": {
-    "postinstall": "typings install",
-    "start": "node build/auction.js",
+    "tsc": "tsc",
+    "startServer": "node build/auction.js",
     "dev": "nodemon build/auction.js"
   },
   "dependencies": {
@@ -13,9 +13,13 @@
     "ws": "^1.0.1"
   },
   "devDependencies": {
+    "@types/compression": "0.0.29",
+    "@types/es6-shim": "0.0.27-alpha",
+    "@types/express": "^4.0.28-alpha",
+    "@types/ws": "0.0.26-alpha",
     "compression": "^1.6.1",
     "nodemon": "^1.8.1",
-    "typescript": "^1.8.10",
+    "typescript": "^2.0.0",
     "typings": "^1.0.4"
   }
 }

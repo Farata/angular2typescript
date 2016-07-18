@@ -1,12 +1,4 @@
-import {
-  beforeEach,
-  beforeEachProviders,
-  describe,
-  expect,
-  inject,
-  it
-} from '@angular/core/testing';
-
+import {addProviders, fakeAsync, inject} from '@angular/core/testing';
 import {TestComponentBuilder} from '@angular/compiler/testing';
 
 // Component to test
@@ -16,10 +8,10 @@ describe('StarsComponent', () => {
   let component;
   let testComponentBuilder;
 
-  beforeEachProviders(() => [
+  beforeEach(() => addProviders([
     StarsComponent,
     TestComponentBuilder
-  ]);
+  ]));
 
   beforeEach(inject([
     StarsComponent,
@@ -37,22 +29,20 @@ describe('StarsComponent', () => {
     expect(component.readonly).toEqual(true);
   });
 
-  it('all stars are empty', done => {
-    testComponentBuilder.createAsync(StarsComponent).then(fixture => {
-      let element = fixture.nativeElement;
-      let cmp = fixture.componentInstance;
-      cmp.rating = 0;
+  it('all stars are empty', fakeAsync(() => {
+    let fixture = testComponentBuilder.createFakeAsync(StarsComponent);
+    let element = fixture.nativeElement;
+    let cmp = fixture.componentInstance;
+    cmp.rating = 0;
 
-      fixture.detectChanges();
+    fixture.detectChanges();
 
-      let selector = '.glyphicon-star-empty';
-      expect(element.querySelectorAll(selector).length).toBe(5);
-      done();
-    });
-  });
+    let selector = '.glyphicon-star-empty';
+    expect(element.querySelectorAll(selector).length).toBe(5);
+  }));
 
-  it('all stars are filled', done => {
-    testComponentBuilder.createAsync(StarsComponent).then(fixture => {
+  it('all stars are filled', fakeAsync(() => {
+      let fixture = testComponentBuilder.createFakeAsync(StarsComponent);
       let element = fixture.nativeElement;
       let cmp = fixture.componentInstance;
       cmp.rating = 5;
@@ -61,16 +51,13 @@ describe('StarsComponent', () => {
 
       let selector = '.glyphicon-star:not(.glyphicon-star-empty)';
       expect(element.querySelectorAll(selector).length).toBe(5);
-      done();
-    });
-  });
+  }));
 
-  it('emits rating change event when readonly is false', done => {
+  it('emits rating change event when readonly is false', fakeAsync(() => {
     component.ratingChange.subscribe(r => {
       expect(r).toBe(3);
-      done();
     });
     component.readonly = false;
     component.fillStarsWithColor(2);
-  });
+  }));
 });

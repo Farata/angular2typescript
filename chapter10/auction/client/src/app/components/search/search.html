@@ -1,4 +1,4 @@
-<form [ngFormModel]="formModel"
+<form [formGroup]="formModel"
       (ngSubmit)="onSearch()"
       novalidate>
 
@@ -9,7 +9,7 @@
            placeholder="Title"
            class="form-control"
            type="text"
-           ngControl="title"
+           formControlName="title"
            minlength="3">
     <span class="help-block"
           [class.hidden]="!formModel.hasError('minlength', 'title')">
@@ -25,7 +25,7 @@
            type="number"
            step="any"
            min="0"
-           ngControl="price">
+           formControlName="price">
     <span class="help-block"
           [class.hidden]="!formModel.hasError('positivenumber', 'price')">
       Price is not a positive number
@@ -35,7 +35,7 @@
     <label for="category">Product category:</label>
     <select id="category"
             class="form-control"
-            ngControl="category">
+            formControlName="category">
       <option value="">All categories</option>
       <option *ngFor="let c of categories"
               [value]="c">{{c}}</option>

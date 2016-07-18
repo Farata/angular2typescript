@@ -3,13 +3,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
-
+    "types":["es6-shim"],
     "sourceMap": true,
     "target": "es5"
   },
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+    "node_modules"
   ]
 }

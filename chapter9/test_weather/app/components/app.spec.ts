@@ -20,14 +20,14 @@ describe('Router', () => {
       disableDeprecatedForms(),
       provideForms(),
 
-      // A helper function defined below in the file returns a list of router
+      // A helper function defined below returns a list of router
       // providers required for testing environment. Expected to be gone in RC.5
       ...routerProviders(),
 
       // In this spec file we test navigation to WeatherComponent which in turn
       // injects WeatherService, so we need to register a provider for
-      // the service here. However since we do not test the component's behavior
-      // here, we can provide a mock object such as an object literal below:
+      // the service here. However since we do not test the actual service
+      // here, we can provide a mock object, e.g. an object literal:
       {provide: WeatherService, useValue: {} }
   ]));
 

@@ -1,10 +1,12 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
-import {ROUTER_PROVIDERS} from '@angular/router';
+import {provideRouter} from '@angular/router';
+import {ROUTER_CONFIG} from "./router-config";
 
-import {MyApp} from './components/app';
+import {MyApp} from './app/app';
 
 bootstrap(MyApp, [
-  ...HTTP_PROVIDERS, // using spread operator
-  ...ROUTER_PROVIDERS
-]).catch((console) => console.error(console));
+  ...HTTP_PROVIDERS,
+  provideRouter(ROUTER_CONFIG)
+]).catch(console.error.bind(console));

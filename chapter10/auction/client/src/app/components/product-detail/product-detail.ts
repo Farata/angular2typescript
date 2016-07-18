@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {RouteSegment, OnActivate, CanDeactivate} from '@angular/router';
+import {Component, OnDestroy} from '@angular/core';
+import {DomSanitizationService, SafeHtml} from '@angular/platform-browser';
+import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
@@ -12,7 +13,7 @@ import StarsComponent from '../stars/stars';
   template: require('./product-detail.html'),
   directives: [StarsComponent]
 })
-export default class ProductDetailComponent implements OnActivate, CanDeactivate {
+export default class ProductDetailComponent implements OnDestroy {
   product: Product;
   reviews: Review[];
 
@@ -22,14 +23,19 @@ export default class ProductDetailComponent implements OnActivate, CanDeactivate
 
   isReviewHidden: boolean = true;
   isWatching: boolean = false;
+  imgHtml: SafeHtml;
 
   private subscription: Subscription;
 
   constructor(private productService: ProductService,
-              private bidService: BidService) {}
+              private bidService: BidService,
+              private sanitizer: DomSanitizationService,
+              router: ActivatedRoute) {
 
-  routerOnActivate(currentSegment: RouteSegment) {
-    const productId = parseInt(currentSegment.getParam('productId'));
+    this.imgHtml = sanitizer.bypassSecurityTrustHtml(`
+      <img src="http://placehold.it/820x320">`);
+
+    const productId = parseInt(router.snapshot.params['productId']);
 
     this.productService
       .getProductById(productId)
@@ -61,7 +67,7 @@ export default class ProductDetailComponent implements OnActivate, CanDeactivate
     }
   }
 
-  routerCanDeactivate(): any {
+  ngOnDestroy(): any {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
