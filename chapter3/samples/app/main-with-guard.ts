@@ -6,6 +6,8 @@ import {provideRouter, ROUTER_DIRECTIVES} from '@angular/router';
 import {HomeComponent} from './components/home';
 import {ProductDetailComponent} from './components/product';
 
+import {LoginGuard} from './guards/login.guard';
+
 @Component({
     selector: 'basic-routing',
     directives: [ROUTER_DIRECTIVES],
@@ -20,7 +22,8 @@ class RootComponent {}
 bootstrap(RootComponent, [
     provideRouter([
       {path: '',        component: HomeComponent},
-      {path: 'product', component: ProductDetailComponent}
+      {path: 'product', component: ProductDetailComponent, canActivate:[LoginGuard]}
     ]),
+    LoginGuard,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
 ]);
