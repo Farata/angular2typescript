@@ -7,6 +7,7 @@ import {HomeComponent} from './components/home';
 import {ProductDetailComponent} from './components/product';
 
 import {LoginGuard} from './guards/login.guard';
+import {UnsavedChangesGuard} from './guards/unsaved_changes.guard';
 
 @Component({
     selector: 'basic-routing',
@@ -22,8 +23,9 @@ class RootComponent {}
 bootstrap(RootComponent, [
     provideRouter([
       {path: '',        component: HomeComponent},
-      {path: 'product', component: ProductDetailComponent, canActivate:[LoginGuard]}
+      {path: 'product', component: ProductDetailComponent,
+          canActivate:[LoginGuard], canDeactivate:[UnsavedChangesGuard]}
     ]),
-    LoginGuard,
+    LoginGuard, UnsavedChangesGuard,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
 ]);

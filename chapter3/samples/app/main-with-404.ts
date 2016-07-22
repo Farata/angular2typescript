@@ -5,6 +5,7 @@ import {provideRouter, ROUTER_DIRECTIVES, RouterConfig} from '@angular/router';
 
 import {HomeComponent} from './components/home';
 import {ProductDetailComponent} from './components/product';
+import {_404Component} from "./components/404";
 
 @Component({
     selector: 'basic-routing',
@@ -22,7 +23,8 @@ RouterConfig
 bootstrap(RootComponent, [
     provideRouter([
       {path: '',        component: HomeComponent},
-      {path: 'product', component: ProductDetailComponent}
+      {path: 'product', component: ProductDetailComponent},
+      {path: '**', component: _404Component}
     ]),
     {provide: LocationStrategy, useClass: HashLocationStrategy}
 ]);
