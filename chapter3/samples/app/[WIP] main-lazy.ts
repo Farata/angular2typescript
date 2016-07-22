@@ -1,10 +1,11 @@
+/*
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
 import {LuxuryComponent} from './components/luxury';
 
-// This is a non-working app - needs migration to new router
+// This is a non-working app - needs migration to the router 3.0
 
 @Component({
     selector: 'product',
@@ -39,3 +40,4 @@ bootstrap(RootComponent, [
     ROUTER_PROVIDERS,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
 ]);
+*/

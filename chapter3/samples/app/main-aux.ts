@@ -20,7 +20,7 @@ export class HomeComponent {}
     selector: 'chat',
     template: `<textarea placeholder="Chat with customer service"
                        class="chat"></textarea>`,
-    styles: [`.chat {background: #eee; height: 80px;width:30%; font-size: 30px;
+    styles: [`.chat {background: #eee; height: 80px;width:30%; font-size: 24px;
                      float:left; display:block; box-sizing:border-box;} `]})
 export class ChatComponent {}
 
@@ -31,24 +31,13 @@ export class ChatComponent {}
     template: `
         <a [routerLink]="['']">Home</a>
         <a [routerLink]="['product']">Product Details</a>
-        <a href="javascript:void(0)" (click)="goToChat()">Chat</a>
-        <input type="button" value ="Chat" (click)="goToChat()">
+        <a href="#/home(aux:chat)">Chat</a>
         <br/>
         <router-outlet></router-outlet>
         <router-outlet name="aux"></router-outlet>
     `
 })
-class RootComponent {
-
-    constructor(private router: Router){
-
-    }
-
-    goToChat(){
-        this.router.navigateByUrl("home(aux:chat)");
-    }
-
-}
+class RootComponent {}
 
 bootstrap(RootComponent, [
     provideRouter([
