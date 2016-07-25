@@ -1,6 +1,6 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-All examples were upgraded to Angular 2 RC.4. 
+All examples were upgraded to Angular 2 RC.4.  The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
 In the latest version of the code we use the new new new router 3.0 Beta 2. If you want the router's sample that use older version of the router see the dir chapter3_router_v2.
 Any folder that has _old_ in the name has code samples described in the MEAP V6.

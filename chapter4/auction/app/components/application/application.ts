@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import { ROUTER_DIRECTIVES} from '@angular/router';
 import HomeComponent from '../home/home';
 
@@ -15,7 +15,8 @@ import SearchComponent from '../search/search';
     FooterComponent,
     SearchComponent,
     HomeComponent
-  ]
+  ],
+  encapsulation:ViewEncapsulation.None
 })
 
 export default class ApplicationComponent {}

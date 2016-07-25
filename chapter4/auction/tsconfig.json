@@ -4,8 +4,10 @@
     "emitDecoratorMetadata": true,
     "module": "commonjs",
     "target": "ES5",
-    "noEmit": true
+    "noEmit": true,
+    "types":["es6-shim"]
   },
+
   "exclude": [
     "node_modules"
   ]

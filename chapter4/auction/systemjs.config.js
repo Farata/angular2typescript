@@ -7,7 +7,7 @@ System.config({
         '@angular'                         : 'node_modules/@angular'
       },
       packages: {
-        'app'                              : {main: 'main.ts', defaultExtension: 'ts'},
+        'app'                              : {main: 'main', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},
