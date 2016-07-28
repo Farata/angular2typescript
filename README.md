@@ -11,6 +11,10 @@ Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
 It'll help you in getting started while reading Chapter 2.
 
+Watch this video with the high-level overview of the sample Auction app we develop in the book: https://www.youtube.com/watch?v=I809tajbVk4&feature=youtu.be
+
+Note the changes in the SystemJS config object in the angular-seed project in Chapter 2. Now we use minimized Angular bundles to lower the size of the app and the number of network requests during the app bootstrap.
+
 With the recent release of TypeScript 2.0 Beta, there is no need to use the Typings tool for downloading *.d.ts files. We're starting updating the code example to use @types and install the *.d.ts files with npm, e.g. 
 npm i @types/es6-shim --save
 
