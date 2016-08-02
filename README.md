@@ -2,7 +2,7 @@ This is a repository for code samples for the upcoming book by Yakov Fain and An
 
 All examples were upgraded to Angular 2 RC.4.  The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
-In the latest version of the code we use the new new new router 3.0 Beta 2. If you want the router's sample that use older version of the router see the dir chapter3_router_v2.
+In the latest version of the code we use the new new new router 3.0 Beta 2. 
 
 Also, the Forms API is being changed. The code samples with the latest Forms API are in chapter7.
 
