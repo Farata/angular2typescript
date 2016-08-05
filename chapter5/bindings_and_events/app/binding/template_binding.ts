@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
     <button (click)="flag = !flag">Toggle flag's value</button>
 
     <p>
-      Flags's value: {{flag}}
+      Flag's value: {{flag}}
     </p>
 
     <p>

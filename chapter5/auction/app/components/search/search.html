@@ -1,4 +1,4 @@
-<form name="searchForm" role="form">
+<!--<form name="searchForm" role="form">
   <div class="form-group">
     <label for="productTitle">Product title:</label>
     <input id="productTitle"
@@ -20,5 +20,43 @@
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-primary btn-block">Search</button>
+  </div>
+</form>-->
+
+
+<form [formGroup]="formModel">
+
+  <div class="form-group">
+    <label for="title">Product title:</label>
+    <input id="title"
+           placeholder="Title"
+           class="form-control"
+           type="text"
+           formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="price">Product price:</label>
+    <input id="price"
+           placeholder="Price"
+           class="form-control"
+           type="number"
+           step="any"
+           min="0"
+           formControlName="price">
+  </div>
+  <div class="form-group">
+    <label for="category">Product category:</label>
+    <select id="category"
+            class="form-control"
+            formControlName="category">
+      <option value="-1">All categories</option>
+      <option *ngFor="let c of categories"
+              [value]="c">{{c}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button type="submit"
+            class="btn btn-primary btn-block">Search</button>
   </div>
 </form>

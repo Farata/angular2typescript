@@ -1,6 +1,7 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
-import {Control, NgFormControl} from '@angular/common';
+import {Control} from '@angular/common';
+import {disableDeprecatedForms, provideForms, REACTIVE_FORM_DIRECTIVES, FormControl} from '@angular/forms';
 import {HTTP_PROVIDERS, Http} from '@angular/http';
 
 import {Observable} from 'rxjs/Rx';
@@ -10,10 +11,10 @@ import 'rxjs/add/operator/debounceTime';
 
 @Component({
     selector: "app",
-    directives: [NgFormControl],
+    directives: [REACTIVE_FORM_DIRECTIVES],
     template: `
       <h2>Observable weather</h2>
-      <input type="text" placeholder="Enter city" [ngFormControl]="searchInput">
+      <input type="text" placeholder="Enter city" [formControl]="searchInput">
       <h3>{{temperature}}</h3>
     `
 })
@@ -48,9 +49,17 @@ class AppComponent {
 
     getWeather(city: string): Observable<Array<string>> {
       return this.http.get(this.baseWeatherURL + city + this.urlSuffix)
-        .map(res => res.json());
+        .map(res => {
+            console.log(res);
+            return res.json()});
     }
 }
-bootstrap(AppComponent, [...HTTP_PROVIDERS]);
+
+bootstrap(AppComponent, [
+    disableDeprecatedForms(),
+    provideForms(),
+    [...HTTP_PROVIDERS]
+]);
+
 
 

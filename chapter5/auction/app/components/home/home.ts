@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Control, NgFormControl} from '@angular/common';
+import {FormControl, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
 import {Product, ProductService} from '../../services/product-service';
 import CarouselComponent from '../carousel/carousel';
 import ProductItemComponent from '../product-item/product-item';
@@ -9,7 +9,7 @@ import 'rxjs/add/operator/debounceTime';
 @Component({
   selector: 'auction-home-page',
   directives: [
-    NgFormControl,
+    REACTIVE_FORM_DIRECTIVES,
     CarouselComponent,
     ProductItemComponent
   ],
@@ -26,7 +26,7 @@ import 'rxjs/add/operator/debounceTime';
         <div class="form-group">
           <input placeholder="Filter products by title"
                  class="form-control" type="text"
-                 [ngFormControl]="titleFilter">
+                 [formControl]="titleFilter">
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ import 'rxjs/add/operator/debounceTime';
 })
 export default class HomeComponent {
   products: Product[] = [];
-  titleFilter: Control = new Control();
+  titleFilter: FormControl = new FormControl();
   filterCriteria: string;
 
   constructor(private productService: ProductService) {
