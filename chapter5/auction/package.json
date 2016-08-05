@@ -22,13 +22,12 @@
     "rxjs": "5.0.0-beta.6",
     "systemjs": "^0.19.31",
     "zone.js": "^0.6.12",
-
-      "bootstrap": "^3.3.6",
-      "jquery": "^2.2.2"
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2"
   },
   "devDependencies": {
+    "@types/es6-shim": "0.0.29",
     "live-server": "^0.8.2",
     "typescript": "^1.8.10"
   }
 }
-

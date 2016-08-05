@@ -1,29 +1,3 @@
-<!--<form name="searchForm" role="form">
-  <div class="form-group">
-    <label for="productTitle">Product title:</label>
-    <input id="productTitle"
-           name="productTitle"
-           type="text"
-           placeholder="Title"
-           class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="productPrice">Product price:</label>
-    <input id="productPrice"
-           name="productPrice"
-           type="number" min="0" step="any"
-           placeholder="Price" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="prodcutCategory">Product category:</label>
-    <select id="prodcutCategory" class="form-control"></select>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary btn-block">Search</button>
-  </div>
-</form>-->
-
-
 <form [formGroup]="formModel">
 
   <div class="form-group">
@@ -49,9 +23,6 @@
     <select id="category"
             class="form-control"
             formControlName="category">
-      <option value="-1">All categories</option>
-      <option *ngFor="let c of categories"
-              [value]="c">{{c}}</option>
     </select>
   </div>
 
