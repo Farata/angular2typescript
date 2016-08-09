@@ -1,16 +1,14 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component} from '@angular/core';
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-@Component({
-    selector: 'app',
-    template: `<h1>Hello {{ name }}!</h1>`
+import { AppComponent }  from 'app/app.component';
+
+@NgModule({
+    imports:      [ BrowserModule ],
+    declarations: [ AppComponent ],
+    bootstrap:    [ AppComponent ]
 })
-class AppComponent {
-    name: string;
+export class AppModule { }
 
-    constructor() {
-        this.name = 'Angular 2';
-    }
-}
-
-bootstrap(AppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);

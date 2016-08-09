@@ -5,10 +5,10 @@ System.config({
       '@angular': 'node_modules/@angular'
     },
     paths: {
-      'node_modules/@angular/*': 'node_modules/@angular/!*/bundles'
+      'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
     },
     meta: {
-      '@angular/!*': {'format': 'cjs'}
+      '@angular/*': {'format': 'cjs'}
     },
     packages: {
         'app'                              : {main: 'main', defaultExtension: 'ts'},
