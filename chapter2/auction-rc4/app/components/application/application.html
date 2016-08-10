@@ -1,0 +1,31 @@
+<auction-navbar></auction-navbar>
+
+<div class="container">
+  <div class="row">
+    <!-- Left column contains only search form the style col-md-3 comes from
+    Twitter Bootstrap grid system-->
+    <div class="col-md-3">
+      <auction-search></auction-search>
+    </div>
+
+    <!--
+      Right column which is the main area of the page contains two rows (as per Twitter Bootstrap):
+      1. First one keeps a carousel with featured products
+      2. Second one has a flexible grid with products.
+    -->
+    <div class="col-md-9">
+      <div class="row carousel-holder">
+        <div class="col-md-12">
+          <auction-carousel></auction-carousel>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let prod of products" class="col-sm-4 col-lg-4 col-md-4">
+          <auction-product-item [product]="prod"></auction-product-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<auction-footer></auction-footer>
