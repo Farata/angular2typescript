@@ -1,4 +1,4 @@
-\import {Component} from '@angular/core';
+import {Component} from '@angular/core';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -24,5 +24,5 @@ class HelloWorldComponent {
 })
 export class AppModule { }
 
-// App botstrap
+// App bootstrap
 platformBrowserDynamic().bootstrapModule(AppModule);
