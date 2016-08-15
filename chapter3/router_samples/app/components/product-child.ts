@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {Routes, ROUTER_DIRECTIVES, RouteSegment} from '@angular/router';
-import {SellerInfoComponent} from './seller';
-import {ProductDescriptionComponent} from './product_description';
+import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
+import {ProductDescriptionComponent} from './product-description';
 
 @Component({
     selector: 'product',
@@ -15,14 +14,10 @@ import {ProductDescriptionComponent} from './product_description';
       </div>
     `
 })
-@Routes([
-    {path: '',            component: ProductDescriptionComponent},
-    {path: 'seller/:id',  component: SellerInfoComponent}
-])
 export class ProductDetailComponent {
   productID: string;
 
-  constructor(params: RouteSegment) {
-    this.productID = params.getParam('id');
+  constructor(route: ActivatedRoute) {
+    this.productID = route.snapshot.params['id'];
   }
 }

@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Basic Routing Samples</title>
+  <title>Chapter 3: Routing Samples</title>
   <script src="node_modules/zone.js/dist/zone.js"></script>
   <script src="node_modules/typescript/lib/typescript.js"></script>
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="systemjs.config.js"></script>
-  <script>
-    System.import('app').catch(function (err) {console.error(err);});
-  </script>
+  <script>System.import('app').catch(console.error.bind(console));</script>
 </head>
 <body>
-  <basic-routing></basic-routing>
+  <app>Loading...</app>
 </body>
 </html>
