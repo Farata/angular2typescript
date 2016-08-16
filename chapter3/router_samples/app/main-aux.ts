@@ -1,12 +1,9 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {provideRouter, ROUTER_DIRECTIVES, Router} from '@angular/router';
-
-@Component({
-    selector: 'product',
-    template: '<h1 >Product Detail Component</h1>'})
-export class ProductDetailComponent {}
+import { Routes, RouterModule } from '@angular/router';
 
 @Component({
     selector: 'home',
@@ -24,28 +21,44 @@ export class HomeComponent {}
                      float:left; display:block; box-sizing:border-box;} `]})
 export class ChatComponent {}
 
+const routes: Routes = [
+    {path: '',  redirectTo: 'home', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
+    {path: 'chat', component: ChatComponent, outlet:"aux"}
+];
 
 @Component({
-    selector: 'basic-routing',
-    directives: [ROUTER_DIRECTIVES],
+    selector: 'app',
     template: `
         <a [routerLink]="['']">Home</a>
-        <a [routerLink]="['product']">Product Details</a>
-        <a href="#/home(aux:chat)">Chat</a>
+        <a [routerLink]="[{outlets: {primary: 'home', aux: 'chat'}}]">Open Chat</a>
+        <a [routerLink]="[{outlets: {aux: null}}]">Close Chat</a>
         <br/>
         <router-outlet></router-outlet>
         <router-outlet name="aux"></router-outlet>
     `
 })
-class RootComponent {}
+class AppComponent {}
 
-bootstrap(RootComponent, [
-    provideRouter([
-      {path: '',  redirectTo: 'home', terminal:true},
-      {path: 'home',        component: HomeComponent},
-      {path: 'product', component: ProductDetailComponent},
-      {path: 'chat', component: ChatComponent, outlet:"aux"}
+@NgModule({
+    imports:      [ BrowserModule, RouterModule.forRoot(routes)],
+    declarations: [ AppComponent, HomeComponent, ChatComponent],
+    providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap:    [ AppComponent ]
+})
+class AppModule { }
 
-    ]),
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
-]);
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+
+/*
+// programmatic navigation
+class AppComponent {
+
+    constructor(private _router: Router){}
+
+    navigateToChat(){
+        this._router.navigate([{outlets: {aux: 'chat'}}]);
+    }
+}*/
