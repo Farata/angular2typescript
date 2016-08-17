@@ -2,8 +2,7 @@ System.config({
   transpiler: 'typescript',
   typescriptOptions: {
     emitDecoratorMetadata: true,
-    module: 'system',
-    target: "ES5"
+    module: 'system'
   },
   map: {
     '@angular': 'node_modules/@angular'
