@@ -1,8 +1,14 @@
-import { Component, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
+import {
+  disableDeprecatedForms,
+  provideForms,
+  FormControl,
+  FormGroup,
+  REACTIVE_FORM_DIRECTIVES
+} from '@angular/forms';
+
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 
@@ -19,6 +25,7 @@ function asyncSsnValidator(control: FormControl): Observable<any> {
 
 @Component({
   selector: 'app',
+  directives: [REACTIVE_FORM_DIRECTIVES],
   template: `
     <form [formGroup]="form">
       SSN: <input type="text" formControlName="my-ssn">
@@ -36,11 +43,7 @@ class AppComponent {
   }
 }
 
-@NgModule({
-  imports     : [ BrowserModule, ReactiveFormsModule ],
-  declarations: [ AppComponent ],
-  bootstrap   : [ AppComponent ]
-})
-class AppModule {}
-
-platformBrowserDynamic().bootstrapModule(AppModule);
+bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms()
+]);

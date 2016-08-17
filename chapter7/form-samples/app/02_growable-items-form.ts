@@ -1,64 +1,52 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component} from '@angular/core';
-import {
-    REACTIVE_FORM_DIRECTIVES,
-    disableDeprecatedForms,
-    provideForms,
-    FormArray,
-    FormControl,
-    FormGroup,
-} from '@angular/forms';
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ReactiveFormsModule, FormControl, FormGroup, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app',
-  directives: [REACTIVE_FORM_DIRECTIVES],
   template: `
-    <form [formGroup]="form" (ngSubmit)="register()">
-      <div>
-        <label for="username">Username</label>
-        <input id="username" type="text" formControlName="username">
-      </div>
-      <div>
-        <label>Emails</label>
-        <ul formArrayName="emails">
-          <li *ngFor="let e of emails; let i=index"><input [formControlName]="i"></li>
-        </ul>
-        <button type="button" (click)="addEmail()">Add Email</button>
-      </div>
+    <form [formGroup]="formModel" (ngSubmit)="register()">
+      <label>Emails</label>
+      <button type="button" (click)="addEmail()">Add Email</button>
+      <ul formArrayName="emails">
+        <li *ngFor="let e of formModel.get('emails').controls; let i=index">
+          <input [formControlName]="i">
+        </li>
+      </ul>
       <button type="submit">Register</button>
     </form>
+    <hr>
     <label>Form Value:</label>
-    <pre>{{value}}</pre>
+    <pre>{{ value }}</pre>
   `
 })
-export default class AppComponent {
-  form: FormGroup;
-  emails: FormControl[];
-
-  constructor() {
-    this.emails = [new FormControl()];
-
-    this.form = new FormGroup({
-      username: new FormControl(),
-      emails: new FormArray(this.emails)
-    });
-  }
+class AppComponent {
+  formModel: FormGroup = new FormGroup({
+    emails: new FormArray([
+      new FormControl()
+    ])
+  });
 
   get value() {
-    return JSON.stringify(this.form.value, null, 4);
+    return JSON.stringify(this.formModel.value, null, 4);
   }
 
   addEmail() {
-    const emails = <FormArray>this.form.controls['emails'];
+    const emails = this.formModel.get('emails') as FormArray;
     emails.push(new FormControl());
   }
 
   register() {
-    console.log(this.form.value);
+    console.log(this.formModel.value);
   }
 }
 
-bootstrap(AppComponent, [
-  disableDeprecatedForms(),
-  provideForms()
-]);
+@NgModule({
+  imports     : [ BrowserModule, ReactiveFormsModule ],
+  declarations: [ AppComponent ],
+  bootstrap   : [ AppComponent ]
+})
+class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);

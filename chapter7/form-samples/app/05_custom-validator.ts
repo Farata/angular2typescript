@@ -2,19 +2,15 @@ import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/delay';
 
 /**
- * Returns an Observable resolved with either a null or an error object.
+ * Returns `true` if FormControl's value represents a valid SSN,
+ * otherwise returns `false`.
  */
-function asyncSsnValidator(control: FormControl): Observable<any> {
+function ssnValidator(control: FormControl): {[key: string]: any} {
   const value: string = control.value || '';
   const valid = value.match(/^\d{9}$/);
-  return Observable
-      .of(valid ? null : {ssn: true})
-      .delay(5000);
+  return valid ? null : {ssn: true};
 }
 
 @Component({
@@ -22,7 +18,7 @@ function asyncSsnValidator(control: FormControl): Observable<any> {
   template: `
     <form [formGroup]="form">
       SSN: <input type="text" formControlName="my-ssn">
-           <span>{{form.status}}</span>
+           <span [hidden]="!form.hasError('ssn', 'my-ssn')">SSN in invalid</span>
     </form>
   `
 })
@@ -31,7 +27,7 @@ class AppComponent {
 
   constructor() {
     this.form = new FormGroup({
-      'my-ssn': new FormControl('', null, asyncSsnValidator)
+      'my-ssn': new FormControl('', ssnValidator)
     });
   }
 }
