@@ -1,18 +1,7 @@
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-
-import NavbarComponent from '../navbar/navbar';
-import FooterComponent from '../footer/footer';
-import SearchComponent from '../search/search';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'auction-application',
-  templateUrl: 'app/components/application/application.html',
-  directives: [
-    ROUTER_DIRECTIVES,
-    NavbarComponent,
-    FooterComponent,
-    SearchComponent
-  ]
+  templateUrl: 'app/components/application/application.html'
 })
 export default class ApplicationComponent {}

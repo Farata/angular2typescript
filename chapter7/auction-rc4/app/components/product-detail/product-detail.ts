@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Product, Review, ProductService } from '../../services/product-service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Product, Review, ProductService} from '../../services/product-service';
+import StarsComponent from '../stars/stars';
 
 @Component({
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
-  templateUrl: 'app/components/product-detail/product-detail.html'
+  templateUrl: 'app/components/product-detail/product-detail.html',
+  directives: [StarsComponent]
 })
 export default class ProductDetailComponent implements OnInit {
   productId: number;
