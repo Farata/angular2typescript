@@ -1,11 +1,9 @@
 import {Component} from '@angular/core';
-import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
-import {ProductDescriptionComponent} from './product-description';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'product',
     styles: ['.product {background: cyan}'],
-    directives: [ROUTER_DIRECTIVES],
     template: `
       <div class="product">
         <h1>Product Detail for Product: {{productID}}</h1>

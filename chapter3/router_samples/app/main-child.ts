@@ -1,31 +1,40 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
 import {Component} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {provideRouter, ROUTER_DIRECTIVES} from '@angular/router';
-
-import {HomeComponent} from './components/home';
+import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent} from "./components/home";
 import {ProductDetailComponent} from './components/product-child';
 import {ProductDescriptionComponent} from './components/product-description';
 import {SellerInfoComponent} from './components/seller';
 
+const routes: Routes = [
+    {path: '',            component: HomeComponent},
+    {path: 'product/:id', component: ProductDetailComponent,
+        children: [
+          {path: '',           component: ProductDescriptionComponent},
+          {path: 'seller/:id', component: SellerInfoComponent}
+        ]}
+];
+
 @Component({
-    selector: 'basic-routing',
-    directives: [ROUTER_DIRECTIVES],
+    selector: 'app',
     template: `
         <a [routerLink]="['/']">Home</a>
-        <a [routerLink]="['/product', 1234]">Product Details</a>
+        <a [routerLink]="['/product', 1234]">Product Details</a> 
         <router-outlet></router-outlet>
-    `,
+    `
 })
-class RootComponent {}
+class AppComponent {}
 
-bootstrap(RootComponent, [
-    provideRouter([
-        {path: '',            component: HomeComponent},
-        {path: 'product/:id', component: ProductDetailComponent, children: [
-            {path: '',           component: ProductDescriptionComponent},
-            {path: 'seller/:id', component: SellerInfoComponent}
-        ]}
-    ]),
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
-]);
+@NgModule({
+    imports:      [ BrowserModule, RouterModule.forRoot(routes)],
+    declarations: [ AppComponent, HomeComponent, ProductDetailComponent,
+                    ProductDescriptionComponent, SellerInfoComponent],
+    providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],
+    bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
