@@ -7,6 +7,7 @@ import SearchComponent from '../search/search';
 @Component({
   selector: 'auction-application',
   templateUrl: 'app/components/application/application.html',
+  styleUrls: ['app/components/application/application.css'],
   directives: [
     NavbarComponent,
     FooterComponent,
