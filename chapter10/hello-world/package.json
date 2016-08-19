@@ -4,12 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "node_modules/.bin/concurrently \"node_modules/.bin/webpack\"  \"node_modules/.bin/webpack-dev-server\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^2.2.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   }

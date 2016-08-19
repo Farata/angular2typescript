@@ -1,14 +1,16 @@
-.preview*
+.DS_Store
 .idea*
-.vscode*
-*.pdf*
-
 *.map
+.preview*
+*.pdf*
+.vscode*
 
+build
+coverage
+dist
 jspm_packages
-
 node_modules
-
 npm-debug.log
+typings
 
 /appendixb/js/*
