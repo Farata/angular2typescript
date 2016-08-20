@@ -1,10 +1,12 @@
 import {Component} from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
+import StarsComponent from '../stars/stars';
 
 @Component({
   selector: 'auction-product-page',
-  templateUrl: 'app/components/product-detail/product-detail.html'
+  templateUrl: 'app/components/product-detail/product-detail.html',
+  directives: [ StarsComponent]
 })
 export default class ProductDetailComponent {
   product: Product;
