@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular DI Sample</title>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {console.error(err);});
+  </script>
+</head>
+<body>
+   <app></app>
+</body>
+</html>
