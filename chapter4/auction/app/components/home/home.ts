@@ -5,10 +5,6 @@ import ProductItemComponent from '../product-item/product-item';
 
 @Component({
   selector: 'auction-home-page',
-  directives: [
-    CarouselComponent,
-    ProductItemComponent
-  ],
   styleUrls: ['app/components/home/home.css'],
   template: `
     <div class="row carousel-holder">

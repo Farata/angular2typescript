@@ -2,10 +2,43 @@
 <html>
 <head>
   <title>Binding and events samples</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Internatialization pkg to fix issue with pipes in some browsers-->
   <!--script src="node_modules/intl/dist/Intl.min.js"></script>
   <script src="node_modules/intl/locale-data/jsonp/en.js"></script -->
+  <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Intl.~locale.en"></script>
+
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+</head>
+
+<body>
+<app>Loading...</app>
+</body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Binding and events samples</title>
+
+  &lt;!&ndash; Internatialization pkg to fix issue with pipes in some browsers&ndash;&gt;
+  &lt;!&ndash;script src="node_modules/intl/dist/Intl.min.js"></script>
+  <script src="node_modules/intl/locale-data/jsonp/en.js"></script &ndash;&gt;
 
   <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Intl.~locale.en"></script>
 
@@ -22,4 +55,4 @@
 <body>
 <app>Loading...</app>
 </body>
-</html>
+</html>-->

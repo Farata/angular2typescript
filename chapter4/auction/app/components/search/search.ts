@@ -1,9 +1,8 @@
 import {Component} from '@angular/core';
-import {FormControl, FormGroup, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'auction-search',
-  directives: [REACTIVE_FORM_DIRECTIVES],
   templateUrl: 'app/components/search/search.html'
 })
 export default class SearchComponent {

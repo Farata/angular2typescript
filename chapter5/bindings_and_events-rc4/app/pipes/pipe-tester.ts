@@ -1,7 +1,5 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { NgModule, Component }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {Component} from '@angular/core';
 import {TemperaturePipe} from './temperature-pipe';
 
 @Component({
@@ -14,7 +12,7 @@ import {TemperaturePipe} from './temperature-pipe';
               <br>In {{targetFormat}} this temperature is {{temp | temperature: format | number:'1.1-2'}}`
 
 })
-class AppComponent {
+class GreetingComponent {
 
     temp: number;
     toCelsius: boolean=true;
@@ -29,11 +27,4 @@ class AppComponent {
         this.targetFormat = this.toCelsius?'Celsius':'Fahrenheit';
     }
 }
-@NgModule({
-    imports:      [ BrowserModule, FormsModule],
-    declarations: [ AppComponent],
-    bootstrap:    [ AppComponent ]
-})
-class AppModule { }
-
-platformBrowserDynamic().bootstrapModule(AppModule);
+bootstrap(GreetingComponent);

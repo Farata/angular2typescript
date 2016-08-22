@@ -11,7 +11,7 @@ System.config({
         '@angular/*': {'format': 'cjs'}
     },
     packages: {
-        'app'                              : {main: './pipes/pipe-tester', defaultExtension: 'ts'},
+        'app'                              : {main: './observables/observable_events_http', defaultExtension: 'ts'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
         '@angular/compiler'                : {main: 'compiler.umd.min.js'},

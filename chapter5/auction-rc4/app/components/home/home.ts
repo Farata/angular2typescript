@@ -1,11 +1,18 @@
 import {Component} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
 import {Product, ProductService} from '../../services/product-service';
+import CarouselComponent from '../carousel/carousel';
+import ProductItemComponent from '../product-item/product-item';
 import {FilterPipe} from '../pipes/filter-pipe'
 import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'auction-home-page',
+  directives: [
+    REACTIVE_FORM_DIRECTIVES,
+    CarouselComponent,
+    ProductItemComponent
+  ],
   pipes: [FilterPipe],
   styleUrls: ['app/components/home/home.css'],
   template: `
