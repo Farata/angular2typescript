@@ -1,15 +1,9 @@
 import {Component} from '@angular/core';
 import {Product} from '../../services/product-service';
-import CarouselComponent from '../carousel/carousel';
-import ProductItemComponent from '../product-item/product-item';
 import {ProductService} from '../../services/product-service';
 
 @Component({
   selector: 'auction-home-page',
-  directives: [
-    CarouselComponent,
-    ProductItemComponent
-  ],
   styleUrls: ['app/components/home/home.css'],
   template: `
     <div class="row carousel-holder">

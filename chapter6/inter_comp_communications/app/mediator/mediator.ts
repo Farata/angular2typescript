@@ -1,7 +1,9 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule, Component} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import {OrderComponent} from './order';
-import {PriceQuoterComponent} from './price_quoter';
+import {PriceQuoterComponent} from './price-quoter';
 import {Stock} from './stock';
 
 @Component({
@@ -13,11 +15,19 @@ import {Stock} from './stock';
   `,
     directives: [OrderComponent, PriceQuoterComponent]
 })
-class MediatorComponent {
+class AppComponent {
     stock: Stock;
 
     priceQuoteHandler(event:Stock) {
         this.stock = event;
     }
 }
-bootstrap(MediatorComponent);
+@NgModule({
+    imports:      [ BrowserModule],
+    declarations: [ AppComponent, OrderComponent,
+                    PriceQuoterComponent],
+    bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

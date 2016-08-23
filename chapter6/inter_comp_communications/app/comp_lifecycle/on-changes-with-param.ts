@@ -1,5 +1,7 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component, Input, OnChanges, SimpleChange, enableProdMode} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule, Component, Input,  OnChanges, SimpleChange, enableProdMode } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 interface IChanges {[key: string]: SimpleChange};
 
@@ -44,4 +46,12 @@ class AppComponent {
 }
 
 enableProdMode();
-bootstrap(AppComponent);
+
+@NgModule({
+  imports:      [ BrowserModule, FormsModule],
+  declarations: [ AppComponent, ChildComponent],
+  bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

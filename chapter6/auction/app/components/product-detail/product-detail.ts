@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Product, Review, ProductService} from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
@@ -7,7 +7,7 @@ import StarsComponent from '../stars/stars';
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
   templateUrl: 'app/components/product-detail/product-detail.html',
-  directives: [ ROUTER_DIRECTIVES, StarsComponent]
+  directives: [ StarsComponent]
 })
 export default class ProductDetailComponent {
   product: Product;
@@ -29,6 +29,7 @@ export default class ProductDetailComponent {
   addReview() {
     let review = new Review(0, this.product.id, new Date(), 'Anonymous',
         this.newRating, this.newComment);
+    console.log("Adding review " + JSON.stringify(review));
     this.reviews = [...this.reviews, review];
     this.product.rating = this.averageRating(this.reviews);
 

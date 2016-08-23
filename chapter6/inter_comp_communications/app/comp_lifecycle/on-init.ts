@@ -1,5 +1,7 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component, Input, OnInit, OnChanges} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule, Component, Input, OnInit,  OnChanges } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'child',
@@ -39,4 +41,11 @@ class AppComponent {
   greeting: string = 'Hello';
 }
 
-bootstrap(AppComponent);
+@NgModule({
+  imports:      [ BrowserModule, FormsModule],
+  declarations: [ AppComponent, ChildComponent],
+  bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

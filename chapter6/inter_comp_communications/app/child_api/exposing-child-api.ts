@@ -1,12 +1,13 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component, ViewChild, AfterViewInit} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule, Component, ViewChild, AfterViewInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
     selector: 'child',
     template: `<h3>Child</h3>`
 
 })
-class Child {
+class ChildComponent {
     greet(name) {
         console.log(`Hello from ${name}.`);
     }
@@ -14,7 +15,6 @@ class Child {
 
 @Component({
     selector: 'app',
-    directives: [Child],
     template: `
     <h1>Parent</h1>
     <child #child1></child>
@@ -23,13 +23,20 @@ class Child {
     <button (click)="child2.greet('Child 2')">Invoke greet() on child 2</button>
   `
 })
-class App implements AfterViewInit {
+class AppComponent implements AfterViewInit {
     @ViewChild('child1')
-    firstChild: Child;
+    firstChild: ChildComponent;
 
     ngAfterViewInit() {
         this.firstChild.greet('Child 1');
     }
 }
 
-bootstrap(App);
+@NgModule({
+    imports:      [ BrowserModule],
+    declarations: [ AppComponent, ChildComponent],
+    bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
