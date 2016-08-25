@@ -2,10 +2,10 @@
 <html>
 
 <!--
- This file is used only for testing custom_observable_service_subscriber.ts
+ This file is used only for testing custom-observable-service-subscriber.ts
  The Node server is not used in this example
 
- Just start http-server and open http://localhost:8080
+ Just start the live-server and open http://localhost:8080
 
 -->
 <head>
@@ -14,7 +14,6 @@
   <script src="node_modules/typescript/lib/typescript.js"></script>
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="systemjs.config.js"></script>
   <script>
     System.config({
       transpiler: 'typescript',
@@ -25,7 +24,7 @@
         '@angular'                         : 'node_modules/@angular'
       },
       packages: {
-        'app'                              : {main: 'main', defaultExtension: 'ts'},
+        'app'                              : {main: 'custom-observable-service-subscriber', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'index.js'},
         '@angular/core'                    : {main: 'index.js'},
         '@angular/common'                  : {main: 'index.js'},

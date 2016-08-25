@@ -1,24 +1,26 @@
-// This file is used by samples that are loaded by with the Node server
+// This file is used by samples that are loaded from the local Node server
+
+
 System.config({
     transpiler: 'typescript',
     typescriptOptions: {emitDecoratorMetadata: true},
     map: {
-        'app' : 'app',
-        'rxjs': 'node_modules/rxjs',
-        '@angular'                    : 'node_modules/@angular'
-
-      },
-      packages: {
-        'app'                              : {main: 'bids/bid_component', defaultExtension: 'ts'},
-        'rxjs'                             : {main: 'index.js'},
-        '@angular/core'                    : {main: 'index.js'},
-        '@angular/common'                  : {main: 'index.js'},
-        '@angular/compiler'                : {main: 'index.js'},
-        '@angular/router'                  : {main: 'index.js'},
-        '@angular/platform-browser'        : {main: 'index.js'},
-        '@angular/platform-browser-dynamic': {main: 'index.js'},
-        '@angular/http'                    : {main: 'index.js'},
-        '@angular/forms'                    : {main: 'index.js'}
-
-      }
+        '@angular': 'node_modules/@angular'
+    },
+    paths: {
+        'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
+    },
+    meta: {
+        '@angular/*': {'format': 'cjs'}
+    },
+    packages: {
+        'app'                              : {main: './bids/bid-component', defaultExtension: 'ts'},
+        '@angular/core'                    : {main: 'core.umd.min.js'},
+        '@angular/common'                  : {main: 'common.umd.min.js'},
+        '@angular/compiler'                : {main: 'compiler.umd.min.js'},
+        '@angular/forms'                   : {main: 'forms.umd.min.js'},
+        '@angular/http'                    : {main: 'http.umd.min.js'},
+        '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
+        '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'}
+    }
 });

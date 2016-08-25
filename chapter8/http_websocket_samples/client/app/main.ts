@@ -1,6 +1,7 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {Component} from '@angular/core';
-import {HTTP_PROVIDERS, Http} from '@angular/http';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { NgModule, Component }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {HttpModule, Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable} from "rxjs/Observable";
 
@@ -43,4 +44,12 @@ class AppComponent {
     }
 }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS]);
+@NgModule({
+    imports:      [ BrowserModule,
+                    HttpModule],
+    declarations: [ AppComponent],
+    bootstrap:    [ AppComponent ]
+})
+class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

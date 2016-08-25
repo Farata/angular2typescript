@@ -3,15 +3,13 @@ import {
     FormControl,
     FormGroup,
     FormBuilder,
-    Validators,
-    REACTIVE_FORM_DIRECTIVES
+    Validators
 } from '@angular/forms';
 
 import {ProductService} from 'app/services/product-service';
 
 @Component({
   selector: 'auction-search',
-  directives: [REACTIVE_FORM_DIRECTIVES],
   templateUrl: 'app/components/search/search.html'
 })
 export default class SearchComponent {

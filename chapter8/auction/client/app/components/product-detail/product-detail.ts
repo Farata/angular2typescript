@@ -63,11 +63,7 @@ export default class ProductDetailComponent implements OnDestroy {
     }
   }
 
-/*  routerOnDeactivate(): any {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
-  }*/
+/* add a router guard to unsubscribe on deactivate*/
 
   ngOnDestroy(): any {
     if (this.subscription) {
