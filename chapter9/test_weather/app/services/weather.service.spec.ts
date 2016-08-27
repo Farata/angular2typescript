@@ -1,28 +1,31 @@
-import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
-import {addProviders, async, inject} from '@angular/core/testing';
+import {async, getTestBed, TestBed, Injector} from '@angular/core/testing';
+import {Response, ResponseOptions, HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {WeatherService, WEATHER_URL_BASE, WEATHER_URL_SUFFIX} from './weather.service';
 
 describe('WeatherService', () => {
   let mockBackend: MockBackend;
   let service: WeatherService;
+  let injector: Injector;
 
-  beforeEach(() => addProviders([
-    MockBackend,
-    BaseRequestOptions,
-    WeatherService,
-    { provide: WEATHER_URL_BASE, useValue: ''},
-    { provide: WEATHER_URL_SUFFIX, useValue: ''},
-    { provide: Http,
-      useFactory: (backend, options) => new Http(backend, options),
-      deps: [MockBackend, BaseRequestOptions]
-    }
-  ]));
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpModule],
+      providers: [
+        { provide: XHRBackend, useClass: MockBackend },
+        { provide: WEATHER_URL_BASE, useValue: '' },
+        { provide: WEATHER_URL_SUFFIX, useValue: '' },
+        WeatherService
+      ]
+    });
 
-  beforeEach(inject([MockBackend, WeatherService], (_mockBackend, _service) => {
-    mockBackend = _mockBackend;
-    service = _service;
-  }));
+    injector = getTestBed();
+  });
+
+  beforeEach(() => {
+    mockBackend = injector.get(XHRBackend);
+    service = injector.get(WeatherService);
+  });
 
   it('getWeather() should return weather for New York', async(() => {
     let mockResponseData = {

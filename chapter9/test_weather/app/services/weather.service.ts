@@ -9,8 +9,8 @@ export const WEATHER_URL_SUFFIX = new OpaqueToken('WeatherUrlSuffix');
 
 export interface WeatherResult {
   place: string;
-  temperature: string;
-  humidity: string;
+  temperature: number;
+  humidity: number;
 }
 
 @Injectable()

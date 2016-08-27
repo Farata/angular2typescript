@@ -11,11 +11,9 @@ export default class StarsComponent {
 
   private maxStars: number = 5;
 
-  @Input()
-  readonly: boolean = true;
+  @Input() readonly: boolean = true;
 
-  @Input()
-  get rating(): number {
+  @Input() get rating(): number {
     return this._rating;
   }
 

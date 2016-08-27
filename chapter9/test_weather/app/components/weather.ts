@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {REACTIVE_FORM_DIRECTIVES, FormControl} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/switchMap';
 
@@ -7,7 +7,6 @@ import {WeatherService, WeatherResult} from '../services/weather.service';
 
 @Component({
   selector: 'my-weather',
-  directives: [REACTIVE_FORM_DIRECTIVES],
   template: `
     <h2>Weather</h2>
     <input type="text" placeholder="Enter city" [formControl]="searchInput">

@@ -19,9 +19,9 @@ Promise.
     var testing = modules[0];
     var browser = modules[1];
 
-    testing.setBaseTestProviders(
-        browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-        browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+    testing.TestBed.initTestEnvironment(
+        browser.BrowserDynamicTestingModule,
+        browser.platformBrowserDynamicTesting());
   }).
   then(function () { return Promise.all(resolveTestFiles()); }).
   then(function () { __karma__.start(); },

@@ -1,25 +1,25 @@
-import { addProviders, async, inject } from '@angular/core/testing';
-
-import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
+import {async, getTestBed, TestBed, inject, Injector} from '@angular/core/testing';
+import {Response, ResponseOptions, HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
-
 import {ProductService} from './product-service';
 
 describe('ProductService', () => {
   let mockBackend: MockBackend;
   let service: ProductService;
+  let injector: Injector;
 
-  beforeEach(() => addProviders([
-    ProductService,
-    MockBackend,
-    BaseRequestOptions,
-    { provide: Http,
-      useFactory: (backend, options) => new Http(backend, options),
-      deps: [MockBackend, BaseRequestOptions]
-    }
-  ]));
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpModule],
+      providers: [
+        { provide: XHRBackend, useClass: MockBackend },
+        ProductService
+      ]
+    });
+    injector = getTestBed();
+  });
 
-  beforeEach(inject([MockBackend, ProductService], (_mockBackend, _service) => {
+  beforeEach(inject([XHRBackend, ProductService], (_mockBackend, _service) => {
     mockBackend = _mockBackend;
     service = _service;
   }));

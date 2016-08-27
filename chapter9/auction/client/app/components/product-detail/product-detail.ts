@@ -1,17 +1,14 @@
 import {Component, OnDestroy} from '@angular/core';
-import {NgClass} from '@angular/common';
-import {CanDeactivate, ActivatedRoute} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 import {Product, Review, ProductService} from '../../services/product-service';
 import {BidService} from '../../services/bid-service';
-import StarsComponent from '../stars/stars';
 
 @Component({
   selector: 'auction-product-page',
   styles: ['auction-stars.large {font-size: 24px;}'],
-  templateUrl: 'app/components/product-detail/product-detail.html',
-  directives: [NgClass, StarsComponent]
+  templateUrl: 'app/components/product-detail/product-detail.html'
 })
 export default class ProductDetailComponent implements OnDestroy {
   product: Product;

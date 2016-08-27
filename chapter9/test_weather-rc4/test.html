@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Testing the Weather Application</title>
+  <base href="/">
+
+  <!-- TypeScript in-browser compiler -->
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+
+  <!-- Polyfills -->
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+  <!-- Zone.js dependencies -->
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/zone.js/dist/async-test.js"></script>
+  <script src="node_modules/zone.js/dist/fake-async-test.js"></script>
+
+  <!-- Jasmine -->
+  <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+  <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+
+  <!-- SystemJS -->
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+</head>
+<body>
+<script>
+  var SPEC_MODULES = [
+    'app/components/app.spec',
+    'app/components/weather.spec',
+    'app/services/weather.service.spec'
+  ];
+
+  Promise.all([
+    System.import('@angular/core/testing'),
+    System.import('@angular/platform-browser-dynamic/testing')
+  ])
+  .then(function (modules) {
+    var testing = modules[0];
+    var browser = modules[1];
+
+    testing.setBaseTestProviders(
+      browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
+      browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+
+    // Load all the spec files.
+    return Promise.all(SPEC_MODULES.map(function (module) {
+      return System.import(module);
+    }));
+  })
+  .then(window.onload)
+  .catch(console.error.bind(console));
+</script>
+</body>
+</html>

@@ -1,55 +1,55 @@
-import { addProviders, async, inject } from '@angular/core/testing';
-
-import {TestComponentBuilder} from '@angular/compiler/testing';
-
+import { TestBed, async, fakeAsync, inject } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
 import StarsComponent from './stars';
 
 describe('StarsComponent', () => {
-  let component;
-  let testComponentBuilder;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ CommonModule ],
+      declarations: [ StarsComponent ]
+    });
+  });
 
-  beforeEach(() => addProviders([StarsComponent, TestComponentBuilder]));
-
-  beforeEach(inject([StarsComponent, TestComponentBuilder], (_cmp, _tcb) => {
-    component = _cmp;
-    testComponentBuilder = _tcb;
+  beforeEach(async(() => {
+    TestBed.compileComponents();
   }));
 
   it('is successfully injected', () => {
+    let component = TestBed.createComponent(StarsComponent).componentInstance;
     expect(component instanceof StarsComponent).toEqual(true);
   });
 
   it('readonly property is true by default', () => {
+    let component = TestBed.createComponent(StarsComponent).componentInstance;
     expect(component.readonly).toEqual(true);
   });
 
-  it('all stars are empty', async(() => {
-    testComponentBuilder.createAsync(StarsComponent).then(fixture => {
-      let element = fixture.nativeElement;
-      let cmp = fixture.componentInstance;
-      cmp.rating = 0;
+  it('all stars are empty', () => {
+    let fixture = TestBed.createComponent(StarsComponent);
+    let element = fixture.nativeElement;
+    let cmp = fixture.componentInstance;
+    cmp.rating = 0;
 
-      fixture.detectChanges();
+    fixture.detectChanges();
 
-      let selector = '.glyphicon-star-empty';
-      expect(element.querySelectorAll(selector).length).toBe(5);
-    });
-  }));
+    let selector = '.glyphicon-star-empty';
+    expect(element.querySelectorAll(selector).length).toBe(5);
+  });
 
-  it('all stars are filled', async(() => {
-    testComponentBuilder.createAsync(StarsComponent).then(fixture => {
-      let element = fixture.nativeElement;
-      let cmp = fixture.componentInstance;
-      cmp.rating = 5;
+  it('all stars are filled', () => {
+    let fixture = TestBed.createComponent(StarsComponent);
+    let element = fixture.nativeElement;
+    let cmp = fixture.componentInstance;
+    cmp.rating = 5;
 
-      fixture.detectChanges();
+    fixture.detectChanges();
 
-      let selector = '.glyphicon-star:not(.glyphicon-star-empty)';
-      expect(element.querySelectorAll(selector).length).toBe(5);
-    });
-  }));
+    let selector = '.glyphicon-star:not(.glyphicon-star-empty)';
+    expect(element.querySelectorAll(selector).length).toBe(5);
+  });
 
   it('emits rating change event when readonly is false', async(() => {
+    let component = TestBed.createComponent(StarsComponent).componentInstance;
     component.ratingChange.subscribe(r => {
       expect(r).toBe(3);
     });
