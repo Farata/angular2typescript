@@ -1,11 +1,11 @@
 import { TestBed, async, fakeAsync, inject } from '@angular/core/testing';
-import { CommonModule } from '@angular/common';
+// import { CommonModule } from '@angular/common';
 import StarsComponent from './stars';
 
 describe('StarsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ CommonModule ],
+      //imports: [ CommonModule ],
       declarations: [ StarsComponent ]
     });
   });
