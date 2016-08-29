@@ -7,10 +7,6 @@ import ProductItemComponent from '../product-item/product-item';
 @Component({
   selector: 'auction-home-page',
   providers: [ProductService],
-  directives: [
-    CarouselComponent,
-    ProductItemComponent
-  ],
   styleUrls: ['app/components/home/home.css'],
   template: `
     <div class="row carousel-holder">
