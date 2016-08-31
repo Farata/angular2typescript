@@ -1,18 +1,11 @@
-import {Component} from '@angular/core';
-import {
-    FormControl,
-    FormGroup,
-    FormBuilder,
-    Validators,
-    REACTIVE_FORM_DIRECTIVES
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import {ProductService} from '../../services/product-service';
+import { ProductService } from '../../services/product-service';
 
 @Component({
   selector: 'auction-search',
-  directives: [REACTIVE_FORM_DIRECTIVES],
-  template: require('./search.html')
+  templateUrl: 'search.html'
 })
 export default class SearchComponent {
   formModel: FormGroup;

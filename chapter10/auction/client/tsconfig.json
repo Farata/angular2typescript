@@ -7,10 +7,7 @@
     "noEmit": true,
     "sourceMap": true,
     "target": "es5",
-    "types": [
-      "es6-shim",
-      "jasmine"
-    ]
+    "types": ["es6-shim", "jasmine"]
   },
   "exclude": [
     "node_modules"

@@ -1,17 +1,15 @@
-import {Component, OnDestroy} from '@angular/core';
-import {DomSanitizationService, SafeHtml} from '@angular/platform-browser';
-import {ActivatedRoute} from '@angular/router';
-import {Subscription} from 'rxjs/Subscription';
+import { Component, OnDestroy } from '@angular/core';
+import { DomSanitizationService, SafeHtml } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
-import {Product, Review, ProductService} from '../../services/product-service';
-import {BidService} from '../../services/bid-service';
-import StarsComponent from '../stars/stars';
+import { Product, Review, ProductService } from '../../services/product-service';
+import { BidService } from '../../services/bid-service';
 
 @Component({
   selector: 'auction-product-page',
-  styles: ['auction-stars.large {font-size: 24px;}'],
-  template: require('./product-detail.html'),
-  directives: [StarsComponent]
+  styles: [ 'auction-stars.large {font-size: 24px;}' ],
+  templateUrl: 'product-detail.html'
 })
 export default class ProductDetailComponent implements OnDestroy {
   product: Product;

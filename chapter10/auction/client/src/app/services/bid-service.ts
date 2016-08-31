@@ -1,6 +1,7 @@
-import {Injectable} from '@angular/core';
-import {WebSocketService} from './websocket-service';
-import {Observable, Subscriber} from 'rxjs/Rx';
+import { Injectable } from '@angular/core';
+import { WebSocketService } from './websocket-service';
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
 
 @Injectable()
 export class BidService {

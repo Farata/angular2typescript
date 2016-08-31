@@ -1,18 +1,10 @@
-import {Component} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-
-import {Product, ProductService} from '../../services/product-service';
-import CarouselComponent from '../carousel/carousel';
-import ProductItemComponent from '../product-item/product-item';
-
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable'
+import { Product, ProductService } from '../../services/product-service';
 
 @Component({
   selector: 'auction-home-page',
-  directives: [
-    CarouselComponent,
-    ProductItemComponent
-  ],
-  styles: [require('./home.css')],
+  styleUrls: [ 'home.css' ],
   template: `
     <div class="row carousel-holder">
       <div class="col-md-12">

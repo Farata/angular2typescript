@@ -4,13 +4,11 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "noEmit": true,
-    "types":["es6-shim", "jasmine"],
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "types": ["es6-shim", "jasmine"]
   },
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+    "node_modules"
   ]
 }

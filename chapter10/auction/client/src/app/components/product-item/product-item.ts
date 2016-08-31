@@ -1,20 +1,17 @@
-import {Component, Input} from '@angular/core';
-import {DomSanitizationService, SafeHtml} from '@angular/platform-browser';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { DomSanitizationService, SafeHtml } from '@angular/platform-browser';
 
-import {Product} from '../../services/product-service';
+import { Product } from '../../services/product-service';
 import StarsComponent from '../stars/stars';
 
 
 @Component({
   selector: 'auction-product-item',
-  template: require('./product-item.html'),
-  styles: [require('./product-item.css')],
-  directives: [ROUTER_DIRECTIVES, StarsComponent],
+  styleUrls: [ 'product-item.css' ],
+  templateUrl: 'product-item.html'
 })
 export default class ProductItemComponent {
-  @Input()
-  product: Product;
+  @Input() product: Product;
 
   imgHtml: SafeHtml;
 

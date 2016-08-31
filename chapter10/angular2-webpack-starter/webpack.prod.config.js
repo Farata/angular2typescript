@@ -1,13 +1,13 @@
 const path = require('path');
 
 // Webpack and its plugins
-const CommonsChunkPlugin   = require('webpack/lib/optimize/CommonsChunkPlugin');
-const CompressionPlugin    = require('compression-webpack-plugin');
-const CopyWebpackPlugin    = require('copy-webpack-plugin');
-const DedupePlugin         = require('webpack/lib/optimize/DedupePlugin');
-const DefinePlugin          = require('webpack/lib/DefinePlugin');
-const OccurenceOrderPlugin = require('webpack/lib/optimize/OccurenceOrderPlugin');
-const UglifyJsPlugin       = require('webpack/lib/optimize/UglifyJsPlugin');
+const CommonsChunkPlugin    = require('webpack/lib/optimize/CommonsChunkPlugin');
+const CompressionPlugin     = require('compression-webpack-plugin');
+const CopyWebpackPlugin     = require('copy-webpack-plugin');
+const DedupePlugin          = require('webpack/lib/optimize/DedupePlugin');
+const DefinePlugin           = require('webpack/lib/DefinePlugin');
+const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
+const UglifyJsPlugin        = require('webpack/lib/optimize/UglifyJsPlugin');
 
 const ENV = process.env.NODE_ENV = 'production';
 const metadata = {
@@ -27,7 +27,10 @@ module.exports = {
       {test: /\.css$/,  loader: 'to-string!css', exclude: /node_modules/}, // Inline CSS into components
       {test: /\.css$/,  loader: 'style!css', exclude: /src/}, // Add CSS as style tag to index.html
       {test: /\.html$/, loader: 'html?caseSensitive=true'},
-      {test: /\.ts$/,   loader: 'ts', query: {compilerOptions: {noEmit: false}}}
+      {test: /\.ts$/,   loaders: [
+        {loader: 'ts', query: {compilerOptions: {noEmit: false}}},
+        {loader: 'angular2-template'}
+      ]}
     ]
   },
   output: {
@@ -40,7 +43,7 @@ module.exports = {
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
     new DedupePlugin(),
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}}),
-    new OccurenceOrderPlugin(true),
+    new OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({
       compress: {screw_ie8 : true},
       mangle: {screw_ie8 : true}

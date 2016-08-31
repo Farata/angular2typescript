@@ -19,7 +19,10 @@ module.exports = {
       {test: /\.css$/,  loader: 'raw', exclude: /node_modules/},
       {test: /\.css$/,  loader: 'style!css?-minimize', exclude: /src/},
       {test: /\.html$/, loader: 'raw'},
-      {test: /\.ts$/,   loader: 'ts', query: {compilerOptions: {noEmit: false}}}
+      {test: /\.ts$/,   loaders: [
+        {loader: 'ts', query: {compilerOptions: {noEmit: false}}},
+        {loader: 'angular2-template'}
+      ]}
     ]
   },
   plugins: [

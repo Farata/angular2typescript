@@ -40,7 +40,10 @@ module.exports = {
       {test: /\.css$/,   loader: 'raw', exclude: /node_modules/},
       {test: /\.css$/,   loader: 'style!css?-minimize', exclude: /src/},
       {test: /\.html$/,  loader: 'raw'},
-      {test: /\.ts$/,    loader: 'ts', query: {compilerOptions: {noEmit: false}}},
+      {test: /\.ts$/,   loaders: [
+        {loader: 'ts', query: {compilerOptions: {noEmit: false}}},
+        {loader: 'angular2-template'}
+      ]},
       {test: /\.woff$/,  loader: 'url?limit=10000&mimetype=application/font-woff'},
       {test: /\.woff2$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
       {test: /\.ttf$/,   loader: 'url?limit=10000&mimetype=application/octet-stream'},

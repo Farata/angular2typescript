@@ -12,7 +12,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
+    new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}])
   ],
   resolve: {
