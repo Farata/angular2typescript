@@ -1,6 +1,7 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-All examples were upgraded to Angular 2 RC.5. If you see two directories that have the same name, but one of them has the rc4 suffix, this means that the other one was already upgraded to RC.5. For example, in chapter 2 you can find the angular-seed dir, which is an RC.5 version of the code. The angular-seed-rc4 contains the code sample that was used in MEAP V7 of the book. 
+Code samples from chapter 2 were upgraded to RC.6. The rest of the code samples were upgraded to Angular 2 RC.5. If you see two-three directories that have the same name, but one of them has the rc4 or rc5 suffixes, this means that the dir without the suxxis was already upgraded to the newer version. 
+Code samples with the rc4 suffixes contain the code samples that were used in MEAP V7 of the book. 
 
  The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
