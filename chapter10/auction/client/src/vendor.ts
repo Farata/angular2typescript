@@ -1,5 +1,5 @@
 import 'zone.js/dist/zone';
-import 'reflect-metadata/Reflect.js';
+import 'core-js/es7/reflect.js';
 
 // Angular modules
 import '@angular/platform-browser-dynamic';

@@ -49,7 +49,7 @@ module.exports = {
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
     new CompressionPlugin({regExp: /\.css$|\.html$|\.js$|\.map$/, threshold: 1500}),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
-    new DedupePlugin(),
+//     new DedupePlugin(), broken in in RC.6
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.ENV)}}),
     new OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({

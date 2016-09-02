@@ -19,7 +19,6 @@
     "@types/ws": "0.0.26-alpha",
     "compression": "^1.6.1",
     "nodemon": "^1.8.1",
-    "typescript": "^2.0.0",
-    "typings": "^1.0.4"
+    "typescript": "^2.0.0"
   }
 }

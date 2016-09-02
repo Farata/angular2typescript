@@ -41,7 +41,7 @@ module.exports = {
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
     new CompressionPlugin({regExp: /\.css$|\.html$|\.js$|\.map$/}),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
-    new DedupePlugin(),
+//    new DedupePlugin(),  // broken in RC.6
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}}),
     new OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({
@@ -51,5 +51,6 @@ module.exports = {
   ],
   resolve: {
     extensions: ['', '.ts', '.js']
+    // ,mainFields: ["module", "main", "browser"] // may be needed for tree shaking when implemented
   }
 };

@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { DomSanitizationService, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -27,7 +27,7 @@ export default class ProductDetailComponent implements OnDestroy {
 
   constructor(private productService: ProductService,
               private bidService: BidService,
-              private sanitizer: DomSanitizationService,
+              private sanitizer: DomSanitizer,
               router: ActivatedRoute) {
 
     this.imgHtml = sanitizer.bypassSecurityTrustHtml(`

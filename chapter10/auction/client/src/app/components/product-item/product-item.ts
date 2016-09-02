@@ -1,9 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizationService, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import { Product } from '../../services/product-service';
-import StarsComponent from '../stars/stars';
-
 
 @Component({
   selector: 'auction-product-item',
@@ -15,7 +13,7 @@ export default class ProductItemComponent {
 
   imgHtml: SafeHtml;
 
-  constructor(private sanitizer: DomSanitizationService) {
+  constructor(private sanitizer: DomSanitizer) {
     this.imgHtml = sanitizer.bypassSecurityTrustHtml(`
       <img src="http://placehold.it/320x150">`);
   }
