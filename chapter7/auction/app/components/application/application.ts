@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
-declare var __ModuleName: string;
+//declare var __moduleName: string;
 @Component({
   selector: 'auction-application',
   moduleId:__moduleName,
