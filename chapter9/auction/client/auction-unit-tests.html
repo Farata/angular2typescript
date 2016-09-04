@@ -9,20 +9,24 @@
   <!-- Polyfills -->
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
 
-  <!-- Zone.js dependencies -->
-  <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/zone.js/dist/async-test.js"></script>
-  <script src="node_modules/zone.js/dist/fake-async-test.js"></script>
-
   <!-- Jasmine -->
   <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
   <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
   <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
   <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
 
+  <!-- Zone.js -->
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/zone.js/dist/proxy.js"></script>
+  <script src="node_modules/zone.js/dist/sync-test.js"></script>
+  <script src="node_modules/zone.js/dist/jasmine-patch.js"></script>
+  <script src="node_modules/zone.js/dist/async-test.js"></script>
+  <script src="node_modules/zone.js/dist/fake-async-test.js"></script>
+  <script src="node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
+
   <!-- SystemJS -->
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="config.js"></script>
+  <script src="systemjs.config.js"></script>
 </head>
 <body>
 <script>
@@ -36,21 +40,21 @@
     System.import('@angular/core/testing'),
     System.import('@angular/platform-browser-dynamic/testing')
   ])
-  .then(function (modules) {
-    var testing = modules[0];
-    var browser = modules[1];
+          .then(function (modules) {
+            var testing = modules[0];
+            var browser = modules[1];
 
-    testing.TestBed.initTestEnvironment(
-        browser.BrowserDynamicTestingModule,
-        browser.platformBrowserDynamicTesting());
+            testing.TestBed.initTestEnvironment(
+                    browser.BrowserDynamicTestingModule,
+                    browser.platformBrowserDynamicTesting());
 
-    // Load all the spec files.
-    return Promise.all(SPEC_MODULES.map(function (module) {
-      return System.import(module);
-    }));
-  })
-  .then(window.onload)
-  .catch(console.error.bind(console));
+            // Load all the spec files.
+            return Promise.all(SPEC_MODULES.map(function (module) {
+              return System.import(module);
+            }));
+          })
+          .then(window.onload)
+          .catch(console.error.bind(console));
 </script>
 </body>
 </html>

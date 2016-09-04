@@ -156,7 +156,8 @@ The code samples are https://github.com/Farata/angular2typescript[here].
 === 10.2 Creating a Basic Webpack Configuration for Angular
 === 10.3 Creating Dev and Prod Webpack Configurations for Angular
 === 10.4 Hands-on: Deploying Online Auction with Webpack
-=== 10.5 Summary
+=== 10.5 What's Angular CLI
+=== 10.6 Summary
 
 == Appendix A. Overview of ECMAScript 6
 === 11.1. How to Run Code Samples

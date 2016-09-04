@@ -1,4 +1,5 @@
-import {async, getTestBed, TestBed, inject, Injector} from '@angular/core/testing';
+import {Injector} from '@angular/core';
+import {async, getTestBed, TestBed, inject} from '@angular/core/testing';
 import {Response, ResponseOptions, HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {ProductService} from './product-service';

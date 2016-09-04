@@ -13,34 +13,39 @@
     "npm": ">=2.14.x"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.5",
-    "@angular/compiler": "2.0.0-rc.5",
-    "@angular/core": "2.0.0-rc.5",
-    "@angular/forms": "0.3.0",
-    "@angular/http": "2.0.0-rc.5",
-    "@angular/platform-browser": "2.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
-    "@angular/router": "3.0.0-rc.1",
-    "bootstrap": "^3.3.7",
-    "express": "^4.13.3",
-    "jquery": "^2.2.2",
+    "@angular/common": "2.0.0-rc.6",
+    "@angular/compiler": "2.0.0-rc.6",
+    "@angular/core": "2.0.0-rc.6",
+    "@angular/forms": "2.0.0-rc.6",
+    "@angular/http": "2.0.0-rc.6",
+    "@angular/platform-browser": "2.0.0-rc.6",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.6",
+    "@angular/router": "^3.0.0-rc.2",
     "reflect-metadata": "^0.1.8",
-    "rxjs": "5.0.0-beta.6",
-    "ws": "^1.0.1",
-    "zone.js": "^0.6.12"
+    "core-js": "^2.4.0",
+    "rxjs": "5.0.0-beta.11",
+    "systemjs": "0.19.37",
+    "zone.js": "0.6.17",
+
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+
+    "express": "^4.13.3",
+    "ws": "^1.0.1"
   },
   "devDependencies": {
     "@types/es6-shim": "0.0.31",
     "@types/express": "^4.0.32",
     "@types/jasmine": "^2.2.33",
     "@types/ws": "0.0.30",
-    "jasmine-core": "^2.4.1",
+
+    "jasmine-core": "2.4.1",
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
+
     "nodemon": "^1.10.2",
-    "systemjs": "^0.19.37",
     "typescript": "^2.0.0"
   }
 }

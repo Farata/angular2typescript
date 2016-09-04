@@ -1,4 +1,5 @@
-import {async, getTestBed, TestBed, Injector} from '@angular/core/testing';
+import {Injector} from '@angular/core';
+import {async, getTestBed, TestBed,} from '@angular/core/testing';
 import {Response, ResponseOptions, HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {WeatherService, WEATHER_URL_BASE, WEATHER_URL_SUFFIX} from './weather.service';
