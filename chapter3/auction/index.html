@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>body{padding-top:70px}</style>
+  <title>CH3: Online Auction</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function (err) {console.error(err);});
+  </script>
+</head>
+<body>
+  <auction-application></auction-application>
+</body>
+</html>
