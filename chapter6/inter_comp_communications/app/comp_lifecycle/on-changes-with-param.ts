@@ -29,7 +29,6 @@ class ChildComponent implements OnChanges {
 
 @Component({
   selector: 'app',
-  directives: [ChildComponent],
   styles: ['.parent {background: lightblue}'],
   template: `
      <div class="parent">

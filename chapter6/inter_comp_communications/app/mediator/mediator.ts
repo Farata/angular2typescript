@@ -12,8 +12,7 @@ import {Stock} from './stock';
     <price-quoter (buy)="priceQuoteHandler($event)"></price-quoter><br>
     <br/>
     <order-processor [stock]="stock"></order-processor>
-  `,
-    directives: [OrderComponent, PriceQuoterComponent]
+  `
 })
 class AppComponent {
     stock: Stock;

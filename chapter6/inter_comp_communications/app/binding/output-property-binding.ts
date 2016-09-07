@@ -51,7 +51,7 @@ class AppComponent {
 }
 @NgModule({
     imports:      [ BrowserModule],
-    declarations: [ AppComponent],
+    declarations: [ AppComponent, PriceQuoterComponent],
     bootstrap:    [ AppComponent ]
 })
 class AppModule { }

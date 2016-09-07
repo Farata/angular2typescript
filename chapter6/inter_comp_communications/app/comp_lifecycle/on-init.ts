@@ -31,7 +31,6 @@ class ChildComponent implements OnInit, OnChanges {
 
 @Component({
   selector: 'app',
-  directives: [ChildComponent],
   template: `
     <div>Greeting: <input type="text" [(ngModel)]="greeting"></div>
     <child [greeting]="greeting"></child>

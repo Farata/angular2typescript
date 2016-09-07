@@ -34,8 +34,7 @@ class OrderComponent {
     <input type="text" placeholder="Enter stock (e.g. AAPL)"  (change)="onInputEvent($event)">
     <br/>
     <order-processor [stockSymbol]="stock" quantity="100"></order-processor>
-  `,
-    directives: [OrderComponent]
+  `
 })
 class AppComponent {
     stock:string;
@@ -46,7 +45,7 @@ class AppComponent {
 }
 @NgModule({
     imports:      [ BrowserModule],
-    declarations: [ AppComponent],
+    declarations: [ AppComponent, OrderComponent],
     bootstrap:    [ AppComponent ]
 })
 class AppModule { }
