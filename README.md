@@ -1,8 +1,8 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-Code samples from chapter 2, 9, and 10 were upgraded to RC.6. The rest of the code samples were upgraded to Angular 2 RC.5. We'll keep the older code marked with the suffix rc-4  until the book's MEAP V8 is released. Code samples with the rc4 suffixes contain the code samples that were used in MEAP V7 of the book. 
+Most of the code samples were upgraded to RC.6.  
 
- The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
+The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
 Note the changes in the SystemJS config object in the angular-seed project in Chapter 2. Now we use minimized Angular bundles to lower the size of the app and the number of network requests during the app bootstrap.
 

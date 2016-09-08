@@ -18,33 +18,37 @@ import 'rxjs/add/operator/debounceTime';
     `
 })
 class AppComponent {
-    private baseWeatherURL: string= 'http://api.openweathermap.org/data/2.5/find?q=';
+    private baseWeatherURL: string= 'http://api.openweathermap.org/data/2.5/weather?q=';
     private urlSuffix: string = "&units=imperial&appid=ca3f6d6ca3973a518834983d0b318f73";
 
-    searchInput: FormControl = new FormControl('');
+    searchInput: FormControl = new FormControl();
     temperature: string;
 
     constructor(private http:Http){
 
         this.searchInput.valueChanges
-            .debounceTime(200)
+            .debounceTime(500)
             .switchMap(city => this.getWeather(city))
             .subscribe(
                 res => {
                     if (res['cod'] === '404') return;
-                    if (!res.list[0]) {
+                    if (!res.main) {
                         this.temperature ='City is not found';
                     } else {
 
                         this.temperature =
-                            `Current temperature is  ${res.list[0].main.temp}F, ` +
-                            `humidity: ${res.list[0].main.humidity}%`;
+                           `Current temperature is  ${res.main.temp}F, ` +
+                            `humidity: ${res.main.humidity}%`;
                     }
                 },
                 err => console.log(`Can't get weather. Error code: %s, URL: %s`, err.message, err.url),
                 () => console.log(`Weather is retrieved`)
             );
     }
+
+/*    ngOnInit(){
+        this.searchInput.setValue("New York"); // by default get weather for NYC
+    }*/
 
     getWeather(city: string): Observable<Array<string>> {
       return this.http.get(this.baseWeatherURL + city + this.urlSuffix)

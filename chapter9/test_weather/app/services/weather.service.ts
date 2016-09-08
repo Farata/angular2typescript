@@ -30,15 +30,15 @@ export class WeatherService {
   }
 
   private _hasResult(data): boolean {
-    return data['cod'] !== '404' && data.list.length;
+    return data['cod'] !== '404' && data.main;
   }
 
   private _parseData(data): WeatherResult {
-    let [first,] = data.list;
     return {
-      place: first.name || 'unknown',
-      temperature: first.main.temp,
-      humidity: first.main.humidity
+      place: data.name || 'unknown',
+      temperature: data.main.temp,
+      humidity: data.main.humidity
     };
   }
+
 }
