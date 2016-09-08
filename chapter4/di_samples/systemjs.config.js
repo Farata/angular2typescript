@@ -1,56 +1,30 @@
 System.config({
     transpiler: 'typescript',
-    typescriptOptions: {emitDecoratorMetadata: true},
+    typescriptOptions: {emitDecoratorMetadata: true,
+        target: "ES5",
+        module: "commonjs"},
     map: {
-        '@angular': 'node_modules/@angular'
+        '@angular': 'node_modules/@angular',
+        'rxjs'    : 'node_modules/rxjs'
     },
     paths: {
         'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
     },
     meta: {
-        '@angular/*': {'format': 'cjs'}
+        '@angular/*': {'format': 'cjs'},
+        'app/mediator/stock.ts': {
+            format: 'es6'
+        }
     },
     packages: {
         'app'                              : {main: 'main-factory', defaultExtension: 'ts'},
+        'rxjs'                             : {main: 'Rx'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
         '@angular/compiler'                : {main: 'compiler.umd.min.js'},
+        '@angular/router'                  : {main: 'router.umd.min.js'},
+        '@angular/forms'                  : {main: 'forms.umd.min.js'},
         '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
         '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'}
     }
 });
-
-
-
-
-
-
-
-
-/*
-System.config({
-    transpiler: 'typescript',
-    typescriptOptions: {emitDecoratorMetadata: true},
-    map: {
-        'app' : 'app',
-        'rxjs': 'node_modules/rxjs',
-
-        '@angular/core'                    : 'node_modules/@angular/core',
-        '@angular/common'                  : 'node_modules/@angular/common',
-        '@angular/compiler'                : 'node_modules/@angular/compiler',
-        '@angular/router'                  : 'node_modules/@angular/router',
-        '@angular/platform-browser'        : 'node_modules/@angular/platform-browser',
-        '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic'
-      },
-      packages: {
-        'app'                              : {main: 'main_factory', defaultExtension: 'ts'},
-        'rxjs'                             : {main: 'index.js'},
-        '@angular/core'                    : {main: 'index.js'},
-        '@angular/common'                  : {main: 'index.js'},
-        '@angular/compiler'                : {main: 'index.js'},
-        '@angular/router'                  : {main: 'index.js'},
-        '@angular/platform-browser'        : {main: 'index.js'},
-        '@angular/platform-browser-dynamic': {main: 'index.js'}
-      }
-});
-*/

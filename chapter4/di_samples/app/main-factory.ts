@@ -23,7 +23,7 @@ class MockProductService implements ProductService {
 @Component({
   selector: 'product1',
   template: '{{product.title}}'})
-class Product1Component { // <3>
+class Product1Component {
   product: Product;
 
   constructor(productService: ProductService) {

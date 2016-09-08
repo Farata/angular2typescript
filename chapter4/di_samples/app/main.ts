@@ -64,7 +64,8 @@ class AppComponent {}
 
 @NgModule({
   imports:      [ BrowserModule],
-  providers: [{provide:ProductService, useClass:MockProductService}],
+  providers: [ProductService],
+  // providers: [{provide:ProductService, useClass:MockProductService}],
   declarations: [ AppComponent, Product1Component, Product2Component],
   bootstrap:    [ AppComponent ]
 })
