@@ -6,7 +6,7 @@ import { ReactiveFormsModule, FormControl, FormGroup, FormArray } from '@angular
 @Component({
   selector: 'app',
   template: `
-    <form [formGroup]="formModel" (ngSubmit)="register()">
+    <form [formGroup]="formModel" (ngSubmit)="onSubmit()">
       <label>Emails</label>
       <button type="button" (click)="addEmail()">Add Email</button>
       <ul formArrayName="emails">
@@ -14,7 +14,7 @@ import { ReactiveFormsModule, FormControl, FormGroup, FormArray } from '@angular
           <input [formControlName]="i">
         </li>
       </ul>
-      <button type="submit">Register</button>
+      <button type="submit">Submit</button>
     </form>
     <hr>
     <label>Form Value:</label>
@@ -37,7 +37,7 @@ class AppComponent {
     emails.push(new FormControl());
   }
 
-  register() {
+  onSubmit() {
     console.log(this.formModel.value);
   }
 }

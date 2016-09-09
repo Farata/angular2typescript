@@ -2,7 +2,8 @@ System.config({
   transpiler: 'typescript',
   typescriptOptions: {emitDecoratorMetadata: true},
   map: {
-    '@angular': 'node_modules/@angular'
+    '@angular': 'node_modules/@angular',
+    'rxjs'    : 'node_modules/rxjs'
   },
   paths: {
     'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
@@ -11,7 +12,8 @@ System.config({
     '@angular/*': {'format': 'cjs'}
   },
   packages: {
-    'app'                              : {main: 'main', defaultExtension: 'ts'},
+    'app'                              : {main: '06_custom-validator-directive', defaultExtension: 'ts'},
+    'rxjs'                             : {main: 'Rx'},
     '@angular/core'                    : {main: 'core.umd.min.js'},
     '@angular/common'                  : {main: 'common.umd.min.js'},
     '@angular/compiler'                : {main: 'compiler.umd.min.js'},

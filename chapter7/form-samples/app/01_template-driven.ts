@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
       <div>SSN:             <input type="text"     name="ssn"      ngModel></div>
       <div>Password:        <input type="password" name="password" ngModel></div>
       <div>Confirm password: <input type="password" name="pconfirm"  ngModel></div>
-      <button type="submit">Register</button>
+      <button type="submit">Submit</button>
     </form>
   `
 })
