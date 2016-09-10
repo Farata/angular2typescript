@@ -37,11 +37,9 @@ class AppComponent {
 }
 
 @NgModule({
-    imports:      [ BrowserModule,  FormsModule,
-        HttpModule],
+    imports:      [ BrowserModule,  FormsModule, HttpModule],
     declarations: [ AppComponent],
     bootstrap:    [ AppComponent ]
 })
 class AppModule { }
-
 platformBrowserDynamic().bootstrapModule(AppModule);

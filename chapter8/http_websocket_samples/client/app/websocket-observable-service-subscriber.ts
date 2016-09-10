@@ -40,5 +40,4 @@ class AppComponent {
     bootstrap:    [ AppComponent ]
 })
 class AppModule { }
-
 platformBrowserDynamic().bootstrapModule(AppModule);

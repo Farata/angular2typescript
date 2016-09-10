@@ -2,21 +2,21 @@
 <html>
 <head>
   <title>CH8: Online Auction</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <style>body{padding-top:70px}</style>
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
   <script src="node_modules/core-js/client/shim.min.js"></script>
   <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/reflect-metadata/Reflect.js"></script>
 
   <script src="node_modules/typescript/lib/typescript.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
-  <script src="node_modules/rxjs/bundles/Rx.min.js"></script>
   <script src="systemjs.config.js"></script>
-</head>
+
+  <script>System.import('app')</script>
 <body>
 <auction-application></auction-application>
 <script>System.import('app')</script>
