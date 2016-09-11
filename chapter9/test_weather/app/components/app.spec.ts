@@ -14,12 +14,10 @@ describe('Router', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ ReactiveFormsModule, RouterTestingModule ],
+      imports: [ ReactiveFormsModule, RouterTestingModule,
+          RouterTestingModule.withRoutes(routes)],
       declarations: [AppComponent, HomeComponent, WeatherComponent],
       providers: [
-        // In RC.6 provideRoutes() will be replaced with
-        // RouterTestingModule.withRoutes()
-        provideRoutes(routes),
 
         // In this spec file we test navigation to WeatherComponent which in turn
         // injects WeatherService, so we need to register a provider for the
