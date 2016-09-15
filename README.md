@@ -1,6 +1,24 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-Most of the code samples were upgraded to RC.6.  
+The code in chapter2/angular-seed was upgraded to Angular 2.0 Final, and the rest of the code samples were upgraded to RC.6.
+To upgrade them to Final, remove the -rc6 suffix from all Angular packages in package.json. Here's how the Final version in package.json should look like:
+
+```
+ "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+    "core-js": "^2.4.0",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.37",
+    "zone.js": "0.6.21"
+  },
+```
 
 The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
