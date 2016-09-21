@@ -1,6 +1,8 @@
 System.config({
     transpiler: 'typescript',
-    typescriptOptions: {emitDecoratorMetadata: true},
+    typescriptOptions: {emitDecoratorMetadata: true,
+        target: "ES5",
+        module: "commonjs"},
     map: {
         '@angular': 'node_modules/@angular',
         'rxjs'    : 'node_modules/rxjs'

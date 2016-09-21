@@ -1,0 +1,34 @@
+{
+  "name": "angular-seed",
+  "description": "An initial npm-managed project for Chapter 2",
+  "private": true,
+  "scripts": {
+    "start": "live-server",
+    "ngc": "ngc"
+  },
+  "engines": {
+    "npm": ">=2.14.x"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
+    "systemjs": "0.19.36",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12",
+    "angular2-in-memory-web-api": "0.0.15"
+  },
+  "devDependencies": {
+    "@angular/platform-server": "^2.0.0-rc.5",
+    "@angular/compiler-cli": "^0.5.0",
+    "live-server": "0.8.2",
+    "typescript": "^1.9.0-dev"
+  }
+}
