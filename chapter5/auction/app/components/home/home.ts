@@ -1,12 +1,10 @@
 import {Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Product, ProductService} from '../../services/product-service';
-import {FilterPipe} from '../pipes/filter-pipe'
 import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'auction-home-page',
-  pipes: [FilterPipe],
   styleUrls: ['app/components/home/home.css'],
   template: `
     <div class="row carousel-holder">

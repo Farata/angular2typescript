@@ -27,12 +27,13 @@ class AppComponent {
     constructor(private http:Http){
 
         this.searchInput.valueChanges
-            .debounceTime(500)
+            .debounceTime(200)
             .switchMap(city => this.getWeather(city))
             .subscribe(
                 res => {
                     if (res['cod'] === '404') return;
-                    if (!res.main) {
+
+                    if (!res.main) {  // main is a property on the obj returned by the weather service
                         this.temperature ='City is not found';
                     } else {
 
