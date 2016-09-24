@@ -27,7 +27,7 @@ Note the changes in the SystemJS config object in the angular-seed project in Ch
 With the release of TypeScript 2.0, there is no need to use the Typings tool for downloading *.d.ts files. We're starting updating the code example to use @types and install the *.d.ts files with npm, e.g. 
 npm i @types/es6-shim --save
 
-In chapter 10 we upgraded the code samples to use Webpack 2.1.0-beta.
+In chapter 10 we upgraded the code samples to use Webpack 2.1.0-beta.21. Although the newer beta.24 is available, it introduced some breaking changes so we don't use it.
 
 Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
