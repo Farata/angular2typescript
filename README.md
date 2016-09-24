@@ -1,6 +1,6 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-Most of the code samples were upgraded to Angular 2.0 Final, and some of them are still in RC.6. To upgrade them to Final, remove the -rc6 suffix from all Angular packages in package.json. Here's how the Final version in package.json should look like:
+Most of the code samples were upgraded to Angular 2.0 Final, and some of them are still in RC.6. To upgrade them to Final, remove the -rc6 suffix from all Angular packages in package.json. Here's how the package.json in Angular 2.0 Final apps could look like:
 
 ```
  "dependencies": {
