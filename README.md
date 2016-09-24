@@ -18,7 +18,7 @@ Most of the code samples were upgraded to Angular 2.0 Final, and some of them ar
     "zone.js": "0.6.21"
   },
 ```
-**IMPORTANT:** If you already have an older version of Node.js installed on your computer, upgrade it to the current one to avoid errors during npm instal.
+**IMPORTANT:** If you already have an older version of Node.js installed, upgrade it to the current one to avoid errors during npm instal.
 
 The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
