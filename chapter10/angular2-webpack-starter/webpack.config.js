@@ -1,6 +1,6 @@
 const path               = require('path');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-const DefinePlugin        = require('webpack/lib/DefinePlugin');
+const DefinePlugin       = require('webpack/lib/DefinePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
@@ -13,7 +13,6 @@ const metadata = {
 };
 
 module.exports = {
-  debug: true,
   devServer: {
     contentBase: 'src',
     historyApiFallback: true,
@@ -37,7 +36,7 @@ module.exports = {
     ]
   },
   output: {
-    path    : './dist',
+    path    : path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -45,6 +44,6 @@ module.exports = {
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };

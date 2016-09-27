@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router'
 
-import { ROUTING } from './app.routing.ts';
+import { ROUTING } from './app.routing';
 import { MyApp } from './app/app';
 import { About } from './app/about/about';
 import { Home } from './app/home/home';

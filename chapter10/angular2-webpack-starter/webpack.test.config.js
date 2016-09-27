@@ -12,7 +12,6 @@ const metadata = {
 };
 
 module.exports = {
-  debug: true,
   devtool: 'source-map',
   module: {
     loaders: [
@@ -29,6 +28,6 @@ module.exports = {
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };

@@ -17,7 +17,7 @@ const metadata = {
 module.exports = {
   devtool: 'source-map',
   entry: {
-    'main'  : './src/main.ts',
+    'main'  : './src/main.aot.ts',
     'vendor': './src/vendor.ts'
   },
   module: {

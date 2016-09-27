@@ -8,7 +8,8 @@
     "target": "es5",
     "types": ["es6-shim", "jasmine"]
   },
-  "exclude": [
-    "node_modules"
+  "files": [
+    "src/main.ts",
+    "src/typings.d.ts"
   ]
 }
