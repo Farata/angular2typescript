@@ -1,13 +1,14 @@
 const path = require('path');
 
 // Webpack and its plugins
-const CommonsChunkPlugin    = require('webpack/lib/optimize/CommonsChunkPlugin');
-const CompressionPlugin     = require('compression-webpack-plugin');
-const CopyWebpackPlugin     = require('copy-webpack-plugin');
-const DedupePlugin          = require('webpack/lib/optimize/DedupePlugin');
-const DefinePlugin          = require('webpack/lib/DefinePlugin');
-const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
-const UglifyJsPlugin        = require('webpack/lib/optimize/UglifyJsPlugin');
+const CommonsChunkPlugin       = require('webpack/lib/optimize/CommonsChunkPlugin');
+const CompressionPlugin        = require('compression-webpack-plugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const CopyWebpackPlugin        = require('copy-webpack-plugin');
+const DedupePlugin             = require('webpack/lib/optimize/DedupePlugin');
+const DefinePlugin             = require('webpack/lib/DefinePlugin');
+const OccurrenceOrderPlugin    = require('webpack/lib/optimize/OccurrenceOrderPlugin');
+const UglifyJsPlugin           = require('webpack/lib/optimize/UglifyJsPlugin');
 
 const ENV = process.env.NODE_ENV = 'production';
 const metadata = {
@@ -39,7 +40,11 @@ module.exports = {
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
     new CompressionPlugin({regExp: /\.css$|\.html$|\.js$|\.map$/}),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
-    // new DedupePlugin(),  // broken in RC.6
+    new ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.join(__dirname, 'src') // location of your src
+    ),
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}}),
     new OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({

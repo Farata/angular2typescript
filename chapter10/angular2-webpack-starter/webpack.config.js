@@ -1,6 +1,7 @@
-const path               = require('path');
-const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-const DefinePlugin       = require('webpack/lib/DefinePlugin');
+const path                     = require('path');
+const CommonsChunkPlugin       = require('webpack/lib/optimize/CommonsChunkPlugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const DefinePlugin             = require('webpack/lib/DefinePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
@@ -41,7 +42,12 @@ module.exports = {
   },
   plugins: [
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
-    new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})
+    new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}}),
+    new ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.join(__dirname, 'src') // location of your src
+    ),
   ],
   resolve: {
     extensions: ['.ts', '.js']
