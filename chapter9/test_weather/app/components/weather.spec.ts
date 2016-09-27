@@ -1,9 +1,5 @@
-import { TestBed, fakeAsync } from '@angular/core/testing';
+import { TestBed} from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/empty';
-
 import { WeatherComponent } from './weather';
 import { WeatherService } from '../services/weather.service';
 
@@ -29,5 +25,4 @@ describe('WeatherComponent', () => {
     expect(element.querySelector('li:nth-of-type(1)').innerHTML).toBe('Temperature: 57F');
     expect(element.querySelector('li:nth-of-type(2)').innerHTML).toBe('Humidity: 44%');
   });
-
 });
