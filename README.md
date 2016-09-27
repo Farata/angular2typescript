@@ -1,6 +1,6 @@
 This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-Most of the code samples were upgraded to Angular 2.0 Final, and some of them are still in RC.6. To upgrade them to Final, remove the -rc6 suffix from all Angular packages in package.json. Here's how the Final version in package.json should look like:
+Most of the code samples were upgraded to Angular 2.0 Final, and some of them are still in RC.6. To upgrade them to Final, remove the -rc6 suffix from all Angular packages in package.json. Here's how package.json in Angular 2.0 Final apps could look like:
 
 ```
  "dependencies": {
@@ -18,6 +18,7 @@ Most of the code samples were upgraded to Angular 2.0 Final, and some of them ar
     "zone.js": "0.6.21"
   },
 ```
+**IMPORTANT:** If you already have an older version of Node.js installed, upgrade it to the current one to avoid errors during npm instal.
 
 The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
@@ -26,7 +27,7 @@ Note the changes in the SystemJS config object in the angular-seed project in Ch
 With the release of TypeScript 2.0, there is no need to use the Typings tool for downloading *.d.ts files. We're starting updating the code example to use @types and install the *.d.ts files with npm, e.g. 
 npm i @types/es6-shim --save
 
-In chapter 10 we upgraded the code samples to use Webpack 2.1.0-beta.
+In chapter 10 we upgraded the code samples to use Webpack 2.1.0-beta.21. Although the newer beta.24 is available, it introduced some breaking changes so we don't use it.
 
 Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
