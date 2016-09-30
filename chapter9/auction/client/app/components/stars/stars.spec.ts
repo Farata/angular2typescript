@@ -1,4 +1,4 @@
-import { TestBed, async, fakeAsync, inject } from '@angular/core/testing';
+import { TestBed, async} from '@angular/core/testing';
 import StarsComponent from './stars';
 
 describe('StarsComponent', () => {
