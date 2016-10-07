@@ -9,24 +9,23 @@
     "start": "webpack-dev-server --inline --progress --port 8080"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.6",
-    "@angular/compiler": "2.0.0-rc.6",
-    "@angular/core": "2.0.0-rc.6",
-    "@angular/http": "2.0.0-rc.6",
-    "@angular/platform-browser": "2.0.0-rc.6",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.6",
-    "@angular/router": "3.0.0-rc.2",
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
     "reflect-metadata": "^0.1.8",
-    "rxjs": "5.0.0-beta.11",
+    "rxjs": "5.0.0-beta.12",
     "systemjs": "^0.19.37",
-    "zone.js": "0.6.17"
+    "zone.js": "0.6.21"
   },
   "devDependencies": {
     "@types/es6-shim": "0.0.31",
     "copy-webpack-plugin": "^3.0.1",
     "ts-loader": "^0.8.2",
-    "typescript": "^2.0.0",
+    "typescript": "2.0.0",
     "webpack": "2.1.0-beta.21",
-    "webpack-dev-server": "2.1.0-beta.0"
-  }
+    "webpack-dev-server": "2.1.0-beta.0"}
 }

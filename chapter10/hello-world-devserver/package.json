@@ -1,7 +1,7 @@
 {
-  "name": "first-project",
+  "name": "first-webpack-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hello world with webpack-dev-server",
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server"
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "2.1.0-beta.21",
-    "webpack-dev-server": "2.1.0-beta.0"
+    "webpack": "^2.1.0-beta.21",
+    "webpack-dev-server": "^2.1.0-beta.0"
   }
 }

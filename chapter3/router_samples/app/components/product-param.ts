@@ -9,10 +9,12 @@ import {ActivatedRoute} from '@angular/router';
 export class ProductDetailComponentParam {
   productID: string;
 
-  constructor(route: ActivatedRoute) {
-    this.productID = route.snapshot.params['id'];
+  constructor(private route: ActivatedRoute) {
+   this.productID = route.snapshot.params['id'];
 
-/*    this.route.params.subscribe(
+
+    // Subscribing for receiving changing params
+   /*this.route.params.subscribe(
         params => this.productID = params['id']
     );*/
 

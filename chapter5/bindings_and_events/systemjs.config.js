@@ -14,7 +14,7 @@ System.config({
         '@angular/*': {'format': 'cjs'}
     },
     packages: {
-        'app'                              : {main: 'binding/two-way-binding', defaultExtension: 'ts'},
+        'app'                              : {main: 'pipes/pipe-tester', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'Rx'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
