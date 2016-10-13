@@ -1,0 +1,12 @@
+<div class="row carousel-holder">
+  <div class="col-md-12">
+    <auction-carousel></auction-carousel>
+  </div>
+</div>
+<div class="row">
+  <div class="alert alert-warning" role="alert" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <div *ngFor="let product of products | async" class="col-sm-4 col-lg-4 col-md-4">
+    <auction-product-item [product]="product"></auction-product-item>
+  </div>
+</div>

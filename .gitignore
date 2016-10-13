@@ -8,6 +8,7 @@
 jspm_packages
 
 node_modules
+build
 
 npm-debug.log
 

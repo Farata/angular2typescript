@@ -1,0 +1,24 @@
+{
+  "name": "ng2-webpack-starter",
+  "description": "Angular 2 Webpack starter project suitable for a production grade application",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "startServer": "node build/auction.js",
+    "dev": "nodemon build/auction.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "ws": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/compression": "0.0.33",
+    "@types/es6-shim": "0.31.32",
+    "@types/express": "^4.0.33",
+    "@types/ws": "0.0.34",
+    "compression": "^1.6.2",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.0.0"
+  }
+}
