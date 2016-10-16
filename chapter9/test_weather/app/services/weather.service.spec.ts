@@ -31,13 +31,11 @@ describe('WeatherService', () => {
   it('getWeather() should return weather for New York', async(() => {
     let mockResponseData = {
       cod: '200',
-      list: [{
         name: 'New York',
         main: {
           temp: 57,
           humidity: 44
         }
-      }]
     };
 
     mockBackend.connections.subscribe((connection: MockConnection) => {
