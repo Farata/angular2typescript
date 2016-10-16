@@ -10,4 +10,4 @@ Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
 It'll help you in getting started while reading Chapter 2.
 
-To request [on-site training](https://yakovfain.com/2016/10/01/angular-2-training-for-your-organization/) in your organization , send us an email at training@faratasystems.com. 
+To request [on-site training](https://yakovfain.com/2016/10/01/angular-2-training-for-your-organization/) in your organization send us an email at training@faratasystems.com. 
