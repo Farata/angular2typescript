@@ -8,7 +8,7 @@ The video with a high-level code review of a sample Online Auction application t
 
 Note the changes in the SystemJS config object in the angular-seed project in Chapter 2. Now we use minimized Angular bundles to lower the size of the app and the number of network requests during the app bootstrap.
 
-With the release of TypeScript 2.0, there is no need to use the Typings tool for downloading *.d.ts files. We're starting updating the code example to use @types and install the *.d.ts files with npm, e.g. 
+With the release of TypeScript 2.0, there is no need to use the Typings tool for downloading *.d.ts files. We're using type definition files from the  @types NPM organization and install them with npm, e.g. 
 npm i @types/es6-shim --save
 
 Watch the video from one of our recent online trainings:
