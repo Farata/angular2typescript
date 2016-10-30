@@ -6,7 +6,7 @@ All code samples were upgraded to Angular 2.0 Final
 
 To start a new SystemJS-based project use the seed project from chapter 2. To create a new Webpack-based project use the seed angular2-webpack-seed from chapter 10.
 
-The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
+The video with a code review of a sample online auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
 Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
