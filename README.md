@@ -2,7 +2,9 @@ This is a repository for code samples for the upcoming book by Yakov Fain and An
 
 All code samples were upgraded to Angular 2.0 Final
 
-**IMPORTANT:** If you already have an older version of Node.js installed, upgrade it to the current one to avoid errors during npm instal.
+**IMPORTANT:** If you already have an older version of Node.js installed, upgrade it to the current one to avoid errors during npm install.
+
+To start a new SystemJS-based projet use the seed project from chapter 2. To create a new Webpack-based project use the seed angular2-webpack-seed from chapter 10.
 
 The video with a high-level code review of a sample Online Auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
