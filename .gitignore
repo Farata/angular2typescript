@@ -1,7 +1,10 @@
 .preview*
 .idea*
 .vscode*
+
 *.pdf*
+
+yarn.lock*
 
 *.map
 
