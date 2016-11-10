@@ -1,15 +1,16 @@
 const path = require('path');
 
 // Webpack and its plugins
-const webpack               = require('webpack');
-const CommonsChunkPlugin    = require('webpack/lib/optimize/CommonsChunkPlugin');
-const CompressionPlugin     = require('compression-webpack-plugin');
-const CopyWebpackPlugin     = require('copy-webpack-plugin');
-const DedupePlugin          = require('webpack/lib/optimize/DedupePlugin');
-const DefinePlugin          = require('webpack/lib/DefinePlugin');
-const OccurrenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
-const ProvidePlugin         = require('webpack/lib/ProvidePlugin');
-const UglifyJsPlugin        = require('webpack/lib/optimize/UglifyJsPlugin');
+const webpack                  = require('webpack');
+const CommonsChunkPlugin       = require('webpack/lib/optimize/CommonsChunkPlugin');
+const CompressionPlugin        = require('compression-webpack-plugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const CopyWebpackPlugin        = require('copy-webpack-plugin');
+const DedupePlugin             = require('webpack/lib/optimize/DedupePlugin');
+const DefinePlugin             = require('webpack/lib/DefinePlugin');
+const OccurrenceOrderPlugin    = require('webpack/lib/optimize/OccurrenceOrderPlugin');
+const ProvidePlugin            = require('webpack/lib/ProvidePlugin');
+const UglifyJsPlugin           = require('webpack/lib/optimize/UglifyJsPlugin');
 
 const ENV = process.env.NODE_ENV = 'production';
 const metadata = {
@@ -18,13 +19,11 @@ const metadata = {
 };
 
 module.exports = {
-  debug: false,
   devtool: 'source-map',
   entry: {
     'main'  : './src/main.ts',
     'vendor': './src/vendor.ts'
   },
-  metadata: metadata,
   module: {
     loaders: [
       {test: /\.css$/,   loader: 'to-string!css', exclude: /node_modules/},
@@ -42,14 +41,18 @@ module.exports = {
     ]
   },
   output: {
-    path    : './dist',
+    path    : path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
     new CompressionPlugin({regExp: /\.css$|\.html$|\.js$|\.map$/, threshold: 1500}),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
-//     new DedupePlugin(), broken in in RC.6
+    new ContextReplacementPlugin(
+       // To prevent Webpack from resolving paths to lazily loaded modules at the build time
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.join(__dirname, 'src') // location of your src
+    ),
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.ENV)}}),
     new OccurrenceOrderPlugin(true),
     new UglifyJsPlugin({
@@ -59,6 +62,6 @@ module.exports = {
     new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'})
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };

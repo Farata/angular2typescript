@@ -1,9 +1,10 @@
-const path               = require('path');
-const webpack            = require('webpack');
-const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-const CopyWebpackPlugin  = require('copy-webpack-plugin');
-const DefinePlugin       = require('webpack/lib/DefinePlugin');
-const ProvidePlugin      = require('webpack/lib/ProvidePlugin');
+const path                     = require('path');
+const webpack                  = require('webpack');
+const CommonsChunkPlugin       = require('webpack/lib/optimize/CommonsChunkPlugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const CopyWebpackPlugin        = require('copy-webpack-plugin');
+const DefinePlugin             = require('webpack/lib/DefinePlugin');
+const ProvidePlugin            = require('webpack/lib/ProvidePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
@@ -17,7 +18,6 @@ const metadata = {
 };
 
 module.exports = {
-  debug: true,
   devServer: {
     contentBase: 'src',
     historyApiFallback: true,
@@ -52,16 +52,21 @@ module.exports = {
     ]
   },
   output: {
-    path    : './dist',
+    path    : path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
     new CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity}),
     new CopyWebpackPlugin([{from: './src/index.html', to: 'index.html'}]),
     new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.ENV)}}),
-    new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'})
+    new ProvidePlugin({jQuery: 'jquery', jquery: 'jquery', $: 'jquery'}),
+    new ContextReplacementPlugin(
+       // To prevent Webpack from resolving paths to lazily loaded modules at the build time
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.join(__dirname, 'src') // location of your src
+    ),
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };

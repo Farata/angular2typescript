@@ -1,5 +1,6 @@
-const path         = require('path');
-const DefinePlugin = require('webpack/lib/DefinePlugin');
+const path                     = require('path');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const DefinePlugin             = require('webpack/lib/DefinePlugin');
 
 const ENV  = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
@@ -12,7 +13,6 @@ const metadata = {
 };
 
 module.exports = {
-  debug: true,
   devtool: 'source-map',
   module: {
     loaders: [
@@ -26,9 +26,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}})
+    new DefinePlugin({'webpack': {'ENV': JSON.stringify(metadata.env)}}),
+    new ContextReplacementPlugin(
+       // To prevent Webpack from resolving paths to lazily loaded modules at the build time
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.join(__dirname, 'src') // location of your src
+    ),
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };
