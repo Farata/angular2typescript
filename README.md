@@ -12,4 +12,6 @@ Watch the video from one of our recent online trainings:
 https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
 It'll help you in getting started while reading Chapter 2.
 
+This repo has some extra code samples that we use during our trainings. They didn't didn't make it into the book, but we decided to post them here in the folders called extras.
+
 To request [on-site training](https://yakovfain.com/2016/10/01/angular-2-training-for-your-organization/) in your organization send us an email at training@faratasystems.com. 
