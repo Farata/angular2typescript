@@ -31,7 +31,6 @@ class Product {
     styles:[`.selected {background-color: cornflowerblue}`]
 })
 class AppComponent {
-    productId: number = 123;
     selectedProduct: Product;
 
     products: Product[] = [
