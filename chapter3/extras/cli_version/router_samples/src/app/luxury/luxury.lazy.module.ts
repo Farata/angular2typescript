@@ -11,4 +11,4 @@ import {LuxuryComponent} from "./luxury.component";
     declarations: [ LuxuryComponent ]
 })
 
-export default class LuxuryModule { }
+export class LuxuryModule {}

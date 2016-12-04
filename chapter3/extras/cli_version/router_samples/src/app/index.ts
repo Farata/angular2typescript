@@ -8,7 +8,6 @@ export * from './seller.component';
 export * from './product-param-data.component';
 export * from './404';
 export * from './luxury/luxury.module';
-export * from './luxury/luxury.lazy.module';
 export * from './guards/login.guard';
 export * from './guards/unsaved-changes.guard';
 export * from './resolver_events/data.component';

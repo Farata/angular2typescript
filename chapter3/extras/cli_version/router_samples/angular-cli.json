@@ -12,7 +12,7 @@
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main-resolver-events.ts",
+      "main": "main-luxury-lazy.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
