@@ -7,7 +7,7 @@ import {RouterModule} from "@angular/router";
 import {HomeComponent, ProductDetailComponent} from "./app";
 
 @Component({
-    selector: 'app',
+    selector: 'app-root',
     template: `
         <a [routerLink]="['/']">Home</a>
         <a [routerLink]="['/product']">Product Details</a>
@@ -23,7 +23,7 @@ export class AppComponent {}
                    {path: '',        component: HomeComponent},
                    {path: 'product', component: ProductDetailComponent},
                    {path: 'luxury',
-                       loadChildren: 'app/components/luxury/luxury.lazy.module' }
+                       loadChildren: './app/luxury/luxury.lazy.module#LuxuryModule' }
                    ])
               ],
     declarations: [ AppComponent, HomeComponent, ProductDetailComponent],
