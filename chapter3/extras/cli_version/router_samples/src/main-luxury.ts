@@ -1,4 +1,5 @@
-import './polyfills.ts';
+
+/*import './polyfills.ts';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule, Component }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,4 +34,5 @@ export class AppComponent {}
 class AppModule { }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+*/
 
