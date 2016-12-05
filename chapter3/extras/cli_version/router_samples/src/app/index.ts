@@ -7,7 +7,7 @@ export * from './product-description.component';
 export * from './seller.component';
 export * from './product-param-data.component';
 export * from './404';
-export * from './luxury/luxury.module';
+/*export * from './luxury/luxury.module'; */ // Removed so the luxury.lazy.module properly bundles LuxuryComponent in the 0.chunk.js
 export * from './guards/login.guard';
 export * from './guards/unsaved-changes.guard';
 export * from './resolver_events/data.component';
