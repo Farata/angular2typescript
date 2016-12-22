@@ -1,8 +1,8 @@
-This is a repository for code samples for the upcoming book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
+This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a>. 
 
-All code samples were upgraded to Angular 2.0 Final
+All code samples were upgraded to Angular 2.0 Final 
 
-**IMPORTANT:** If you already have an older version of Node.js installed, upgrade it to the current one to avoid errors during npm install.
+**Reporting errors:**  If you'll run into a bug in the code, please open an issue at this repository. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section.
 
 To start a new SystemJS-based project use the seed project from chapter 2. To create a new Webpack-based project use the seed angular2-webpack-seed from chapter 10.
 
