@@ -25,7 +25,7 @@ class AppComponent {
 
     getStockQuoteFromServer(stock: string) {
 
-        console.log(`The price of ${stock} is ${100*Math.random().toFixed(4)}`);
+        console.log(`The price of ${stock} is ${(100*Math.random()).toFixed(4)}`);
     }
 }
 
