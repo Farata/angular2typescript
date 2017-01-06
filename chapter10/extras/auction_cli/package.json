@@ -7,7 +7,7 @@
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --prod --aot",
     "postbuild": "npm run deploy",
-    "predeploy": "rimraf -- ../auction_standalone_server/build/public && mkdirp ../auction_standalone_server/build/public",
+    "predeploy": "rimraf ../auction_standalone_server/build/public && mkdirp ../auction_standalone_server/build/public",
     "deploy": "copyfiles -f dist/** ../auction_standalone_server/build/public",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
