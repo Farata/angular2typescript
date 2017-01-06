@@ -1,0 +1,22 @@
+{
+  "name": "node-samples",
+  "description": "Node and Express samples",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "devRest": "nodemon build/rest-server.js",
+    "devRestAngular": "nodemon build/rest-server-angular.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "@types/compression": "0.0.33",
+    "@types/es6-shim": "0.31.32",
+    "@types/express": "^4.0.34",
+    "@types/node": "^6.0.57",
+    "compression": "^1.6.2",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.1.0"
+  }
+}
