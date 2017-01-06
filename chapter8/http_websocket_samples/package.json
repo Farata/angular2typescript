@@ -28,6 +28,7 @@
     "@types/express": "^4.0.31",
     "@types/node": "^4.0.30",
     "express": "^4.14.0",
+    "reflect-metadata": "^0.1.9",
     "ws": "^1.1.1"
   },
   "devDependencies": {
