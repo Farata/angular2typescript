@@ -4,4 +4,4 @@ To run any of these applications, change into the required directory and run npm
 
 After that, run ng serve and open your browser at localhost:4200.
 
-Code samples in the folder http-node-samples require two separate terminal windows: one for running the Node server and another - to bundle and deploy the client. In the client dir: npm run build. In the server dir: npm run devRestAngular. Then open your browser at localhost:8000.
+Code samples in the folder http-node-samples and auction require two separate terminal windows: one for running the Node server and another - to bundle and deploy the client. In the client dir: npm run build. In the server dir: npm run devRestAngular (in auction/server it's npm run startServer). Then open your browser at localhost:8000.

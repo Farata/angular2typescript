@@ -1,12 +1,10 @@
 {
-  "name": "ng2-webpack-starter",
-  "description": "Angular 2 Webpack starter project suitable for a production grade application",
-  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "name": "ng2-auction-server",
+  "description": "Online Auction: the server",
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "startServer": "node build/auction.js",
-    "dev": "nodemon build/auction.js"
+    "startServer": "node build/auction.js"
   },
   "dependencies": {
     "express": "^4.13.3",
@@ -19,6 +17,6 @@
     "@types/ws": "0.0.34",
     "compression": "^1.6.2",
     "nodemon": "^1.11.0",
-    "typescript": "^2.0.0"
+    "typescript": "^2.1.0"
   }
 }
