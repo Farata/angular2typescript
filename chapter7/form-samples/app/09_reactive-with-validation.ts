@@ -67,7 +67,7 @@ class AppComponent {
       'passwordsGroup': new FormGroup({
         'password': new FormControl('', Validators.minLength(5)),
         'pconfirm': new FormControl('')
-      }, {}, equalValidator)
+      }, equalValidator)
     });
   }
 
