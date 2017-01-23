@@ -12,7 +12,7 @@ System.config({
     '@angular/*': {'format': 'cjs'}
   },
   packages: {
-    'app'                              : {main: '12_growable-items-form-with-remove', defaultExtension: 'ts'},
+    'app'                              : {main: '09_reactive-with-validation', defaultExtension: 'ts'},
     'rxjs'                             : {main: 'Rx'},
     '@angular/core'                    : {main: 'core.umd.min.js'},
     '@angular/common'                  : {main: 'common.umd.min.js'},
