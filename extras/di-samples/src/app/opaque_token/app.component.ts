@@ -8,5 +8,5 @@ export const BACKEND_URL  = new OpaqueToken('BackendUrl');
   providers: [  {provide:BACKEND_URL, useValue: 'myQAserver.com'}]
 })
 export class AppComponent {
-  constructor(@Inject(BACKEND_URL) public url: string) {}
+  constructor(@Inject(BACKEND_URL) public url) {}
 }
