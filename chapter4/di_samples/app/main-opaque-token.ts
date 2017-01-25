@@ -9,7 +9,7 @@ export const BackendUrl  = new OpaqueToken('BackendUrl');
   template: 'URL: {{url}}'
 })
 class AppComponent {
-  constructor(@Inject(BackendUrl) public url: string) {}
+  constructor(@Inject(BackendUrl) public url) {}
 }
 
 @NgModule({
