@@ -1,4 +1,4 @@
-This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript</a>. These code examples are free to use under the MIT license.
+This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript</a>. These code examples are free to use under the <a href="https://tldrlegal.com/license/mit-license">MIT</a> license.
 
 All code samples were upgraded to Angular 2.0 or later releases. 
 
