@@ -8,3 +8,5 @@ To run any of these applications, change into the required directory and run npm
 After that, run ng serve and open your browser at localhost:4200.
 
 Code samples located in the folders http-node-samples and auction require two separate terminal windows: one for running the Node server and another - to bundle and deploy the client. In the client dir: npm run build. In the server dir: npm run devRestAngular (in auction/server it's npm run startServer). Then open your browser at localhost:8000.
+
+The folder test-weather contains the sample app from chapter 9. It requires Angular CLI 1.0.0-beta.32.3 or above. To run the tests, ng test.
