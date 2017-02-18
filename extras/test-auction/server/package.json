@@ -1,0 +1,22 @@
+{
+  "name": "ng2-auction-server",
+  "description": "Online Auction: the server",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "startServer": "node build/auction.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "ws": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/compression": "0.0.33",
+    "@types/es6-shim": "0.31.32",
+    "@types/express": "^4.0.33",
+    "@types/ws": "0.0.34",
+    "compression": "^1.6.2",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.1.0"
+  }
+}
