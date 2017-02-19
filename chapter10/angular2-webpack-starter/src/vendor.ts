@@ -6,7 +6,7 @@ import '@angular/router';
 import '@angular/core';
 import '@angular/common';
 
-// RxJS - comment it our if not using or import specific functions
+// RxJS - comment it out if not using or import specific functions
 //import 'rxjs';
 
 // Other vendor libraries

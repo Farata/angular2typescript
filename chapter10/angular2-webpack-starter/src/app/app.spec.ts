@@ -1,7 +1,6 @@
-import { TestBed, fakeAsync, inject, tick } from '@angular/core/testing';
+import { TestBed, fakeAsync, inject, tick, RouterTestingModule } from '@angular/core/testing';
 import { Location } from '@angular/common';
-import { provideRoutes, Router } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
 
 import { ROUTES } from '../app.routing';
 import { MyApp } from './app';
@@ -12,13 +11,8 @@ describe('Router', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
+      imports: [ RouterTestingModule.withRoutes(ROUTES) ],
       declarations: [ MyApp, About, Home ],
-      providers: [
-        // In RC.6 provideRoutes() will be replaced with
-        // RouterTestingModule.withRoutes()
-        provideRoutes(ROUTES)
-      ]
     })
   });
 

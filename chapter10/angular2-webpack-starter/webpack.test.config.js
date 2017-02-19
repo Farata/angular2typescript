@@ -16,12 +16,12 @@ module.exports = {
   devtool: 'source-map',
   module: {
     loaders: [
-      {test: /\.css$/,  loader: 'raw', exclude: /node_modules/},
-      {test: /\.css$/,  loader: 'style!css?-minimize', exclude: /src/},
-      {test: /\.html$/, loader: 'raw'},
+      {test: /\.css$/,  loader: 'raw-loader', exclude: /node_modules/},
+      {test: /\.css$/,  loader: 'style-loader!css?-minimize', exclude: /src/},
+      {test: /\.html$/, loader: 'raw-loader'},
       {test: /\.ts$/,   loaders: [
-        {loader: 'ts', query: {compilerOptions: {noEmit: false}}},
-        {loader: 'angular2-template'}
+        {loader: 'ts-loader', query: {compilerOptions: {noEmit: false}}},
+        {loader: 'angular2-template-loader'}
       ]}
     ]
   },

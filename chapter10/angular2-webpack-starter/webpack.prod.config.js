@@ -23,12 +23,12 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.css$/,  loader: 'to-string!css', exclude: /node_modules/}, // Inline CSS into components
-      {test: /\.css$/,  loader: 'style!css', exclude: /src/}, // Add CSS as style tag to index.html
-      {test: /\.html$/, loader: 'html?caseSensitive=true'},
+      {test: /\.css$/,  loader: 'to-string-loader!css-loader', exclude: /node_modules/}, // Inline CSS into components
+      {test: /\.css$/,  loader: 'style-loader!css-loader', exclude: /src/}, // Add CSS as style tag to index.html
+      {test: /\.html$/, loader: 'html-loader?caseSensitive=true'},
       {test: /\.ts$/,   loaders: [
-        {loader: 'ts', query: {compilerOptions: {noEmit: false}}},
-        {loader: 'angular2-template'}
+        {loader: 'ts-loader', query: {compilerOptions: {noEmit: false}}},
+        {loader: 'angular2-template-loader'}
       ]}
     ]
   },
