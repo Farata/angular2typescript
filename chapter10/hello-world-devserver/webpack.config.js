@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './main',
   output: {
-    path: './dist',
+    path: '/dist',
     filename: 'bundle.js'
   },
   watch: true,
