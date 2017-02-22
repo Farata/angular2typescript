@@ -12,7 +12,7 @@ require('zone.js/dist/fake-async-test.js');
 var testing = require('@angular/core/testing');
 var browser = require('@angular/platform-browser-dynamic/testing');
 
-testing.TestBed.initTestEnvironment(
+testing.getTestBed().initTestEnvironment(
     browser.BrowserDynamicTestingModule,
     browser.platformBrowserDynamicTesting());
 

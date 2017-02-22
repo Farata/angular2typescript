@@ -1,6 +1,7 @@
-import { TestBed, fakeAsync, inject, tick, RouterTestingModule } from '@angular/core/testing';
+import { TestBed, fakeAsync, inject, tick } from '@angular/core/testing';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { ROUTES } from '../app.routing';
 import { MyApp } from './app';

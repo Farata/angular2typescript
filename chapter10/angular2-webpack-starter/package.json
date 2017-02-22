@@ -47,7 +47,7 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^2.0.0",
-    "karma-webpack": "^1.7.0",
+    "karma-webpack": "^2.0.2",
     "node-static": "^0.7.7",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
