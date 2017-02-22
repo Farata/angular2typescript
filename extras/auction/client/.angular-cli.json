@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.19-3",
+    "version": "1.0.0-beta.32.3",
     "name": "auction-cli"
   },
   "apps": [
@@ -22,15 +22,15 @@
         "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
-        "../node_modules/core-js/client/shim.js",
+
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js"
       ],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+          "dev": "environments/environment.ts",
+          "prod": "environments/environment.prod.ts"
+        }
     }
   ],
   "addons": [],

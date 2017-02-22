@@ -5,7 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build --prod --aot",
+    "build": "ng build -prod",
     "postbuild": "npm run deploy",
     "predeploy": "rimraf ../server/build/public && mkdirp ../server/build/public",
     "deploy": "copyfiles -f dist/** ../server/build/public",
@@ -36,7 +36,7 @@
     "@types/jasmine": "^2.2.30",
     "@types/jquery": "^1.10.31",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.24",
+    "@angular/cli": "1.0.0-beta.32.3",
     "codelyzer": "~0.0.26",
     "copyfiles": "^1.0.0",
     "jasmine-core": "2.4.1",
