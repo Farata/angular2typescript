@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript</a>. 
 
-All code samples were upgraded to Angular 2.0 or later releases. 
+All code samples were upgraded to Angular 2.4 or later minor releases. 
 
 **Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section.
 
