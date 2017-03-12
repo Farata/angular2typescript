@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript</a>. 
 
-All code samples were upgraded to Angular 2.4 or later minor releases. 
+All code samples were upgraded to Angular 2.4 or later minor releases. A number of code samples have been upgraded to Angular 4 (see dir extras).
 
 **Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section.
 
@@ -21,15 +21,16 @@ After the book was published we've created additional versions of book samples u
 
 The extras directory has several subdirectories. Each of those is an Angular CLI project with several sample applications. Each of these applications has a bootstrap file with the name that starts with main (see the src directory). 
 
-NOTE: Starting from Angular CLI 1.0 Beta 30, the command to install it looks as follows: 
-npm install -g @angular/cli
-
-To upgrade existing projects to the latest Angluar CLI version read this blog: https://yakovfain.com/2017/02/05/upgrading-to-the-latest-angular-cli
-
 To run any of these applications, change into the required directory and run npm install. Then modify the property main in the angular-cli.json to point at the bootstrap file you want to run.
 
 After that, run ng serve and open your browser at localhost:4200.
 
 Code samples located in the folders http-node-samples and auction require two separate terminal windows: one for running the Node server and another - to bundle and deploy the client. In the client dir: npm run build. In the server dir: npm run devRestAngular (in auction/server it's npm run startServer). Then open your browser at localhost:8000.
 
-The folder test-weather contains the sample app from chapter 9. It requires Angular CLI 1.0.0-beta.32.3 or above. To run the tests, ng test.
+The folder test-weather contains the sample app from chapter 9. To run the tests, ng test.
+
+
+*The Angular 4 version of the code samples*
+
+We started publishing the Angular 4 code samples that are Angular CLI-based projects. They are located in the directory extras/Angular_4.
+
