@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noEmit": true,
+    "sourceMap": true,
+    "target": "es5",
+    "types": ["jasmine"],
+    "lib": ["es6", "dom", "es2015.iterable"]
+  },
+  "files": [
+    "src/main.ts",
+    "src/typings.d.ts"
+  ]
+}

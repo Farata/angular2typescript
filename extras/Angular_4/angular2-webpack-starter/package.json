@@ -1,0 +1,61 @@
+{
+  "name": "angular2-webpack-starter",
+  "version": "1.0.0",
+  "description": "Angular 2 Webpack starter project for dev/prod environments",
+  "homepage": "https://www.manning.com/books/angular-2-development-with-typescript",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist aot",
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "test": "karma start karma.conf.js",
+
+    "prebuild": "npm run clean",
+    "build": "webpack --config webpack.prod.config.js --progress --profile --colors",
+    "preserve:dist": "npm run build",
+    "serve:dist": "static dist -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' -z",
+
+    "prebuild:aot": "npm run clean",
+    "build:aot": "ngc -p tsconfig.aot.json && webpack --config webpack.prod.config.aot.js --progress --profile --colors",
+    "preserve:dist:aot": "npm run build:aot",
+    "serve:dist:aot": "static dist -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' -z"
+  },
+  "dependencies": {
+    "@angular/common": ">=4.0.0-beta <5.0.0",
+    "@angular/compiler": ">=4.0.0-beta <5.0.0",
+    "@angular/core": ">=4.0.0-beta <5.0.0",
+    "@angular/forms": ">=4.0.0-beta <5.0.0",
+    "@angular/http": ">=4.0.0-beta <5.0.0",
+    "@angular/platform-browser": ">=4.0.0-beta <5.0.0",
+    "@angular/platform-browser-dynamic": ">=4.0.0-beta <5.0.0",
+    "@angular/router": ">=4.0.0-beta <5.0.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.7.6"
+  },
+  "devDependencies": {
+    "@types/es6-shim": "0.31.32",
+    "@types/jasmine": "2.5.38",
+    "angular2-template-loader": "^0.5.0",
+    "compression-webpack-plugin": "^0.3.1",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.25.0",
+    "dedupe-plugin": "^1.0.0",
+    "html-loader": "^0.4.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.0.0",
+    "karma-webpack": "^2.0.2",
+    "node-static": "^0.7.7",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.0",
+    "to-string-loader": "^1.1.3",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.1.0",
+    "webpack": "^2.1.0",
+    "webpack-dev-server": "^2.1.0"
+  }
+}
