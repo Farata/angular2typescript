@@ -8,12 +8,10 @@
     "clean": "rimraf dist aot",
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start karma.conf.js",
-
     "prebuild": "npm run clean",
     "build": "webpack --config webpack.prod.config.js --progress --profile --colors",
     "preserve:dist": "npm run build",
     "serve:dist": "static dist -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' -z",
-
     "prebuild:aot": "npm run clean",
     "build:aot": "ngc -p tsconfig.aot.json && webpack --config webpack.prod.config.aot.js --progress --profile --colors",
     "preserve:dist:aot": "npm run build:aot",
@@ -33,6 +31,7 @@
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "next",
     "@types/es6-shim": "0.31.32",
     "@types/jasmine": "2.5.38",
     "angular2-template-loader": "^0.5.0",
