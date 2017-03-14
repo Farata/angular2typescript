@@ -1,10 +1,8 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript</a>. 
 
-All code samples were upgraded to Angular 2.4 or later minor releases. A number of code samples have been upgraded to Angular 4 (see dir extras).
+Besides the original code samples (they work with Angular 2.4) this repo has the folder extras with their Angular CLI version for both Angular 2 and Angular 4.
 
 **Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section.
-
-To start a new SystemJS-based project use the seed project from chapter 2. To create a new Webpack-based project use the seed angular2-webpack-seed from chapter 10. 
 
 The video with a code review of a sample online auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
@@ -29,8 +27,6 @@ Code samples located in the folders http-node-samples and auction require two se
 
 The folder test-weather contains the sample app from chapter 9. To run the tests, ng test.
 
-
 *The Angular 4 version of the code samples*
 
-We started publishing the Angular 4 code samples that are Angular CLI-based projects. They are located in the directory extras/Angular_4.
-
+The Angular 4 version of code samples were built with  Angular CLI. They are located in the directory extras/Angular_4.
