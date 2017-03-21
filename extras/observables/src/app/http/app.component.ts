@@ -5,6 +5,8 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
 import {FormControl} from "@angular/forms";
 import {Http} from "@angular/http";
 
@@ -30,25 +32,23 @@ export class AppComponent {
       .switchMap(city => this.getWeather(city))
       .subscribe(
         res => {
-          if (res['cod'] === '404') return;
-          if (!res['main']) {
-            this.temperature ='City is not found';
-          } else {
-
             this.temperature =
               `Current temperature is  ${res['main'].temp}F, ` +
               `humidity: ${res['main'].humidity}%`;
-          }
         },
-        err => console.log(`Can't get weather. Error code: %s, URL: %s`, err.message, err.url),
-        () => console.log(`Weather is retrieved`)
+        err => console.log(`Can't get weather. Error code: %s, URL: %s`, err.message, err.url)
       );
   }
 
   getWeather(city: string): Observable<Array<string>> {
     return this.http.get(this.baseWeatherURL + city + this.urlSuffix)
       .map(res => {
-        console.log(res);
-        return res.json()});
+        console.log(res.json());
+        return res.json()})
+      .catch( err => {
+        if (err.status ===404){
+          console.log(`City ${city} not found`) ;
+          return Observable.of()}    // empty observable
+      });
   }
 }
