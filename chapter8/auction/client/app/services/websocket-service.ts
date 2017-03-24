@@ -1,12 +1,13 @@
 import {Injectable} from '@angular/core';
-import {Observable, Subscriber} from 'rxjs/Rx';
+import {Observable} from "rxjs/Observable";
+import {Subject} from "rxjs/Subject";
 
 
 @Injectable()
 export class WebSocketService {
   private ws: WebSocket;
 
-  createObservableSocket(url: string, openSubscriber: Subscriber): Observable {
+  createObservableSocket(url: string, openSubscriber: Subscriber): Observable<any> {
     this.ws = new WebSocket(url);
     return new Observable(observer => {
       this.ws.onmessage = event => observer.next(event.data);
