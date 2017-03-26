@@ -10,7 +10,7 @@ export class SellerInfoComponent {
    sellerID: string;
 
    constructor(route: ActivatedRoute){
-     this.sellerID = route.snapshot.params['id'];
+     this.sellerID = route.snapshot.paramMap.get('id');
      console.log(`The SellerInfoComponent got the seller id ${this.sellerID}`);
    }
 }

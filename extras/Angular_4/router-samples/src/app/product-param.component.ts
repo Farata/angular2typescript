@@ -3,20 +3,19 @@ import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'product',
-  template: `<h1 class="product">Details for troduct {{productID}}</h1>`,
+  template: `<h1 class="product">Details for product {{productID}}</h1>`,
   styles: ['.product {background: cyan}']
 })
 export class ProductDetailComponentParam {
-  productID: number;
+  productID: string;
 
   constructor(route: ActivatedRoute) {
-    this.productID = route.snapshot.params['id'];
+    this.productID = route.snapshot.paramMap.get('id');
 
-    /*  An alternative way of receiving params via subscription
+      //An alternative way of receiving params via subscription
 
-    this.route.params.subscribe(
-     params => this.productID = params['id']
+/*    route.paramMap.subscribe(
+     params => this.productID = params.get('id')
      );*/
-
   }
 }
