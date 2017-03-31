@@ -17,7 +17,7 @@ import 'rxjs/add/observable/interval'
             
       <br> Subscriber to input events got {{inputValue}}
       <p>
-      <br> Subscriber to input events got {{keyValue}}      
+      <br> Subscriber to key events got {{keyValue}}      
     `
 })
 export class AppComponent {

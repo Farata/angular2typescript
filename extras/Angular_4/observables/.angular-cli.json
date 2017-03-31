@@ -12,7 +12,7 @@
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main-formcontrol.ts",
+      "main": "main-http.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",

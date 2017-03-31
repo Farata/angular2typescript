@@ -12,7 +12,7 @@
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main-template.ts",
+      "main": "main-dynamic.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
