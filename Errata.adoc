@@ -4,7 +4,7 @@ Hello readers!
 
 New versions of Angular are being released and we are committed to maintain the book code samples working. At the time of this writing, the latest version of this framework is Angular 4.0.0. You can find the Angular CLI version of book code samples migrated to Angular 4.0.0 in the directory extras in the above GitHub repository.
 
-If you find any errors in https://www.manning.com/books/angular-2-development-with-typescript[Angular 2 Development with TypeScript] not listed below, it would be most appreciated if you would post the issues in the book's Author's Online Form in its Errata section so that they may be collected for everyone's benefit. 
+If you find any errors in https://www.manning.com/books/angular-2-development-with-typescript[Angular 2 Development with TypeScript] not listed below, it would be most appreciated if you would post the issues in the book's Author's Online Forum in its Errata section so that they may be collected for everyone's benefit. 
 
 === Chapter 1
 
