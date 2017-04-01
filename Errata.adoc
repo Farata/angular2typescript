@@ -6,9 +6,6 @@ New versions of Angular are being released and we are committed to maintain the 
 
 If you find any errors in https://www.manning.com/books/angular-2-development-with-typescript[Angular 2 Development with TypeScript] not listed below, it would be most appreciated if you would post the issues in the book's Author's Online Forum in its Errata section so that they may be collected for everyone's benefit. 
 
-=== Chapter 1
-
-
 === Chapter 2
 
 *Page 24*. Listing 2.1. Replace this line:
