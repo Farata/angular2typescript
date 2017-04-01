@@ -2,7 +2,7 @@ This is a repository for code samples for the book by Yakov Fain and Anton Moise
 
 Besides the original code samples (they work with Angular 2.4) this repo has the folder extras with their Angular CLI version for both Angular 2 and Angular 4.
 
-**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an Errata page with corrections here: https://rawgit.com/farata/angular2typescript/master/Errata.html. 
+**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an Errata page with corrections here: http://bit.ly/2nrJXLe. 
 
 The video with a code review of a sample online auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
 
