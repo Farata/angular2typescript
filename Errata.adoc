@@ -11,8 +11,39 @@ If you find any errors in https://www.manning.com/books/angular-2-development-wi
 
 === Chapter 2
 
+*Page 24*. Listing 2.1. Replace this line:
+
+[source, js]
+----
+<script src="//unpkg.com/zone.js@0.6.12"></script>
+----
+
+with this one:
+
+[source, js]
+----
+<script src="//unpkg.com/zone.js@0.8.4"></script>
+----
+
+
 *Page 26*. Listing 2.2. One code callout reads "Inside the constructor, you initialize the name property with the value
 Angular 2 bound to the template." The digit 2 has to be removed from this text.
+
+*Page 26*. Listing 2.2. Use back ticks instead of single quotes in the template. Replace this:
+
+[source, js]
+----
+template: '<h1>Hello {{ name }}!</h1>'
+----
+
+with this:
+
+[source, js]
+----
+template: `<h1>Hello {{ name }}!</h1>`
+----
+
+*Page 47*. Replace "in section 2.4.1." with "in section 2.1.4."
 
 *Page 55*. Remove the second *the* from the following text fragment: "you’ll create the three the most interesting components".
 
@@ -42,10 +73,13 @@ import { Product, ProductService } from '../../services/product-service';
 
 === Chapter 4
 
+*Page 112*. Replace "IoT container" with "IoC container"
 
 === Chapter 5
 
-*Page 157* Listing 5.4. A pair of parentheses is missing. Replace this line:
+*Page 144*. Replace "DOM attribute" with "DOM property"
+
+*Page 157*. Listing 5.4. A pair of parentheses is missing. Replace this line:
 
 [source, js]
 ----
@@ -59,11 +93,29 @@ with this one:
 console.log(`The price of ${stock} is ${(100*Math.random()).toFixed(4)}`);
 ----
 
+*Page 159*. Listing 5.5. 
+
+Due to changes in the Weather server API we had to re-write the code of this example to handle the case when the city is not found and the server returns 404 killing the data stream. Now we use the catch operator to intercept the error and replace the dead observable with an empty one. The new version of this example is available at 
+https://github.com/Farata/angular2typescript/blob/master/chapter5/bindings_and_events/app/observables/observable-events-http.ts.
+
+*Page 161*. Replace this paragraph:
+
+"Typing the word London takes more than the 200 milliseconds specified in debounceTime(), which means the valueChanges event will emit the observable data more than once. To ensure that the request to the server takes more than 200 milliseconds, you need a slow internet connection."
+
+with this one:
+
+"We don't want the first Observable - valueChanges - to emit the city name unless the user wasn't entering any letter in more than the 200 milliseconds. Hence we specified this interval in debounceTime(). This lowers the number of server requests made by getWeather()."
+
 *Page 163*. The correct link to the DatePipe is https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html
 
-*Page 167*. Listing 5.9. Remove the line that imports FilterPipe from the code. In pre-release versions of Angular it was required, but then the declaration of pipes was moved to the module class. 
+*Page 164*. Replace this sentence:
+"If your component uses custom pipes, they have to be explicitly listed in its @Component annotation in the pipes property."
 
-So the app.module.ts need the following import line:
+with this one:
+
+"If your components use custom pipes, they have to be explicitly listed in the module's @NgModule annotation in the pipes property."
+
+*Page 167*. Listing 5.9. Remove the line that imports FilterPipe from the code. In pre-release versions of Angular it was required, but then the declaration of pipes was moved to the module class. So the app.module.ts need the following import line:
 
 [source, js]
 ----
@@ -71,8 +123,6 @@ import {FilterPipe} from "./components/pipes/filter-pipe";
 ----
 
 Also, you should add FilterPipe to the list of declarations in @NgModule.
-
-
 
 === Chapter 6
 
@@ -92,14 +142,35 @@ class AppComponent {
 }
 ----
 
+*Page 179*. Replace "mediator.ts — PriceQuoterComponent and OrderComponent" with "mediator.ts — AppComponent"
+
 *Page 181*. Replace the text "When the value of the buy input property on OrderComponent changes," with "When the value of the stock input property on OrderComponent changes,"
 
-*Page 185*. This page include the text "...encapsulated—the entire window is shown with the parent’s light green background." The word parent has to be replaced with teh word child.
+*Page 185*. This page include the text "...encapsulated—the entire window is shown with the parent’s light green background.". The word parent has to be replaced with the word child.
+
+*Page 192*. Replace the following sentence:
+
+"As an alternative, you could declare an interface (such as
+interface IChanges {[key: string]: SimpleChange};), and the function signature would look like ngOnChanges(changes: IChanges)."
+
+with this one:
+
+""TypeScript has a structural type system, so the type of the argument 
+changes of ngOnChanges() is specified by including an interface that specifies a structure. As an alternative, you could specify a structure inline {[key: string]: SimpleChange} and the function signature would look like ngOnChanges(changes: {[key: string]: SimpleChange})."
 
 === Chapter 7
 
+*Page 214*. Listing 7.4. Remove 2((CO7-2)) and 2((CO7-3)) from the listing.
 
 === Chapter 8
+
+*Page 247*. Replace this text:
+
+"(run nodemon build/auction-rest-server.js)"
+
+with this one:
+
+"(if nodemon is installed globally run nodemon build/auction-rest-server.js; otherwise modify the dev script in package.json)"
 
 *Page 249*. Listing 8.6. Add the following line to the dependencies section:
 
@@ -108,11 +179,66 @@ class AppComponent {
 "reflect-metadata": "^0.1.10"
 ----
 
-=== Chapter 9
+*Page 260*. Replace "or npm simpleWsServer)." with "or npm run simpleWsServer)."
 
+*Page 264*. Replace this line:
+
+"import {Observable} from 'rxjs/Rx';"
+
+with this one:
+
+"import {Observable} from 'rxjs/Observable';"
 
 === Chapter 10
 
+*Page 314* Listing 10.3. As of webpack 2.3.0, a different path resolution is required. Replace this line:
+
+[source, js]
+----
+path: './dist', 
+----
+
+with this one:
+
+[source, js]
+----
+path: path.resolve('./dist'), 
+----
+
+*Page 316*. Listing 10.5. Update the webpack and webpack-dev-server to the latest version in devDependencies :
+
+[source, js]
+----
+"webpack": "^2.2.0",
+"webpack-dev-server": "^2.2.0"
+----
+
+*Page 317*. Listing 10.6. As of webpack 2.3.0, a different path resolution is required. Replace this line:
+
+[source, js]
+----
+path: './dist', 
+----
+
+with this one:
+
+[source, js]
+----
+path: path.resolve('./dist'), 
+----
+
 === Appednix A
 
-=== Appendix B
+*Page 366*. Replace the following line:
+
+[source, js]
+----
+let {sym, price, stockExchange} = getStock();
+----
+
+with this one:
+
+[source, js]
+----
+let {sym, price, stockExchange} = getStock();
+----

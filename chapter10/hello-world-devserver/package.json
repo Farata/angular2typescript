@@ -2,15 +2,11 @@
   "name": "first-webpack-project",
   "version": "1.0.0",
   "description": "Hello world with webpack-dev-server",
-  "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "webpack": "2.2.0",
-    "webpack-dev-server": "2.2.0"
+  "dependencies": {
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   }
 }
