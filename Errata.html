@@ -423,17 +423,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>New versions of Angular are being released and we are committed to maintain the book code samples working. At the time of this writing, the latest version of this framework is Angular 4.0.0. You can find the Angular CLI version of book code samples migrated to Angular 4.0.0 in the directory extras in the above GitHub repository.</p>
 </div>
 <div class="paragraph">
-<p>If you find any errors in <a href="https://www.manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a> not listed below, it would be most appreciated if you would post the issues in the book&#8217;s Author&#8217;s Online Form in its Errata section so that they may be collected for everyone&#8217;s benefit.</p>
-</div>
-<div class="sect2">
-<h3 id="_chapter_1">Chapter 1</h3>
-
+<p>If you find any errors in <a href="https://www.manning.com/books/angular-2-development-with-typescript">Angular 2 Development with TypeScript</a> not listed below, it would be most appreciated if you would post the issues in the book&#8217;s Author&#8217;s Online Forum in its Errata section so that they may be collected for everyone&#8217;s benefit.</p>
 </div>
 <div class="sect2">
 <h3 id="_chapter_2">Chapter 2</h3>
 <div class="paragraph">
+<p><strong>Page 24</strong>. Listing 2.1. Replace this line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">&lt;script src="//unpkg.com/zone.js@0.6.12"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">&lt;script src="//unpkg.com/zone.js@0.8.4"&gt;&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p><strong>Page 26</strong>. Listing 2.2. One code callout reads "Inside the constructor, you initialize the name property with the value
 Angular 2 bound to the template." The digit 2 has to be removed from this text.</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 26</strong>. Listing 2.2. Use back ticks instead of single quotes in the template. Replace this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">template: '&lt;h1&gt;Hello {{ name }}!&lt;/h1&gt;'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">template: `&lt;h1&gt;Hello {{ name }}!&lt;/h1&gt;`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Page 47</strong>. Replace "in section 2.4.1." with "in section 2.1.4."</p>
 </div>
 <div class="paragraph">
 <p><strong>Page 55</strong>. Remove the second <strong>the</strong> from the following text fragment: "you’ll create the three the most interesting components".</p>
@@ -472,18 +503,65 @@ Angular 2 bound to the template." The digit 2 has to be removed from this text.<
 </div>
 <div class="sect2">
 <h3 id="_chapter_4">Chapter 4</h3>
-
+<div class="paragraph">
+<p><strong>Page 112</strong>. Replace "IoT container" with "IoC container"</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_chapter_5">Chapter 5</h3>
 <div class="paragraph">
+<p><strong>Page 144</strong>. Replace "DOM attribute" with "DOM property"</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 157</strong>. Listing 5.4. A pair of parentheses is missing. Replace this line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">console.log(`The price of ${stock} is ${100*Math.random().toFixed(4)}`);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">console.log(`The price of ${stock} is ${(100*Math.random()).toFixed(4)}`);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Page 159</strong>. Listing 5.5.</p>
+</div>
+<div class="paragraph">
+<p>Due to changes in the Weather server API we had to re-write the code of this example to handle the case when the city is not found and the server returns 404 killing the data stream. Now we use the catch operator to intercept the error and replace the dead observable with an empty one. The new version of this example is available at
+<a href="https://github.com/Farata/angular2typescript/blob/master/chapter5/bindings_and_events/app/observables/observable-events-http.ts" class="bare">https://github.com/Farata/angular2typescript/blob/master/chapter5/bindings_and_events/app/observables/observable-events-http.ts</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 161</strong>. Replace this paragraph:</p>
+</div>
+<div class="paragraph">
+<p>"Typing the word London takes more than the 200 milliseconds specified in debounceTime(), which means the valueChanges event will emit the observable data more than once. To ensure that the request to the server takes more than 200 milliseconds, you need a slow internet connection."</p>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="paragraph">
+<p>"We don&#8217;t want the first Observable - valueChanges - to emit the city name unless the user wasn&#8217;t entering any letter in more than the 200 milliseconds. Hence we specified this interval in debounceTime(). This lowers the number of server requests made by getWeather()."</p>
+</div>
+<div class="paragraph">
 <p><strong>Page 163</strong>. The correct link to the DatePipe is <a href="https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html" class="bare">https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html</a></p>
 </div>
 <div class="paragraph">
-<p><strong>Page 167</strong>. Listing 5.9. Remove the line that imports FilterPipe from the code. In pre-release versions of Angular it was required, but then the declaration of pipes was moved to the module class.</p>
+<p><strong>Page 164</strong>. Replace this sentence:
+"If your component uses custom pipes, they have to be explicitly listed in its @Component annotation in the pipes property."</p>
 </div>
 <div class="paragraph">
-<p>So the app.module.ts need the following import line:</p>
+<p>with this one:</p>
+</div>
+<div class="paragraph">
+<p>"If your components use custom pipes, they have to be explicitly listed in the module&#8217;s @NgModule annotation in the pipes property."</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 167</strong>. Listing 5.9. Remove the line that imports FilterPipe from the code. In pre-release versions of Angular it was required, but then the declaration of pipes was moved to the module class. So the app.module.ts need the following import line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -514,42 +592,142 @@ Angular 2 bound to the template." The digit 2 has to be removed from this text.<
 </div>
 </div>
 <div class="paragraph">
+<p><strong>Page 179</strong>. Replace "mediator.ts — PriceQuoterComponent and OrderComponent" with "mediator.ts — AppComponent"</p>
+</div>
+<div class="paragraph">
 <p><strong>Page 181</strong>. Replace the text "When the value of the buy input property on OrderComponent changes," with "When the value of the stock input property on OrderComponent changes,"</p>
 </div>
 <div class="paragraph">
-<p><strong>Page 185</strong>. This page include the text "&#8230;&#8203;encapsulated—the entire window is shown with the parent’s light green background." The word parent has to be replaced with teh word child.</p>
+<p><strong>Page 185</strong>. This page include the text "&#8230;&#8203;encapsulated—the entire window is shown with the parent’s light green background.". The word parent has to be replaced with the word child.</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 192</strong>. Replace the following sentence:</p>
+</div>
+<div class="paragraph">
+<p>"As an alternative, you could declare an interface (such as
+interface IChanges {[key: string]: SimpleChange};), and the function signature would look like ngOnChanges(changes: IChanges)."</p>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="paragraph">
+<p>""TypeScript has a structural type system, so the type of the argument
+changes of ngOnChanges() is specified by including an interface that specifies a structure. As an alternative, you could specify a structure inline {[key: string]: SimpleChange} and the function signature would look like ngOnChanges(changes: {[key: string]: SimpleChange})."</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_chapter_7">Chapter 7</h3>
-
+<div class="paragraph">
+<p><strong>Page 214</strong>. Listing 7.4. Remove 2CO7-2 and 2CO7-3 from the listing.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_chapter_8">Chapter 8</h3>
-
+<div class="paragraph">
+<p><strong>Page 247</strong>. Replace this text:</p>
 </div>
-<div class="sect2">
-<h3 id="_chapter_9">Chapter 9</h3>
-
+<div class="paragraph">
+<p>"(run nodemon build/auction-rest-server.js)"</p>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="paragraph">
+<p>"(if nodemon is installed globally run nodemon build/auction-rest-server.js; otherwise modify the dev script in package.json)"</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 249</strong>. Listing 8.6. Add the following line to the dependencies section:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">"reflect-metadata": "^0.1.10"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Page 260</strong>. Replace "or npm simpleWsServer)." with "or npm run simpleWsServer)."</p>
+</div>
+<div class="paragraph">
+<p><strong>Page 264</strong>. Replace this line:</p>
+</div>
+<div class="paragraph">
+<p>"import {Observable} from 'rxjs/Rx';"</p>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="paragraph">
+<p>"import {Observable} from 'rxjs/Observable';"</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_chapter_10">Chapter 10</h3>
-
+<div class="paragraph">
+<p><strong>Page 314</strong> Listing 10.3. As of webpack 2.3.0, a different path resolution is required. Replace this line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">path: './dist', </code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">path: path.resolve('./dist'), </code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Page 316</strong>. Listing 10.5. Update the webpack and webpack-dev-server to the latest version in devDependencies :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">"webpack": "^2.2.0",
+"webpack-dev-server": "^2.2.0"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Page 317</strong>. Listing 10.6. As of webpack 2.3.0, a different path resolution is required. Replace this line:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">path: './dist', </code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">path: path.resolve('./dist'), </code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_appednix_a">Appednix A</h3>
-
+<div class="paragraph">
+<p><strong>Page 366</strong>. Replace the following line:</p>
 </div>
-<div class="sect2">
-<h3 id="_appendix_b">Appendix B</h3>
-
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">let {sym, price, stockExchange} = getStock();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>with this one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">let {sym, price, stockExchange} = getStock();</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-04-01 08:11:22 EDT
+Last updated 2017-04-01 18:03:48 EDT
 </div>
 </div>
 </body>
