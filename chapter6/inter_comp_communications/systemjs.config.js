@@ -17,7 +17,7 @@ System.config({
         }
     },
     packages: {
-        'app'                              : {main: 'child_api/exposing-child-api', defaultExtension: 'ts'},
+        'app'                              : {main: 'mediator/mediator.ts', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'Rx'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
