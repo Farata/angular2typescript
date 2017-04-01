@@ -36,7 +36,7 @@
     <select id="category"
             class="form-control"
             formControlName="category">
-      <option value="-1">All categories</option>
+      <option value="">All categories</option>
       <option *ngFor="let c of categories"
               [value]="c">{{c}}</option>
     </select>

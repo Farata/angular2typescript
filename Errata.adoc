@@ -45,6 +45,20 @@ import { Product, ProductService } from '../../services/product-service';
 
 === Chapter 5
 
+*Page 157* Listing 5.4. A pair of parentheses is missing. Replace this line:
+
+[source, js]
+----
+console.log(`The price of ${stock} is ${100*Math.random().toFixed(4)}`);
+----
+
+with this one:
+
+[source, js]
+----
+console.log(`The price of ${stock} is ${(100*Math.random()).toFixed(4)}`);
+----
+
 *Page 163*. The correct link to the DatePipe is https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html
 
 *Page 167*. Listing 5.9. Remove the line that imports FilterPipe from the code. In pre-release versions of Angular it was required, but then the declaration of pipes was moved to the module class. 
@@ -87,6 +101,12 @@ class AppComponent {
 
 === Chapter 8
 
+*Page 249*. Listing 8.6. Add the following line to the dependencies section:
+
+[source, js]
+----
+"reflect-metadata": "^0.1.10"
+----
 
 === Chapter 9
 
