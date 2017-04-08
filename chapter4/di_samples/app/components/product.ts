@@ -12,7 +12,7 @@ import {ProductService, Product} from "../services/product-service";
   providers:[ProductService]
 })
 
-export default class ProductComponent {
+export class ProductComponent {
   product: Product;
 
   constructor( productService: ProductService) {
