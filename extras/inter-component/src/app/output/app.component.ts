@@ -5,7 +5,7 @@ import {IPriceQuote} from "./iprice.quote";
   selector: 'app-root',
   template: `
    <price-quoter (lastPrice)="priceQuoteHandler($event)"></price-quoter><br>
-    AppComponent received: {{stockSymbol}} {{price | currency:'USD':true:'1.2-2'}}`
+    AppComponent received: {{stockSymbol}} {{price | currency:'USD':true}}`
 })
 export class AppComponent {
 

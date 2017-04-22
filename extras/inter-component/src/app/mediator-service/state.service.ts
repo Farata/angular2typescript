@@ -1,8 +1,8 @@
-import {EventEmitter, Injectable} from "@angular/core";
+import {EventEmitter} from "@angular/core";
 
 export class StateService{
 
-  private _searchCriteria: string;
+  private _searchCriteria: string;  // storage of the state
 
   stateEvent: EventEmitter<string> = new EventEmitter();
 

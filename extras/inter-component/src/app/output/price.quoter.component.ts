@@ -5,7 +5,7 @@ import {IPriceQuote} from "./iprice.quote";
 @Component({
   selector: 'price-quoter',
   template: `<strong>Inside PriceQuoterComponent:
-               {{stockSymbol}} {{price | currency:'USD':true:'1.2-2'}}</strong>`,
+               {{stockSymbol}} {{price | currency:'USD':true}}</strong>`,
   styles:[`:host {background: pink;}`]
 })
 export class PriceQuoterComponent {

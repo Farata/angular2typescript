@@ -1,10 +1,10 @@
-import { InterComponentPage } from './app.po';
+import { W3Page } from './app.po';
 
-describe('inter-component App', function() {
-  let page: InterComponentPage;
+describe('w3 App', () => {
+  let page: W3Page;
 
   beforeEach(() => {
-    page = new InterComponentPage();
+    page = new W3Page();
   });
 
   it('should display message saying app works', () => {
