@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/interval';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/do';
 import {Observable} from "rxjs/Observable";
 
 @Component({
@@ -20,7 +21,7 @@ import {Observable} from "rxjs/Observable";
 })
 export class AppComponent {
   @ViewChild('myinput')
-  myInputField: ElementRef;
+  myInputField: ElementRef;  // Using ElementRef is discouraged
 
   data1: string;
   data2: string;
@@ -30,6 +31,7 @@ export class AppComponent {
     let keyup$: Observable<any> = Observable.fromEvent(this.myInputField.nativeElement, 'keyup');
 
     let keyupValue$ = keyup$
+      .do(vevent => console.log(event))
       .map(event => event.target.value)
       .share();
 
@@ -44,3 +46,5 @@ export class AppComponent {
   }
 
 }
+
+// @HostListener offers an alternatve way to listen to native events without subscribe()

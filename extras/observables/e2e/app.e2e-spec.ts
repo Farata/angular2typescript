@@ -1,6 +1,6 @@
 import { ObservablesPage } from './app.po';
 
-describe('observables App', function() {
+describe('observables App', () => {
   let page: ObservablesPage;
 
   beforeEach(() => {

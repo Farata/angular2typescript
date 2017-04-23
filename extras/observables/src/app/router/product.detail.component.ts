@@ -9,12 +9,11 @@ import 'rxjs/add/operator/do';
 })
 export class ProductDetailComponent {
 
-  productID: number;
+  productID: string;
 
   constructor(private route: ActivatedRoute) {
 
-    this.route.params
-      .do(params => console.log("Route param is " + params['id']))
-      .subscribe(params => this.productID = params['id']);
+    this.route.paramMap
+      .subscribe(params => this.productID = params.get('id'));
   }
 }

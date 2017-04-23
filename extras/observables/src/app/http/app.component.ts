@@ -13,10 +13,10 @@ import {Http} from "@angular/http";
 @Component({
   selector: "app-root",
   template: `
-      <h2>Observable weather</h2>
-      <input type="text" placeholder="Enter city" [formControl]="searchInput">
-      <h3>{{temperature}}</h3>
-    `
+    <h2>Observable weather</h2>
+    <input type="text" placeholder="Enter city" [formControl]="searchInput">
+    <h3>{{temperature}}</h3>
+  `
 })
 export class AppComponent {
   private baseWeatherURL: string= 'http://api.openweathermap.org/data/2.5/weather?q=';
@@ -32,9 +32,9 @@ export class AppComponent {
       .switchMap(city => this.getWeather(city))
       .subscribe(
         res => {
-            this.temperature =
-              `Current temperature is  ${res['main'].temp}F, ` +
-              `humidity: ${res['main'].humidity}%`;
+          this.temperature =
+            `Current temperature is  ${res['main'].temp}F, ` +
+            `humidity: ${res['main'].humidity}%`;
         },
         err => console.log(`Can't get weather. Error code: %s, URL: %s`, err.message, err.url)
       );
@@ -42,9 +42,7 @@ export class AppComponent {
 
   getWeather(city: string): Observable<Array<string>> {
     return this.http.get(this.baseWeatherURL + city + this.urlSuffix)
-      .map(res => {
-        console.log(res.json());
-        return res.json()})
+      .map(res => res.json())
       .catch( err => {
         if (err.status ===404){
           console.log(`City ${city} not found`) ;
