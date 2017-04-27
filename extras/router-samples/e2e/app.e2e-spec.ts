@@ -1,10 +1,10 @@
-import { RouterSamplesPage } from './app.po';
+import { HelloNg4Page } from './app.po';
 
-describe('router-samples App', function() {
-  let page: RouterSamplesPage;
+describe('hello-ng4 App', () => {
+  let page: HelloNg4Page;
 
   beforeEach(() => {
-    page = new RouterSamplesPage();
+    page = new HelloNg4Page();
   });
 
   it('should display message saying app works', () => {

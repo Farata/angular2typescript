@@ -9,10 +9,11 @@ import {routing} from "./app.routing";
 import {ProductDetailComponent} from "../product.component";
 import {LoginGuard} from "./login.guard";
 import {UnsavedChangesGuard} from "./unsaved-changes.guard";
+import {OtherComponent} from "../OtherComponent";
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProductDetailComponent
+    AppComponent, HomeComponent, ProductDetailComponent, OtherComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ import {ProductDetailComponentParam} from "./product-param.component";
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProductDetailComponent, ProductDetailComponentParam
+    AppComponent, HomeComponent, ProductDetailComponent
   ],
   imports: [
     BrowserModule,

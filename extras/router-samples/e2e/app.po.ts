@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class RouterSamplesPage {
+export class HelloNg4Page {
   navigateTo() {
     return browser.get('/');
   }
