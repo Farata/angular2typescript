@@ -4,8 +4,6 @@
 
 *.pdf*
 
-yarn.lock*
-
 *.map
 
 jspm_packages

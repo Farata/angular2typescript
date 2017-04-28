@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+auction-carousel {
+  margin-bottom: 16px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+auction-product-item {
+  margin: 0 8px 16px;
+  flex-basis: calc(100% / 3 - 16px);
+}
+
+@media (max-width: 1199px) {
+  auction-product-item {
+    flex-basis: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 599px) {
+  auction-product-item {
+    flex-basis: calc(100% - 16px);
+  }
+}
