@@ -1,0 +1,25 @@
+<div class="ContentSideSections Implementation">
+
+  <p-growl [value]="msgs" [life]="1000"></p-growl>
+
+  <p-carousel headerText="Cars" [value]="cars">
+
+      <ng-template *ngFor="let car of cars" pTemplate>
+
+      <div class="ui-grid ui-grid-responsive" (click)="selectCar(car)">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12"><img src="assets/images/car/{{car.brand}}.gif" /></div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">Year</div>
+          <div class="ui-grid-col-6">{{car.year}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-6">Color</div>
+          <div class="ui-grid-col-6">{{car.color}}</div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>
