@@ -1,0 +1,31 @@
+<form [formGroup]="formModel"
+      (ngSubmit)="onSearch()"
+      novalidate>
+
+  <md-input-container [dividerColor] = "formModel.hasError('minlength','title')?'warn':'default'">
+    <input mdInput
+           type="text"
+           placeholder="Product title"
+           formControlName="title"
+           minlength="3">
+    <md-hint *ngIf="formModel.hasError('minlength','title')" >Enter at least 3 characters</md-hint>
+
+  </md-input-container>
+
+  <md-input-container  [dividerColor] = "formModel.hasError('positivenumber', 'price')?'warn':'default'">
+    <input mdInput
+           type="number"
+           placeholder="Product price"
+           formControlName="price">
+    <md-hint *ngIf="formModel.hasError('positivenumber', 'price')" >The price must be a positive number</md-hint>
+  </md-input-container>
+
+  <md-select placeholder="Category" formControlName="category">
+    <md-option *ngFor="let c of categories"
+               [value]="c">{{ c }}</md-option>
+  </md-select>
+
+  <button md-raised-button color="accent" type="submit">
+    <md-icon>search</md-icon>SEARCH
+  </button>
+</form>

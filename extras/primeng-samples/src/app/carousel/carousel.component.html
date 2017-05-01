@@ -2,9 +2,9 @@
 
   <p-growl [value]="msgs" [life]="1000"></p-growl>
 
-  <p-carousel headerText="Cars" [value]="cars">
+  <p-carousel headerText="Cars" [value]="cars" numVisible="1">
 
-      <ng-template *ngFor="let car of cars" pTemplate>
+      <ng-template let-car pTemplate>
 
       <div class="ui-grid ui-grid-responsive" (click)="selectCar(car)">
         <div class="ui-grid-row">

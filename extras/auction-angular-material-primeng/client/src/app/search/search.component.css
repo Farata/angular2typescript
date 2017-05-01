@@ -1,0 +1,5 @@
+md-input-container, md-select, [md-raised-button] {
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+<div class="ContentSideSections Implementation">
+
+  <p-carousel [value]="products" numVisible="1"
+              [circular]="false" autoplayInterval="2000">
+
+    <ng-template let-product pTemplate="item">
+
+      <div class="ui-grid ui-grid-responsive">
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-12"><img [attr.src]="product.image" /></div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-2">Description</div>
+          <div class="ui-grid-col-10">{{product.description}}</div>
+        </div>
+        <div class="ui-grid-row">
+          <div class="ui-grid-col-2">Price</div>
+          <div class="ui-grid-col-10">{{product.price}}</div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<img src="http://placehold.it/800x300" alt="Banner">
+-->

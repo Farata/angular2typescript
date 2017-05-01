@@ -1,0 +1,10 @@
+<md-card>
+  <md-card-title>{{ product.title }}</md-card-title>
+  <img md-card-image src="http://placehold.it/320x150">
+  <md-card-content>
+    {{ product.description }}
+  </md-card-content>
+  <md-card-actions>
+    <a md-button color="accent" [routerLink]="['/products', product.id]">VIEW</a>
+  </md-card-actions>
+</md-card>
