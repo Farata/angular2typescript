@@ -1,0 +1,17 @@
+{
+  "name": "mastering_ts",
+  "version": "1.0.0",
+  "description": "Mastering TypeScript",
+  "scripts": {
+    "tsc": "tsc -version && tsc -w",
+    "tslint": "tslint"
+  },
+  "author": "Yakov Fain",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^2.0.41",
+    "@types/jqueryui": "^1.11.32",
+    "typescript": "^2.3.0",
+    "tslint": "~4.5.0"
+  }
+}

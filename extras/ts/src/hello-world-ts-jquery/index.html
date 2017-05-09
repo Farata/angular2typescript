@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//unpkg.com/core-js/client/shim.min.js"></script>
+  <script src="//unpkg.com/zone.js@0.6.21"></script>
+  <script src="//unpkg.com/typescript@2.0.2"></script>
+  <script src="//unpkg.com/systemjs@0.19.38/dist/system.src.js"></script>
+
+  <!-- JQuery UI -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="//code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      map: {
+        'rxjs': 'https://unpkg.com/rxjs'
+      },
+      paths: {
+        '@angular/*': 'https://unpkg.com/@angular/*/bundles'
+      },
+      packages: {
+        '@angular/core'                    : {main: 'core.umd.min.js'},
+        '@angular/common'                  : {main: 'common.umd.min.js'},
+        '@angular/compiler'                : {main: 'compiler.umd.min.js'},
+        '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
+        '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'}
+      }
+    });
+    System.import('main.ts');
+  </script>
+</head>
+<body>
+  <hello-world></hello-world>
+</body>
+</html>
