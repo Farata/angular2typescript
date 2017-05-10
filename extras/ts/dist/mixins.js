@@ -30,7 +30,7 @@ var TaxMixin = (function () {
     ;
     return TaxMixin;
 }());
-// class TaxSpecial extends Tax, TaxMixin{}  can't do this
+//  Can't do this: class TaxSpecial extends Tax, TaxMixin{} 
 var TaxSpecial = (function (_super) {
     __extends(TaxSpecial, _super);
     function TaxSpecial() {
@@ -51,4 +51,3 @@ var myTax = new TaxSpecial();
 myTax.calcTax(100000, 0.06);
 myTax.mafiaSpecial(100000, 0.06);
 myTax.drugCartelSpecial(100000, 0.06);
-//# sourceMappingURL=mixins.js.map

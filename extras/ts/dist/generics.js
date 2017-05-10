@@ -32,4 +32,3 @@ var Generics;
     workers[1] = new Employee();
     //workers[2] = new Animal();
 })(Generics || (Generics = {}));
-//# sourceMappingURL=generics.js.map

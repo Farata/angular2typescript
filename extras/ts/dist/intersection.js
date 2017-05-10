@@ -4,4 +4,3 @@ function printWorker(worker) {
     console.log(worker);
 }
 printWorker(worker);
-//# sourceMappingURL=intersection.js.map

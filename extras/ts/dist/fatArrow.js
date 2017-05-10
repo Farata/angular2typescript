@@ -15,4 +15,3 @@ function StockQuoteGeneratorAnonymous(symbol) {
     }, 4000);
 }
 var stockQuoteGeneratorAnonymous = new StockQuoteGeneratorAnonymous("IBM");
-//# sourceMappingURL=fatArrow.js.map

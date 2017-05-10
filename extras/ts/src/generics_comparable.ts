@@ -18,7 +18,8 @@ class Rectangle implements Comparator<Rectangle> {
 let rect1:Rectangle = new Rectangle(2,5);
 let rect2: Rectangle = new Rectangle(2,3);
 
-rect1.compareTo(rect2)===1?console.log("rect1 is bigger"):console.log("rect1 is smaller") ;
+rect1.compareTo(rect2)===1? console.log("rect1 is bigger"): 
+                            console.log("rect1 is smaller") ;
 
 
 class Programmer implements Comparator<Programmer> {

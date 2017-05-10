@@ -12,5 +12,4 @@ var People;
     People.Person = Person;
 })(People || (People = {}));
 var p = new People.Person("John", "Smith", 29, "123-90-4567");
-//console.log("Last name: " + p.lastName + " SSN: " + p._ssn);
-//# sourceMappingURL=classes-namespaces.js.map
+console.log("Last name: " + p.lastName + "  SSN: " + p._ssn);

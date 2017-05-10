@@ -17,7 +17,7 @@ class TaxMixin {
   };		
 }
 
-// class TaxSpecial extends Tax, TaxMixin{}  can't do this
+//  Can't do this: class TaxSpecial extends Tax, TaxMixin{} 
 
 class TaxSpecial extends Tax implements TaxMixin{
 

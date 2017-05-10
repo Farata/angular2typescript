@@ -8,4 +8,3 @@ function getStock() {
 }
 var _a = getStock(), symbol = _a.symbol, price = _a.price;
 console.log("The price of " + symbol + " is " + price);
-//# sourceMappingURL=destructuring.js.map

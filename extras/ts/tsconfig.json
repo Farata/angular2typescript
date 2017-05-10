@@ -1,8 +1,8 @@
 {      "compilerOptions": {
         "outDir": "./dist",
         "baseUrl": "src",
-        "sourceMap": true,
-        "noEmitOnError": true,
+        "sourceMap": false,
+        "noEmitOnError": false,
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,

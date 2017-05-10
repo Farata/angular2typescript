@@ -14,4 +14,3 @@ console.log(padLeft("Hello world", true)); // runtime error
 // Change the function signature to catch type error during compile time
 // function padLeft(value: string, padding: string | number) {
 // No need to throw an error either    
-//# sourceMappingURL=union.js.map

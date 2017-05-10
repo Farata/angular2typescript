@@ -17,4 +17,3 @@ function calcTax(income, state, dependents) {
     }
 }
 exports.calcTax = calcTax;
-//# sourceMappingURL=calcTax.js.map

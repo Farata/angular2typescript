@@ -18,4 +18,3 @@ var workers = []; // better type: IPayable[]
 workers[0] = new Employee();
 workers[1] = new Contractor();
 workers.forEach(function (worker) { return worker.increasePay(20); });
-//# sourceMappingURL=interface-implements.js.map

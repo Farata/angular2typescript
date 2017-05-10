@@ -13,4 +13,3 @@ var MockProductService = (function () {
     };
     return MockProductService;
 }());
-//# sourceMappingURL=implement-class.js.map

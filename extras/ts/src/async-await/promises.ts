@@ -1,4 +1,4 @@
-function getCustomers(){
+export function getCustomers(){
 
     let promise = new Promise(
         function (resolve, reject){
