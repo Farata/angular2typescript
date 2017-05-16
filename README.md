@@ -27,6 +27,6 @@ If several apps are configured in .angular-cli.json project (as in the project i
 ng serve --app mediator1 -o
 
 Code samples located in the folders http-node-samples and auction require two separate terminal windows: one for running the Node server and another - to bundle and deploy the client. 
-In the client dir: npm run build. In the server dir: npm run devRestAngular (in auction/server it's npm run startServer). Then open your browser at localhost:8000.
+In the client dir: npm run build. In the server dir: 1. compile the code: npm run tsc 2) npm run devRestAngular (in auction/server it's npm run startServer). Then open your browser at localhost:8000.
 
 The folder test-weather contains a sample app from chapter 9. Run the unit tests with ng test.
