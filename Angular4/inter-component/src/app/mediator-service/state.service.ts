@@ -12,7 +12,7 @@ export class StateService{
 
     this.stateEvent.emit(value);
 
-    console.log(`StateService emitting ${value}`);
+    console.log(`StateService EventEmitter emitting ${value}`);
   }
 
   get searchCriteria (){
