@@ -3,15 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import {ProductDetailComponent} from "./product.component";
+import {ProductDetailQueryParamComponent} from "./product-queryparam.component";
 import {HomeComponent} from "./home.component";
 import {routing} from "./app.routing";
-import {ProductDetailComponentParam} from "./product-param.component";
 import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProductDetailComponent, ProductDetailComponentParam
+    AppComponent, HomeComponent, ProductDetailQueryParamComponent
   ],
   imports: [
     BrowserModule,
