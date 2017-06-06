@@ -9,7 +9,7 @@ function StockQuoteGeneratorArrow(symbol: string){
 
 }
 
-var stockQuoteGeneratorArrow = new StockQuoteGeneratorArrow("IBM");
+const stockQuoteGeneratorArrow = new StockQuoteGeneratorArrow("IBM");
 
 
 function StockQuoteGeneratorAnonymous(symbol: string){
@@ -23,4 +23,4 @@ function StockQuoteGeneratorAnonymous(symbol: string){
 
 }
 
-var stockQuoteGeneratorAnonymous = new StockQuoteGeneratorAnonymous("IBM");
+const stockQuoteGeneratorAnonymous = new StockQuoteGeneratorAnonymous("IBM");

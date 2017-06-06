@@ -1,5 +1,5 @@
 function UIcomponent (html: string){
-    console.log(`The decorator received ${html} \n`)
+    console.log(`The decorator received ${html} \n`);
 
     return function(target){
         console.log(`Creating a UI component from \n ${target} ` );

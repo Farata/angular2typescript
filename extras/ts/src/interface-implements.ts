@@ -14,7 +14,7 @@ class Contractor implements IPayable{
     }
 }
 
-let workers: Array<IPayable> = [];  // better type: IPayable[]
+let workers: IPayable[] = [];
 
 workers[0]=new Employee();
 workers[1]=new Contractor();

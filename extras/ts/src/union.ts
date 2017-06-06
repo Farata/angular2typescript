@@ -1,6 +1,6 @@
 // Based on https://www.typescriptlang.org/docs/handbook/advanced-types.html
 
-function padLeft(value: string, padding: string | number ) {
+function padLeft(value: string, padding: any ) {
     if (typeof padding === "number") {
         return Array(padding + 1).join(" ") + value;
     }
@@ -13,7 +13,7 @@ function padLeft(value: string, padding: string | number ) {
 console.log( padLeft("Hello world", 4));              // returns "    Hello world"
 console.log( padLeft("Hello world", " Yakov says ")); // returns "  Yakov says  Hello world"
 
-console.log( padLeft("Hello world", true));           // runtime error
+console.log( padLeft("Hello world", true));           // if padding had type any - runtime error
 
 
 // Change the function signature to catch type error during compile time

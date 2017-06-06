@@ -3,10 +3,10 @@
         "baseUrl": "src",
         "sourceMap": false,
         "noEmitOnError": false,
+         "module": "commonjs",
         "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "target": "es6",
+        "target": "es5",
         "watch":true,
         "typeRoots": [
             "node_modules/@types"
