@@ -9,7 +9,7 @@ export class ProductService{
   constructor( private http: Http){}
 
   getProductByID(productID: string): Observable<any>{
-    return this.http.get(`/products/${productID}`)
+    return this.http.get(`/api/products/${productID}`)
       .map(res => res.json());
   }
 }
