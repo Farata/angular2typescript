@@ -1,8 +1,10 @@
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
+import {CanActivate, Router} from "@angular/router";
 import {Injectable} from "@angular/core";
 
 @Injectable()
 export class LoginGuard implements CanActivate{
+
+    constructor(private router: Router){}
 
     canActivate() {
 
@@ -17,7 +19,8 @@ export class LoginGuard implements CanActivate{
         let loggedIn:boolean = Math.random() <0.5;
 
         if(!loggedIn){
-            console.log("LoginGuard: The user is not logged in and can't navigate to product details");
+            alert("You're not logged in and will be redirected to Login page");
+            this.router.navigate(["/login"]);
         }
 
         return loggedIn;

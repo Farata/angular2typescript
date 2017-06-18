@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
   template: `
         <a [routerLink]="['/']">Home</a>
         <a [routerLink]="['/product']">Product Detail</a>
-        <a [routerLink]="['/other']">Other</a>
+        <a [routerLink]="['/login']">Login</a>
         <router-outlet></router-outlet>
     `
 })

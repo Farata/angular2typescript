@@ -8,6 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ProductDetailComponentParam {
   productID: string;
+  page:string;
 
   constructor(route: ActivatedRoute) {
     this.productID = route.snapshot.paramMap.get('id');
