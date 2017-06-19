@@ -2,7 +2,7 @@ import {Component, ViewEncapsulation} from "@angular/core";
 
 @Component({
   selector: 'child',
-  styles: ['.wrapper {background: lightgreen;}'],
+ styles: ['.wrapper {background: lightgreen;}'],
   template: `
     <div class="wrapper">
      <h2>Child</h2>
