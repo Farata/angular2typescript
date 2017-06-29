@@ -17,7 +17,7 @@ export class AmazonComponent {
 
   constructor(private state: StateService){
 
-    this.subscription = state.stateEvent
+    this.subscription = state.getState()
       .subscribe(event => this.searchFor = event);
   }
 
