@@ -20,6 +20,9 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@ngrx/effects": "^4.0.1",
+    "@ngrx/store": "^4.0.0",
+    "@ngrx/store-devtools": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
@@ -42,6 +45,6 @@
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~5.3.2",
-    "typescript": "~2.2.0"
+    "typescript": "~2.3.0"
   }
 }
