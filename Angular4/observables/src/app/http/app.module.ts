@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {HttpModule} from "@angular/http";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import {HttpModule} from "@angular/http";
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

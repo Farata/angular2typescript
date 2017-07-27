@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-
 import {Observable} from 'rxjs/Observable';
-
 import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
 import {FormControl} from "@angular/forms";
-import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: "app-root",
@@ -25,7 +22,7 @@ export class AppComponent {
   searchInput: FormControl = new FormControl();
   temperature: string;
 
-  constructor(private http:Http){
+  constructor(private http:HttpClient){
 
     this.searchInput.valueChanges
       .debounceTime(200)
@@ -42,7 +39,6 @@ export class AppComponent {
 
   getWeather(city: string): Observable<Array<string>> {
     return this.http.get(this.baseWeatherURL + city + this.urlSuffix)
-      .map(res => res.json())
       .catch( err => {
         if (err.status ===404){
           console.log(`City ${city} not found`) ;

@@ -10,7 +10,7 @@ import 'rxjs/add/observable/interval'
 @Component({
   selector: "app-root",
   template: `
-       <h3>Sharing Observable between subscribers to keyup and input events</h3>
+       <h3>Sharing Observable from a Subject between subscribers</h3>
       <input type="text" placeholder="Start typing" 
             (input)="mySubject.next($event)" 
             (keyup)="mySubject.next($event)">
@@ -25,7 +25,7 @@ export class AppComponent {
   keyValue: string;
   inputValue: string;
 
-  mySubject: Observable<Event> = new Subject().share();
+  mySubject: Subject<Event> = new Subject();
 
   constructor(){
 

@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'product',
