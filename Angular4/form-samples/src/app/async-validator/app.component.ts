@@ -44,7 +44,6 @@ export class AppComponent implements OnInit{
     let ssnControl = this.myForm.get('ssnControl');
     ssnControl.valueChanges
       .debounceTime(2000)
-      .filter(val => val.length === 9)
       .switchMap(ssnValue => this.ssnValidatorService.checkWorkAuthorizationV2(ssnValue))
       .subscribe((res) => {
           this.myForm.setErrors(res);
