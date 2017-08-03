@@ -1,0 +1,1 @@
+This folder will contain code samples from the book Angular Development with TypeScript, Second Edition.
