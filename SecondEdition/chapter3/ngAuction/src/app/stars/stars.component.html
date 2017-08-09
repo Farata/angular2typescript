@@ -1,0 +1,9 @@
+<p>
+  <span *ngFor="let isEmpty of stars"
+        class="glyphicon"
+        [class.glyphicon-star]="!isEmpty"
+        [class.glyphicon-star-empty]="isEmpty">
+  </span>
+
+  <span>{{ rating }} stars</span>
+</p>
