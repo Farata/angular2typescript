@@ -8,7 +8,7 @@ export class TemperaturePipe implements PipeTransform {
   transform(value: any, fromTo: string): any {
 
     if (!fromTo) {
-      throw "Temperature pipe requires parameter FtoC or CtoF ";
+      throw new Error("Temperature pipe requires parameter FtoC or CtoF");
     }
 
     return (fromTo == 'FtoC') ?
