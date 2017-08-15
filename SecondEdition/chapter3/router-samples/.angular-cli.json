@@ -124,7 +124,7 @@
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main-aux.ts",
+      "main": "main-secondary.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",

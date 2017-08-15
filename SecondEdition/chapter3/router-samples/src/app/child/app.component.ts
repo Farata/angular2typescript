@@ -3,9 +3,10 @@ import {Component} from '@angular/core';
   selector: 'app-root',
   template: `
         <a [routerLink]="['/']">Home</a>
-        <a [routerLink]="['/product', 123]">Product with children</a> 
+        <a [routerLink]="['/product', productId]">Product with children</a> 
         <router-outlet></router-outlet>
     `
 })
 export class AppComponent {
+  productId = 1234;
 }

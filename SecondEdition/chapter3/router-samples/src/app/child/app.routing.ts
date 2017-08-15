@@ -1,10 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "../home.component";
-import {ProductDetailComponent} from "./product-child.component";
-import {ProductDescriptionComponent} from "./product-description.component";
-import {SellerInfoComponent} from "./seller.component";
+import {ProductDetailComponent} from "./product.detail.component";
+import {ProductDescriptionComponent} from "./product.description.component";
+import {SellerInfoComponent} from "./seller.info.component";
 
-export const routes: Routes = [
+const routes: Routes = [
   {path: '',            component: HomeComponent},
   {path: 'product/:id', component: ProductDetailComponent,
     children: [

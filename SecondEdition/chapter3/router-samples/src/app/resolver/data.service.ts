@@ -1,16 +1,15 @@
 import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import { Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/from';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class DataService{
 
-    mydata: Array<string>[];
+    mydata:any;
 
-    constructor(private http:Http){}
+    constructor(private http:HttpClient){}
 
     loadData(): Observable<string[]> {
         if (this.mydata){
@@ -18,7 +17,6 @@ export class DataService{
         } else
         {
             return this.http.get("./assets/45MB_DATA.json")
-                .map(res => res.json())
                 .do(data => this.mydata = data);
         }
     }

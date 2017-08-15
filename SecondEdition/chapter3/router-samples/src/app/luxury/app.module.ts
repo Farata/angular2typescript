@@ -5,22 +5,21 @@ import {AppComponent} from "./app.component";
 import {HomeComponent} from "../home.component";
 import {ProductDetailComponent} from "./product.detail.component";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
-//import {LuxuryModule} from "./luxury.module"; // for eager loading
+import {CustomPreloadingStrategy} from "./custom.preloader";
+
 
 @NgModule({
   imports: [ BrowserModule,
     RouterModule.forRoot([
       {path: '',        component: HomeComponent},
       {path: 'product', component: ProductDetailComponent},
-//      {path: 'luxury', loadChildren: () => LuxuryModule},  // for eager loading
 
-      {path: 'luxury', loadChildren: './luxury.module#LuxuryModule' } // for lazy loading
-    ]
-/*      , {preloadingStrategy: PreloadAllModules}*/
+      {path: 'luxury', loadChildren: './luxury.module#LuxuryModule', data: {preloadme:true} } ]
+      , {preloadingStrategy: CustomPreloadingStrategy}
       )
   ],
   declarations: [ AppComponent, HomeComponent, ProductDetailComponent],
-  providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}, CustomPreloadingStrategy],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule {}

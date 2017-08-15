@@ -6,7 +6,7 @@ import {ActivatedRoute} from '@angular/router';
   template: `<h1 class="product">Showing products in {{productCategory}}</h1>`,
   styles: ['.product {background: cyan}']
 })
-export class ProductDetailQueryParamComponent {
+export class ProductDetailComponent {
   productCategory: string;
 
   constructor(route: ActivatedRoute) {

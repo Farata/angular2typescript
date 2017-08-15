@@ -8,11 +8,6 @@ export class LoginGuard implements CanActivate{
 
     canActivate() {
 
-        return this.checkIfLoggedIn();
-    }
-
-    private checkIfLoggedIn(): boolean{
-
         // A call to the actual login service would go here
         // For now we'll just randomly return true or false
 

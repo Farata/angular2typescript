@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import {ProductDetailParamComponent} from "./product-param.component";
+import {ProductDetailComponent} from "./product.detail.component";
 import {HomeComponent} from "./home.component";
 import {routing} from "./app.routing";
 import {RouterModule} from "@angular/router";
@@ -11,7 +11,7 @@ import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProductDetailParamComponent,
+    AppComponent, HomeComponent, ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
