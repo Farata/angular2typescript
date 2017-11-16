@@ -8,7 +8,7 @@ Besides the original code samples (they work with Angular 2) we created Angular 
 
 NOTE: The folder extras has some apps that use Angular Material 2 and PrimeNG libraries. It also has additional code samples illustrating various TypeScript features.
 
-**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an Errata page with corrections here: http://bit.ly/2nrJXLe. 
+**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an [Errata page](http://bit.ly/2nrJXLe) with corrections. 
 
 Watch [the video](https://youtu.be/I809tajbVk4) with a code review of a sample online auction application that we gradually develop in the book.
 
