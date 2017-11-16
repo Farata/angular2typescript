@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript, First Edition</a>. 
 
-We started working on the [second edition of this book](https://www.manning.com/books/angular-development-with-typescript-second-edition), and its repository of code samples is located at https://github.com/Farata/angulartypescript
+We started working on the [second edition of this book](https://www.manning.com/books/angular-development-with-typescript-second-edition), and its repository of code samples is located [here](https://github.com/Farata/angulartypescript).
 
 **Plese send us your Angular training and consulting requests at training@faratasystems.com.** 
 
@@ -10,11 +10,9 @@ NOTE: The folder extras has some apps that use Angular Material 2 and PrimeNG li
 
 **Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an Errata page with corrections here: http://bit.ly/2nrJXLe. 
 
-The video with a code review of a sample online auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
+Watch [the video](https://youtu.be/I809tajbVk4) with a code review of a sample online auction application that we gradually develop in the book.
 
-Watch the video from one of our recent online trainings:
-https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
-It'll help you in getting started while reading Chapter 2.
+More recent videos are located [here](https://yakovfain.com/2016/12/05/online-angular-workshops-for-your-organiation/).
 
 *The Angular CLI version of the projects*
 
