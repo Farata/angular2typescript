@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript, First Edition</a>. 
 
-We started working on the second edition of this book, and its repository of code samples is located at https://github.com/Farata/angulartypescript
+We started working on the [second edition of this book](https://www.manning.com/books/angular-development-with-typescript-second-edition), and its repository of code samples is located [here](https://github.com/Farata/angulartypescript).
 
 **Plese send us your Angular training and consulting requests at training@faratasystems.com.** 
 
@@ -8,17 +8,15 @@ Besides the original code samples (they work with Angular 2) we created Angular 
 
 NOTE: The folder extras has some apps that use Angular Material 2 and PrimeNG libraries. It also has additional code samples illustrating various TypeScript features.
 
-**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an Errata page with corrections here: http://bit.ly/2nrJXLe. 
+**Reporting errors:**  If you'll run into a bug in the code, please open an issue here. If you want to report errors or typos in the book text, please report it at the <a href="https://forums.manning.com/forums/angular-2-development-with-typescript">book's forum</a> in the Errata section. We started reading all submissions and created an [Errata page](http://bit.ly/2nrJXLe) with corrections. 
 
-The video with a code review of a sample online auction application that we gradually develop in the book is located at https://youtu.be/I809tajbVk4.
+Watch [the video](https://youtu.be/I809tajbVk4) with a code review of a sample online auction application that we gradually develop in the book.
 
-Watch the video from one of our recent online trainings:
-https://www.youtube.com/watch?v=47Gn-jgb0FI&feature=youtu.be
-It'll help you in getting started while reading Chapter 2.
+More recent videos are located [here](https://yakovfain.com/2016/12/05/online-angular-workshops-for-your-organiation/).
 
 *The Angular CLI version of the projects*
 
-After the book was published we've created additional versions of book samples using Angular-CLI generated projects (see this video https://www.youtube.com/watch?time_continue=1&v=VKQEN7IyanU). These code samples are located in the directory Angular4, which has several subdirectories. Each of those is an Angular CLI project with several sample applications. Each of these applications has a bootstrap file with the name that starts with main (see the src directory). 
+After the book was published we've created additional versions of book samples using Angular-CLI generated projects as in [this video](https://www.youtube.com/watch?time_continue=1&v=VKQEN7IyanU). These code samples are located in the directory Angular4, which has several subdirectories. Each of those is an Angular CLI project with several sample applications. Each of these applications has a bootstrap file with the name that starts with main (see the src directory). 
 
 To run any of these applications, change into the required directory and run npm install. The file .angular-cli.json may configure one or more apps. If there only one app configured per project (default),  modify the property main in the file  .angular-cli.json to point at the bootstrap file you want to run.
 After that, run ng serve and open your browser at localhost:4200.
