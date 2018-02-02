@@ -1,6 +1,6 @@
 This is a repository for code samples for the book by Yakov Fain and Anton Moiseev <a href="https://www.amazon.com/Angular-Development-TypeScript-Yakov-Fain/dp/1617293121">Angular 2 Development with TypeScript, First Edition</a>. 
 
-We started working on the [second edition of this book](https://www.manning.com/books/angular-development-with-typescript-second-edition), and its repository of code samples is located [here](https://github.com/Farata/angulartypescript).
+The code samples of the [second edition of this book](https://www.manning.com/books/angular-development-with-typescript-second-edition), are located [here](https://github.com/Farata/angulartypescript). All of those sample projects are Angular CLI based (no SystemJS) and they were written in Angular 5.
 
 **Plese send us your Angular training and consulting requests at training@faratasystems.com.** 
 
