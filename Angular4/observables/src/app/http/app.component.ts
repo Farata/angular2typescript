@@ -17,6 +17,8 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AppComponent {
   private baseWeatherURL: string= 'http://api.openweathermap.org/data/2.5/weather?q=';
+  
+  // If the below API key doesn't work request your own key at http://api.openweathermap.org 
   private urlSuffix: string = "&units=imperial&appid=ca3f6d6ca3973a518834983d0b318f73";
 
   searchInput: FormControl = new FormControl();
